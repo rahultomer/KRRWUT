@@ -1,0 +1,248 @@
+\documentclass[11pt]{article}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\huge{\bfseries Deterministic Action With Cost}\\
+[6in]
+\textsc{\Large{\bfseries Created By}\\
+Rishabh Jain,
+Rahul Tomar,
+Kuldeep Shankar,\\ 
+Alaa Abboushi,
+Haran Dev Murugan,\\
+Bui Tuan Anh.\\}
+\end{center}	
+\end{titlepage}
+\tableofcontents
+\newpage
+\section{Introduction}\label{sec:intro}
+Let C2 be a class of dynamic systems satisfying the following assumptions:
+\begin{enumerate}
+	\item Inertia law
+	\item Complete information about all actions and fluent. 
+	\item Only Determinism
+	\item Only sequential actions are allowed.
+	\item Characterizations of actions:\begin{itemize}
+		\item Precondition represented by set of literals(a fluent or its negation);if a precondition does not hold, the action is executed but with empty effect
+		\item Postcondition (effect of an action) represented by a set of literals.
+		\item Cost $k \in N $ of an action, actions with empty effects cost 0. Each action has a fixed cost, if it leads to non-empty effects. 
+	\end{itemize}
+	\item Effects of an action depends on the state where the action starts.
+	\item All actions are performed in all states.
+	\item Partial description of any state of the system are allowed.
+	\item No constraints are defined.	 
+\end{enumerate}
+\section{Scenario}\label{sec:scenario}
+A. Can a given program:
+ \begin{itemize}
+ \item always
+ \item ever
+ \end{itemize} 
+be executed during at most cost units? \\
+B. Does a given condition \(\alpha\) hold 
+ \begin{itemize}
+ \item always
+ \item ever
+ \end{itemize}
+ after performing a given program in an initial state?\\ 
+C. Is the Cost k enough to realize the given program?
+\section{Syntax}\label{sec:syntax}
+A system is defined by a set of fluent {\bfseries F}, actions {\bfseries Ac} and Cost {\bfseries k \(\in\) N} and characterized by signature {\bfseries(F, Ac, k)}\\
+A formula is any propositional combination of fluent:
+
+$\alpha$ :: $\neg\alpha$ \textbar $\alpha\wedge\beta$ \textbar $\alpha\vee\beta$ \textbar $\alpha\rightarrow\beta$\\ 
+The system and changes occurring within can be described through a sequence of statements defined in the table:
+\begin{table}[h]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{|l|l|l|}
+\hline
+\bfseries Statement & \bfseries Format & \bfseries Description\\
+\hline
+Initial Statement & initially \(\alpha\) & Initial condition \(\alpha\) of the fluent \\
+\hline
+Effect Statement & Ac costing k causes \(\alpha\) & Perform action Ac for cost k in any state leads to the effect \(\alpha\).\\
+\hline	
+Release Statement & Ac costing k causes \(\alpha\) & Perform action Ac for cost k in any state might, but need not, change the value of \(\alpha\).\\
+\hline
+Constraint Statement & Always \(\alpha\) & Every state satisfies condition \(\alpha\).\\
+\hline
+%Fluent Specification Statement & & \\	
+%\hline	
+Value Statement & \(\alpha\) after A1....An & The condition \(\alpha\) always (must) hold after performing the sequence A1 ….An of actions.\\
+\hline
+Observation Statement & observable \(\alpha\) after A1 ….An & The condition \(\alpha\) sometimes (may) holds after performing the sequence A1 ….An of actions.\\
+\hline
+\end{tabular}
+\end{adjustbox} 
+\caption{Sequence of Statements}
+\label{tab:table01}
+\end{table}
+\section{Semantics}\label{sec:semantics}
+Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_{c}$). A structure S = ($\Psi$,$\sigma$0,k) is a model of D iff\\
+(M1) for every s $\in$ D, S \textbar= s;\\
+(M2) for every A $\in$ Ac, for every f,g1,...,gn $\in$ F, and for every $\sigma\in\sum$, if one of the following conditions holds:
+\\\indent
+(i) D contains an effect statement\\
+\indent\indent 
+{\bfseries A causes $\overline{f}$ for the cost k if} $\overline{g}$,...,$\overline{gn}$,\\
+\indent where k $\neq$ 0 and $\sigma$\textbar$\neq$  gi for some i = 1,...,n\\
+\indent(ii) D does not contain an effect statement\\
+\indent\indent{\bfseries A causes $\overline{f}$ if} g1,...,gn\\
+\indent then $\sigma$ \textbar= f iff $\Psi$(A,$\sigma$,k) \textbar= f. where k = 0.\\
+\pagebreak
+\section{Examples}\label{sec:Examples}
+\subsection{Example 01}\label{example:ex01}
+\subsubsection{Description}\label{par:p101}
+Andrew wants to travel by his car to a place.Travelling costs him 100\$ if he uses fuel from the fuel tank of the car.If in case of emergency, Andrew is carrying a bottle of fuel as reserve, which can cost him 150\$ for travelling because its a low quality fuel. Buying fuel costs him 200\$ and reserve costs him 250\$.\\
+\subsubsection{Representation}\label{par:p201}
+Initially we have:
+\begin{enumerate}
+\item Fuel
+\item Reserve
+\end{enumerate}
+Travel causes $\neg$fuel if fuel $\vee$ reserve\\
+Travel causes $\neg$reserve if $\neg$fuel $\vee$ reserve\\
+BuyF causes fuel if $\neg$fuel\\ 
+BuyS causes reserve if $\neg$reserve\\
+\subsubsection{Calculation}\label{par:p301}\par
+$\sum$ = $\lbrace$ $\sigma_{0}$,$\sigma_{1}$,$\sigma_{2}$,$\sigma_{3}$ $\rbrace$\\
+$\sigma_{0}$ = $\lbrace$ fuel, reserve $\rbrace$ \indent $\sigma_{1}$ = $\lbrace$ $\neg$fuel, reserve $\rbrace$\\
+$\sigma_{2}$ = $\lbrace$ $\neg$fuel, $\neg$reserve $\rbrace$ \indent $\sigma_{3}$ = $\lbrace$ fuel, $\neg$reserve $\rbrace$\\
+\\
+$\Psi$(BuyF,$\sigma_{0}$)=$\sigma_{0}$ \indent $\Psi$(BuyS,$\sigma_{0}$)=$\sigma_{0}$\\
+$\Psi$(BuyF,$\sigma_{1}$)=$\sigma_{0}$ \indent $\Psi$(BuyS,$\sigma_{1}$)=$\sigma_{1}$\\
+$\Psi$(BuyF,$\sigma_{2}$)=$\sigma_{3}$ \indent $\Psi$(BuyS,$\sigma_{2}$)=$\sigma_{1}$\\
+$\Psi$(BuyF,$\sigma_{3}$)=$\sigma_{3}$ \indent $\Psi$(BuyS,$\sigma_{3}$)=$\sigma_{0}$\\
+\\
+$\Psi$(Travel,$\sigma_{0}$)=$\sigma_{1}$\indent
+$\Psi$(Travel,$\sigma_{1}$)=$\sigma_{2}$\\
+$\Psi$(Travel,$\sigma_{2}$)=$\sigma_{2}$\indent
+$\Psi$(Travel,$\sigma_{3}$)=$\sigma_{2}$\\
+\subsubsection{Graph}\label{par:p401}
+	\begin{figure}[H]
+		\includegraphics[width=1\linewidth, height=0.3\textheight]{./media/ex01.png}
+		\label{Figure:f01}
+		\caption{Example 02}
+	\end{figure}
+\subsection{Example 02}\label{example:ex02}
+\subsubsection{Description}\label{par:p102}
+John visits a painter to buy a specific painting. The cost of painting is 200$\$$  if its available in the shop. But if painting is not available then John needs to order a new one to be painted that will cost him 100$\$$  extra. At any time only one copy of painting is available and another one to be ordered once sold.\pagebreak
+
+\subsubsection{Representation:}\label{par:p202}
+\indent 
+\par Fluents: available, sold.\par
+Actions: BUY, ORDER.\par
+BUY costs 200$\$$  \textbf{if} available\par
+
+BUY costs 300$\$$  \textbf{after} ORDER\par
+
+
+MIN COST:0$\$$ \par
+
+MAX COST: 300$\$$ \par
+
+
+Always ORDER $\rightarrow$ available\par
+
+Always BUY $\rightarrow$ sold\par
+
+initially: ¬available $\vee$  ¬sold\par
+
+BUY causes sold if available\par
+
+ORDER causes available if ¬available\par
+
+¬available after BUY\\
+
+\subsubsection{Calculation:}\label{par:p302}
+\indent \par
+$ \sum $ = $ \{ $ $ \sigma $ 0, $ \sigma $ 1, $ \sigma $ 2, $ \sigma $ 3$ \} $ \par
+
+$ \sigma $ 0 = $ \{ $ ¬available, ¬sold$ \} $ \par
+
+$ \sigma $ 1 = $ \{ $ ¬available, sold$ \} $ \par
+
+$ \sigma $ 2 = $ \{ $ available, ¬sold$ \} $ \par
+
+$ \sigma $ 3 = $ \{ $ available, sold$ \} $ \par
+  \(  \Psi  \)  (BUY, $ \sigma $ 0) = $ \sigma $ 0\par
+
+  \(  \Psi  \)  (ORDER, $ \sigma $ 0) = $ \sigma $ 1\par
+
+  \(  \Psi  \)  (BUY, $ \sigma $ 1) = $ \sigma $ 2\par
+
+ \(  \Psi  \)  (ORDER, $ \sigma $ 1) = $ \sigma $ 1\par
+
+ \(  \Psi  \)  (BUY, $ \sigma $ 2) = $ \sigma $ 2\par
+
+ \(  \Psi  \)  (ORDER, $ \sigma $ 2) = $ \sigma $ 1\par
+
+ \(  \Psi  \)  (BUY, $ \sigma $ 3) = $ \sigma $ 2\par
+
+ \(  \Psi  \)  (ORDER, $ \sigma $ 3) = $ \sigma $ 3\par
+\pagebreak
+\subsubsection{Graph}\label{par:p402}
+\begin{figure}[H]
+\includegraphics[width=1\linewidth, height=0.3\textheight]{./media/image1.png}
+\label{Figure:f02}
+\caption{Example 02}
+\end{figure}
+\subsection{Example 03}
+	\subsubsection{Description}\label{par:p103}
+	There is a man. He can cook, eat, and play. Cooking makes food cooked. he can eat food if it is cooked. After eating he feels not hungry, and food is not cooked again. He can play. Playing makes him hungry. He just can play if he is not hungry. He just cooks when there is no food is cooked. Initially, the is hungry, and no food is cooked. In terms of energy, eating costs 5, cooking costs 15, playing costs 20.\\
+	\\
+	\subsubsection{Representation in language}\label{par:p203}
+	Fluents: cooked, hungry.\\
+	Actions: cook, eat, play.\\
+	\\
+	eat costs 5\\
+	cooking cost 15\\
+	play cost 20\\
+	initially $\neg$cooked $\land$ hungry\\
+	cook causes cook if $\neg$cooked\\
+	eat causes ($\neg$cooked $\land$ $\neg$hungry) if cooked\\
+	play causes hungry if $\neg$hungry\\
+	\\
+	\subsubsection{Calculation}\label{par:p303}
+	$\sum$ = \{$\sigma$0 ,$\sigma$1, $\sigma$2, $\sigma$3\}\\
+	\\
+	$\sigma$0 = \{$\neg$cooked, hungry\}\\
+	$\sigma$1 = \{cooked, hungry\}\\
+	$\sigma$2 = \{$\neg$cooked, $\neg$hungry\}\\
+	$\sigma$3 = \{cooked, $\neg$hungry\}\\
+	\\
+	$\psi$(eat, $\sigma$0) = $\sigma$0\\
+	$\psi$(cook, $\sigma$0) = $\sigma$1\\
+	$\psi$(play, $\sigma$0) = $\sigma$0\\
+	\\
+	$\psi$(eat, $\sigma$1) = $\sigma$2\\
+	$\psi$(cook, $\sigma$1) = $\sigma$1\\
+	$\psi$(play, $\sigma$1) = $\sigma$1\\
+	\\
+	$\psi$(eat, $\sigma$2) = $\sigma$2\\
+	$\psi$(cook, $\sigma$2) = $\sigma$3\\
+	$\psi$(play, $\sigma$2) = $\sigma$1\\
+	\\
+	$\psi$(eat, $\sigma$3) = $\sigma$2\\
+	$\psi$(cook, $\sigma$3) = $\sigma$3\\
+	$\psi$(play, $\sigma$3) = $\sigma$1\\
+	\\
+	\subsubsection{Graph}\label{par:p403}
+	\begin{figure}[H]
+		\includegraphics[width=1\linewidth, height=0.3\textheight]{./media/figure01.png}
+		\caption{Example 02}
+		\label{Figure:f03}
+	\end{figure}
+\newpage
+\section{Appendix}	
+\begin{appendix}
+\listoffigures
+\listoftables
+\end{appendix}
+\end{document}
+
