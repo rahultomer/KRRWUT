@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}Introduction}{2}%
+\contentsline {section}{\numberline {2}Scenario}{2}%
+\contentsline {section}{\numberline {3}Syntax}{3}%
+\contentsline {section}{\numberline {4}Semantics}{3}%
+\contentsline {subsection}{\numberline {4.1}Denote:}{4}%
+\contentsline {subsection}{\numberline {4.2}QUERIES}{4}%
+\contentsline {subsubsection}{\numberline {4.2.1}Value Query}{4}%
+\contentsline {subsubsection}{\numberline {4.2.2}Executability Query}{5}%
+\contentsline {section}{\numberline {5}Examples}{5}%
+\contentsline {subsection}{\numberline {5.1}Example 01}{5}%
+\contentsline {subsubsection}{\numberline {5.1.1}Description}{5}%
+\contentsline {subsubsection}{\numberline {5.1.2}Representation}{5}%
+\contentsline {subsubsection}{\numberline {5.1.3}Calculation}{6}%
+\contentsline {subsubsection}{\numberline {5.1.4}Graph}{6}%
+\contentsline {subsection}{\numberline {5.2}Example 02}{6}%
+\contentsline {subsubsection}{\numberline {5.2.1}Description}{6}%
+\contentsline {subsubsection}{\numberline {5.2.2}Representation:}{7}%
+\contentsline {subsubsection}{\numberline {5.2.3}Calculation:}{7}%
+\contentsline {subsubsection}{\numberline {5.2.4}Graph}{8}%
+\contentsline {subsection}{\numberline {5.3}Example 03}{8}%
+\contentsline {subsubsection}{\numberline {5.3.1}Description}{8}%
+\contentsline {subsubsection}{\numberline {5.3.2}Representation in language}{8}%
+\contentsline {subsubsection}{\numberline {5.3.3}Calculation}{9}%
+\contentsline {subsubsection}{\numberline {5.3.4}Graph}{10}%
+\contentsline {section}{\numberline {6}Appendix}{11}%
