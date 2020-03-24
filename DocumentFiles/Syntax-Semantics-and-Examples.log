@@ -1,0 +1,458 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.18)  24 MAR 2020 12:24
+entering extended mode
+**./Syntax-Semantics-and-Examples.tex
+(Syntax-Semantics-and-Examples.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> (E:\miktext\tex/latex/base\article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(E:\miktext\tex/latex/base\size11.clo
+File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (E:\miktext\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count175
+\float@exts=\toks14
+\float@box=\box45
+\@float@everytoks=\toks15
+\@floatcapt=\box46
+)
+(E:\miktext\tex/latex/graphics\graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(E:\miktext\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(E:\miktext\tex/latex/graphics\graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(E:\miktext\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(E:\miktext\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(E:\miktext\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+)
+(E:\miktext\tex/latex/tools\tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+ (E:\miktext\tex/latex/tools\array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen137
+\ar@mcellbox=\box47
+\extrarowheight=\dimen138
+\NC@list=\toks17
+\extratabsurround=\skip49
+\backup@length=\skip50
+\ar@cellbox=\box48
+)
+\TX@col@width=\dimen139
+\TX@old@table=\dimen140
+\TX@old@col=\dimen141
+\TX@target=\dimen142
+\TX@delta=\dimen143
+\TX@cols=\count176
+\TX@ftn=\toks18
+) (E:\miktext\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
+
+(E:\miktext\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(E:\miktext\tex/generic/xkeyval\xkeyval.tex
+(E:\miktext\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks19
+\XKV@tempa@toks=\toks20
+)
+\XKV@depth=\count177
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(E:\miktext\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(E:\miktext\tex/latex/adjustbox\trimclip.sty
+Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
+
+(E:\miktext\tex/latex/collectbox\collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box49
+)
+\tc@llx=\dimen144
+\tc@lly=\dimen145
+\tc@urx=\dimen146
+\tc@ury=\dimen147
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(E:\miktext\tex/latex/adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen148
+\adjbox@Height=\dimen149
+\adjbox@Depth=\dimen150
+\adjbox@Totalheight=\dimen151
+\adjbox@pwidth=\dimen152
+\adjbox@pheight=\dimen153
+\adjbox@pdepth=\dimen154
+\adjbox@ptotalheight=\dimen155
+
+(E:\miktext\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count178
+)
+(E:\miktext\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box50
+\sift@deathcycles=\count179
+\@vwid@loff=\dimen156
+\@vwid@roff=\dimen157
+))
+(E:\miktext\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(E:\miktext\tex/latex/amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(E:\miktext\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen158
+))
+(E:\miktext\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen159
+)
+(E:\miktext\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count180
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count181
+\leftroot@=\count182
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count183
+\DOTSCASE@=\count184
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+\big@size=\dimen160
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count185
+\c@MaxMatrixCols=\count186
+\dotsspace@=\muskip16
+\c@parentequation=\count187
+\dspbrk@lvl=\count188
+\tag@help=\toks22
+\row@=\count189
+\column@=\count190
+\maxfields@=\count191
+\andhelp@=\toks23
+\eqnshift@=\dimen161
+\alignsep@=\dimen162
+\tagshift@=\dimen163
+\tagwidth@=\dimen164
+\totwidth@=\dimen165
+\lineht@=\dimen166
+\@envbody=\toks24
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(E:\miktext\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(E:\miktext\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(E:\miktext\tex/latex/base\textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(E:\miktext\tex/latex/l3backend\l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count192
+\l__pdf_internal_box=\box53
+)
+(Syntax-Semantics-and-Examples.aux)
+\openout1 = `Syntax-Semantics-and-Examples.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+
+(E:\miktext\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count193
+\scratchdimen=\dimen167
+\scratchbox=\box54
+\nofMPsegments=\count194
+\nofMParguments=\count195
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count196
+\MPscratchDim=\dimen168
+\MPnumerator=\count197
+\makeMPintoPDFobject=\count198
+\everyMPtoPDFconversion=\toks27
+) (E:\miktext\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+<./media/uni_logo.jpeg, id=1, 903.375pt x 903.375pt>
+File: ./media/uni_logo.jpeg Graphic file (type jpg)
+<use ./media/uni_logo.jpeg>
+Package pdftex.def Info: ./media/uni_logo.jpeg  used on input line 16.
+(pdftex.def)             Requested size: 143.99158pt x 135.34877pt.
+ [1
+
+{C:/Users/admin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./media/uni
+_logo.jpeg>]
+(Syntax-Semantics-and-Examples.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+ (E:\miktext\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+
+(E:\miktext\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write3
+\openout3 = `Syntax-Semantics-and-Examples.toc'.
+
+ [1] [2]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 7
+1.
+
+(E:\miktext\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
+[]|\OT1/cmr/m/n/10.95 Initial
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]|\OT1/cmr/m/n/10.95 Effect
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]|\OT1/cmr/m/n/10.95 Ac cost-ing k
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
+[]|\OT1/cmr/m/n/10.95 Release
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
+[]|\OT1/cmr/m/n/10.95 Ac cost-ing k
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+[]|\OT1/cmr/m/n/10.95 Constraint
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10.95 Value
+ []
+
+
+Overfull \hbox (0.67336pt too wide) in paragraph at lines 91--91
+[]|\OT1/cmr/m/n/10.95 Observation
+ []
+
+
+Overfull \hbox (47.48578pt too wide) in paragraph at lines 75--94
+ [][] 
+ []
+
+[3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--174
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 175--188
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--188
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--188
+
+ []
+
+<./media/ex01.png, id=31, 2409.0pt x 1844.8925pt>
+File: ./media/ex01.png Graphic file (type png)
+<use ./media/ex01.png>
+Package pdftex.def Info: ./media/ex01.png  used on input line 190.
+(pdftex.def)             Requested size: 359.97435pt x 162.4017pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--192
+[][]
+ []
+
+[6 <./media/ex01.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+
+ []
+
+<./media/image1.png, id=39, 526.96875pt x 345.29pt>
+File: ./media/image1.png Graphic file (type png)
+<use ./media/image1.png>
+Package pdftex.def Info: ./media/image1.png  used on input line 252.
+(pdftex.def)             Requested size: 360.01454pt x 162.4233pt.
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--272
+
+ []
+
+[8 <./media/image1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 273--296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--296
+
+ []
+
+<./media/figure01.png, id=46, 793.7655pt x 367.97475pt>
+File: ./media/figure01.png Graphic file (type png)
+<use ./media/figure01.png>
+Package pdftex.def Info: ./media/figure01.png  used on input line 298.
+(pdftex.def)             Requested size: 360.00113pt x 162.42033pt.
+[9] [10 <./media/figure01.png (PNG copy)>] (Syntax-Semantics-and-Examples.lof)
+\tf@lof=\write4
+\openout4 = `Syntax-Semantics-and-Examples.lof'.
+
+
+(Syntax-Semantics-and-Examples.lot)
+\tf@lot=\write5
+\openout5 = `Syntax-Semantics-and-Examples.lot'.
+
+ [11] (Syntax-Semantics-and-Examples.aux) ) 
+Here is how much of TeX's memory you used:
+ 3566 strings out of 481556
+ 48919 string characters out of 2931569
+ 286565 words of memory out of 3000000
+ 18751 multiletter control sequences out of 15000+200000
+ 539146 words of font info for 49 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 31i,11n,32p,454b,372s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\admin\AppData\Local\MiKTe
+X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><E:/miktext/fonts/type1/pu
+blic/amsfonts/cm/cmbx10.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/cmbx12.p
+fb><E:/miktext/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><E:/miktext/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/miktext/fonts/
+type1/public/amsfonts/cm/cmr12.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/c
+mr8.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:/miktext/fonts
+/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Syntax-Semantics-and-Examples.pdf (12 pages, 575270 bytes).
+PDF statistics:
+ 94 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
