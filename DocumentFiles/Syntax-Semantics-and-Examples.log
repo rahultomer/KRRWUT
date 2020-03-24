@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.23)  24 MAR 2020 14:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.23)  24 MAR 2020 15:40
 entering extended mode
 **./Syntax-Semantics-and-Examples.tex
 (Syntax-Semantics-and-Examples.tex
@@ -346,104 +346,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 187--200
 <./media/ex01.png, id=31, 2409.0pt x 1844.8925pt>
 File: ./media/ex01.png Graphic file (type png)
 <use ./media/ex01.png>
-Package pdftex.def Info: ./media/ex01.png  used on input line 202.
-(pdftex.def)             Requested size: 359.97435pt x 162.4017pt.
+Package pdftex.def Info: ./media/ex01.png  used on input line 203.
+(pdftex.def)             Requested size: 361.33441pt x 289.08012pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--204
-[][]
+Overfull \hbox (1.33441pt too wide) in paragraph at lines 203--205
+ [][] 
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+[6] [7 <./media/ex01.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
 
-[7 <./media/ex01.png>]
 <./media/image1.png, id=42, 526.96875pt x 345.29pt>
 File: ./media/image1.png Graphic file (type png)
 <use ./media/image1.png>
-Package pdftex.def Info: ./media/image1.png  used on input line 264.
+Package pdftex.def Info: ./media/image1.png  used on input line 265.
 (pdftex.def)             Requested size: 360.01454pt x 162.4233pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--272
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--272
-
- []
-
-[8 <./media/image1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 273--284
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 271--273
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--284
+Underfull \hbox (badness 10000) in paragraph at lines 271--273
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--284
+Underfull \hbox (badness 10000) in paragraph at lines 274--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--308
+Underfull \hbox (badness 10000) in paragraph at lines 274--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--308
+Underfull \hbox (badness 10000) in paragraph at lines 274--285
+
+ []
+
+[9 <./media/image1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 286--309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--308
+Underfull \hbox (badness 10000) in paragraph at lines 286--309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--308
+Underfull \hbox (badness 10000) in paragraph at lines 286--309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--308
+Underfull \hbox (badness 10000) in paragraph at lines 286--309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--308
+Underfull \hbox (badness 10000) in paragraph at lines 286--309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--308
+Underfull \hbox (badness 10000) in paragraph at lines 286--309
 
  []
 
-[9]
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--309
+
+ []
+
 <./media/figure01.png, id=49, 793.7655pt x 367.97475pt>
 File: ./media/figure01.png Graphic file (type png)
 <use ./media/figure01.png>
-Package pdftex.def Info: ./media/figure01.png  used on input line 310.
+Package pdftex.def Info: ./media/figure01.png  used on input line 311.
 (pdftex.def)             Requested size: 360.00113pt x 162.42033pt.
- [10 <./media/figure01.png (PNG copy)>] (Syntax-Semantics-and-Examples.lof)
+[10] [11 <./media/figure01.png (PNG copy)>] (Syntax-Semantics-and-Examples.lof)
 \tf@lof=\write4
 \openout4 = `Syntax-Semantics-and-Examples.lof'.
-
 
 (Syntax-Semantics-and-Examples.lot)
 \tf@lot=\write5
 \openout5 = `Syntax-Semantics-and-Examples.lot'.
 
- [11] (Syntax-Semantics-and-Examples.aux) ) 
+ [12] (Syntax-Semantics-and-Examples.aux) ) 
 Here is how much of TeX's memory you used:
  3560 strings out of 480934
  50538 string characters out of 2909665
- 289457 words of memory out of 3000000
+ 289458 words of memory out of 3000000
  19367 multiletter control sequences out of 15000+200000
  539146 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -459,9 +456,9 @@ cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Syntax-Semantics-and-Examples.pdf (12 pages, 576166 bytes).
+Output written on Syntax-Semantics-and-Examples.pdf (13 pages, 576605 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
+ 98 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
