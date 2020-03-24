@@ -24,7 +24,7 @@
 			[0.3in]
 			\textsc{\Large{Created By}\\
 				Rishabh Jain,
-				Rahul Tomar,
+				Rahul Tomer,
 				Kuldeep Shankar,\\ 
 				Alaa Abboushi,
 				Haran Dev Murugan,\\
@@ -34,6 +34,13 @@
 	\tableofcontents
 	\newpage
 	\section{Introduction}\label{sec:intro}
+	A dynamic system (DS) is viewed as
+	\begin{itemize}
+	\item a collection of objects, together with their properties, and
+	\item a collection of actions which, while performed, change properties
+of objects (in consequence, the state of the world).
+	\end{itemize}
+
 	Let C2 be a class of dynamic systems satisfying the following assumptions:
 	\begin{enumerate}
 		\item Inertia law
@@ -63,12 +70,17 @@
 		\item ever
 	\end{itemize}
 	after performing a given program in an initial state?\\ 
-	C. Is the Cost k enough to realize the given program?
+	C. Does a given goal condition $\Upsilon$ hold after performing a given program P in an initial state?
 	\section{Syntax}\label{sec:syntax}
 	A system is defined by a set of fluent {\bfseries F}, actions {\bfseries Ac} and Cost {\bfseries k \(\in\) N} and characterized by signature {\bfseries(F, Ac, k)}\\
 	A formula is any propositional combination of fluent:
 	
-	$\alpha$ :: $\neg\alpha$ \textbar $\alpha\wedge\beta$ \textbar $\alpha\vee\beta$ \textbar $\alpha\rightarrow\beta$\\ 
+	$\alpha$ :: $\neg\alpha$ \textbar $\alpha\wedge\beta$ \textbar $\alpha\vee\beta$ \textbar $\alpha\rightarrow\beta$\\
+	Two specific formulas:
+	\begin{enumerate}
+	\item $\top$: truth
+	\item $\bot$: falsity
+	\end{enumerate}
 	The system and changes occurring within can be described through a sequence of statements defined in the table:
 	\begin{table}[h]
 		\centering
