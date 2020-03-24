@@ -6,7 +6,7 @@ Project Outline
 
 ---
 
-Hello all, this repositoryhas all the required files such as
+Hello all, the **"test branch"** is the project documentation branch. and this branch has all the required files such as
 
 1. Latex Source files (.tex)
 2. Latex Config and Compiler files
