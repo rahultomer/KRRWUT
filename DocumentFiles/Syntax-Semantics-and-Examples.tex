@@ -62,7 +62,10 @@ of objects (in consequence, the state of the world).
 	\end{enumerate}
 	
 	\section{Syntax}\label{sec:syntax}
+	
+	
 	A system is defined by a set of fluent {\bfseries F}, actions {\bfseries Ac} and Cost {\bfseries k \(\in\) N} and characterized by signature {\bfseries(F, Ac, k)}\\
+	A literal is either a fluent f or its negation $\neg$f.\\
 	A formula is any propositional combination of fluent:
 	
 	$\alpha$ :: $\neg\alpha$ \textbar $\alpha\wedge\beta$ \textbar $\alpha\vee\beta$ \textbar $\alpha\rightarrow\beta$\\
@@ -74,17 +77,18 @@ of objects (in consequence, the state of the world).
 	The system and changes occurring within can be described through a sequence of statements defined in the table:
 	\begin{table}[htbp]
   \centering
-    \begin{tabular}{|p{4cm}|p{4cm}|p{7cm}|}
+    \begin{tabular}{|p{2cm}|p{4cm}|p{9cm}|}
     \hline
     \multicolumn{1}{|c|}{Statement} & \multicolumn{1}{c|}{Format} & \multicolumn{1}{c|}{Description} \\
     \hline
     Initial Statement & Initially $\alpha$ & \multicolumn{1}{c|}{Initial condition $\alpha$ of the fluent.} \\
     \hline
-    Effect Statement & Ac costing k causes $\alpha$ & Perform action Ac for cost k in any state leads to the effect $\alpha$. \\
+    Effect Statement & A causes $\alpha$ if g1, . . . , gk & If the action A is performed in any state satisfying g1, . . . , gk, then in
+    the resulting state $\alpha$ holds. \\
     \hline
     Value Statement & $\alpha$ after A1 ….An & The condition $\alpha$ always (must) hold after performing the sequence A1 ….An of actions. \\
     \hline
-    Cost Statement & Cost of $\alpha$ after A1 ….An & The condition $\alpha$ holds a constant cost  for performing any action in the sequence A1 ….An of actions. \\
+    Cost Statement & A cost n & Perform the cost of action A \\
     \hline
     \end{tabular}
     \caption{Syntax Table}
@@ -146,7 +150,7 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_
 	\subsubsection{Graph}\label{par:p401}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=5in,height=4in]{./media/ex01.png}
+		\includegraphics[width=6in,height=3in]{./media/ex01.png}
 		\label{Figure:f01}
 		\caption{Example 01}
 	\end{figure}
@@ -201,7 +205,7 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_
 	\(  \Psi  \)  (ORDER, $ \sigma $3) = $ \sigma $3\par
 	\subsubsection{Graph}\label{par:p402}
 	\begin{figure}[H]
-		\includegraphics[width=1\linewidth, height=0.3\textheight]{./media/image1.jpeg}
+		\includegraphics[width=1\linewidth, height=0.4\textheight]{./media/image1.jpeg}
 		\label{Figure:f02}
 		\caption{Example 02}
 	\end{figure}
