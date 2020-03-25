@@ -122,31 +122,24 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_
 	\section{Examples}\label{sec:Examples}
 	\subsection{Example 01}\label{example:ex01}
 	\subsubsection{Description}\label{par:p101}
-	Andrew wants to travel by his car to a place.Travelling costs him 100\$ if he uses fuel from the fuel tank of the car.If in case of emergency, Andrew is carrying a bottle of fuel as reserve, which can cost him 150\$ for travelling because its a low quality fuel. Buying fuel costs him 200\$ and reserve costs him 250\$.\\
+	Andrew wants to travel by his car to a place.Travelling costs him 50\$ if he uses fuel from the fuel tank of the car.If in case of emergency, Andrew is carrying a bottle of fuel as reserve, which can cost him 50\$ for travelling. buying Fuel costs him 100\$ if both fuel and reserve are empty. and buying causes both his Fuel and Reserve are filled. 
 	\subsubsection{Representation}\label{par:p201}
 	Initially we have:
 	\begin{enumerate}
 		\item Fuel
 		\item Reserve
 	\end{enumerate}
-	Travel causes $\neg$fuel if fuel $\vee$ reserve\\
+	Travel causes $\neg$fuel if fuel %$\vee$ reserve\\
 	Travel causes $\neg$reserve if $\neg$fuel $\vee$ reserve\\
-	BuyF causes fuel if $\neg$fuel\\ 
-	BuyS causes reserve if $\neg$reserve\\
+	Buy causes fuel, reserve  if $\neg$ fuel $\vee$ reserve\\
 	\subsubsection{Calculation}\label{par:p301}\par
-	$\sum$ = $\lbrace$ $\sigma_{0}$,$\sigma_{1}$,$\sigma_{2}$,$\sigma_{3}$ $\rbrace$\\
+	$\sum$ = $\lbrace$ $\sigma_{0}$,$\sigma_{1}$,$\sigma_{2}$ $\rbrace$\\ \\
 	$\sigma_{0}$ = $\lbrace$ fuel, reserve $\rbrace$ \indent $\sigma_{1}$ = $\lbrace$ $\neg$fuel, reserve $\rbrace$\\
-	$\sigma_{2}$ = $\lbrace$ $\neg$fuel, $\neg$reserve $\rbrace$ \indent $\sigma_{3}$ = $\lbrace$ fuel, $\neg$reserve $\rbrace$\\
-	\\
-	$\Psi$(BuyF,$\sigma_{0}$)=$\sigma_{0}$ \indent $\Psi$(BuyS,$\sigma_{0}$)=$\sigma_{0}$\\
-	$\Psi$(BuyF,$\sigma_{1}$)=$\sigma_{0}$ \indent $\Psi$(BuyS,$\sigma_{1}$)=$\sigma_{1}$\\
-	$\Psi$(BuyF,$\sigma_{2}$)=$\sigma_{3}$ \indent $\Psi$(BuyS,$\sigma_{2}$)=$\sigma_{1}$\\
-	$\Psi$(BuyF,$\sigma_{3}$)=$\sigma_{3}$ \indent $\Psi$(BuyS,$\sigma_{3}$)=$\sigma_{0}$\\
-	\\
-	$\Psi$(Travel,$\sigma_{0}$)=$\sigma_{1}$\indent
-	$\Psi$(Travel,$\sigma_{1}$)=$\sigma_{2}$\\
-	$\Psi$(Travel,$\sigma_{2}$)=$\sigma_{2}$\indent
-	$\Psi$(Travel,$\sigma_{3}$)=$\sigma_{2}$\\
+	$\sigma_{2}$ = $\lbrace$ $\neg$fuel, $\neg$reserve $\rbrace$ 
+	\\ \\
+	$\Psi$(Buy,$\sigma_{0}$)=$\sigma_{0}$ \indent $\Psi$(Travel,$\sigma_{0}$)=$\sigma_{1}$\\
+	$\Psi$(Buy,$\sigma_{1}$)=$\sigma_{1}$ \indent $\Psi$(Travel,$\sigma_{1}$)=$\sigma_{2}$\\
+	$\Psi$(Buy,$\sigma_{2}$)=$\sigma_{1}$ \indent $\Psi$(Travel,$\sigma_{2}$)=$\sigma_{2}$\\
 	\subsubsection{Graph}\label{par:p401}
 	\begin{figure}[H]
 		\centering
