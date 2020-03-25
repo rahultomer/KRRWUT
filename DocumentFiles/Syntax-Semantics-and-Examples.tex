@@ -4,7 +4,10 @@
 \usepackage{tabularx}
 \usepackage{adjustbox}
 \usepackage{amsmath,amssymb,trimclip,adjustbox}
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
 \usepackage{textcomp}
+\usepackage{booktabs}
 \begin{document}
 	\begin{titlepage}
 		\begin{center}
@@ -57,20 +60,7 @@ of objects (in consequence, the state of the world).
 		\item Partial description of any state of the system are allowed.
 		\item No constraints are defined.	 
 	\end{enumerate}
-	\section{Scenario}\label{sec:scenario}
-	A. Can a given program:
-	\begin{itemize}
-		\item always
-		\item ever
-	\end{itemize} 
-	be executed during at most cost units? \\
-	B. Does a given condition \(\alpha\) hold 
-	\begin{itemize}
-		\item always
-		\item ever
-	\end{itemize}
-	after performing a given program in an initial state?\\ 
-	C. Does a given goal condition $\Upsilon$ hold after performing a given program P in an initial state?
+	
 	\section{Syntax}\label{sec:syntax}
 	A system is defined by a set of fluent {\bfseries F}, actions {\bfseries Ac} and Cost {\bfseries k \(\in\) N} and characterized by signature {\bfseries(F, Ac, k)}\\
 	A formula is any propositional combination of fluent:
@@ -82,93 +72,49 @@ of objects (in consequence, the state of the world).
 	\item $\bot$: falsity
 	\end{enumerate}
 	The system and changes occurring within can be described through a sequence of statements defined in the table:
-	\begin{table}[h]
-		\centering
-			\begin{tabular}{|p{2cm}|p{3cm}|p{8cm}|}
-				\hline
-				\bfseries Statement & \bfseries Format & \bfseries Description\\
-				\hline
-				Initial Statement & initially \(\alpha\) & Initial condition \(\alpha\) of the fluent \\
-				\hline
-				Effect Statement & Ac costing k causes \(\alpha\) & Perform action Ac for cost k in any state leads to the effect \(\alpha\).\\
-				\hline	
-				Release Statement & Ac costing k causes \(\alpha\) & Perform action Ac for cost k in any state might, but need not, change the value of \(\alpha\).\\
-				\hline
-				Constraint Statement & Always \(\alpha\) & Every state satisfies condition \(\alpha\).\\
-				\hline
-				%Fluent Specification Statement & & \\	
-				%\hline	
-				Value Statement & \(\alpha\) after A1....An & The condition \(\alpha\) always (must) hold after performing the sequence A1 ….An of actions.\\
-				\hline
-				Observation Statement & observable \(\alpha\) after A1 ….An & The condition \(\alpha\) sometimes (may) holds after performing the sequence A1 ….An of actions.\\
-				\hline
-			\end{tabular}
-		\caption{Sequence of Statements}
-		\label{tab:table01}
-	\end{table}
+	\begin{table}[htbp]
+  \centering
+    \begin{tabular}{|p{4cm}|p{4cm}|p{7cm}|}
+    \hline
+    \multicolumn{1}{|c|}{Statement} & \multicolumn{1}{c|}{Format} & \multicolumn{1}{c|}{Description} \\
+    \hline
+    Initial Statement & Initially $\alpha$ & \multicolumn{1}{c|}{Initial condition $\alpha$ of the fluent.} \\
+    \hline
+    Effect Statement & Ac costing k causes $\alpha$ & Perform action Ac for cost k in any state leads to the effect $\alpha$. \\
+    \hline
+    Value Statement & $\alpha$ after A1 ….An & The condition $\alpha$ always (must) hold after performing the sequence A1 ….An of actions. \\
+    \hline
+    Cost Statement & Cost of $\alpha$ after A1 ….An & The condition $\alpha$ holds a constant cost  for performing any action in the sequence A1 ….An of actions. \\
+    \hline
+    \end{tabular}
+    \caption{Syntax Table}
+  \label{tab:table01}
+\end{table}
+
 	\section{Semantics}
-	Let D be an action domain of the class AQ. A structure for a language L:\par
-	S = ($  \Sigma  $ , $ \sigma $ 0, k) where;\par
 	\begin{itemize}
-		\item $  \Sigma  $  is non empty set of states.\par
-		
-		\item $ \sigma $ 0 $ \in $  $ \sum $ is an initial state
-	\end{itemize}\par
-	$ \sum $  is the transition function dependent on any possible states satisfying $ \sigma $  $ \in $  $  \Sigma  $ , as well as any\par
-	actions A $ \in $  Ac performed in cost k $ \in $  N.\par
-	\begin{itemize}
-		\item k: Ac $ \rightarrow $  N
-	\end{itemize}\par
-	As is expected, any action A $ \in $  Ac and in any state $ \sigma $  $ \in $  $  \Sigma  $ , Additionally:\par
-	\begin{itemize}
-		\item $  \Sigma  $  is an array of states fulfilling any constraints.
-	\end{itemize}\par
-	Now, consider action domain D. For a structure S = ($ \sum $ , $ \sigma $ 0, k),\par
-	a partial mapping $ \psi $ s : Ac$\ast \times \sum \rightarrow $  2\par
-	$ \sum $  is defined as:\par
-	\begin{itemize}
-		\item $ \psi $ s($ \sum $ , $ \sigma $ , k) = $ \sigma $ \par
-		
-		\item If $ \psi $ s is defined for 1 n performed at state $ \sigma $  for cost k $ \in $  N, then $ \psi $ s(( 1 n-1), $ \sigma $ , k) .
-	\end{itemize}\par
-	For D being the action domain and S = ($ \sum $ , $ \sigma $ 0, k) being a structure for AQ it can be stated that:\par
-	\begin{itemize}
-		\item A fluent f $ \in $  F if inertial in D iff (non-inertial f) $ \notin $  D.\par
-		
-		\item A value statement ($ \alpha $  after 1 n for cost k) is true in S iff $ \psi $ s(( 1 n-1), $ \sigma $ , k) $\vDash$  $ \alpha $  for every $ \psi $ s previously defined.\par
-		
-		\item An observation Statement (observable $ \alpha $  after 1 n for cost k) is true in D iff $ \psi $ s(( 1 n-1), $ \sigma $ ,k) $\vDash$  $ \alpha $  for some $ \psi $ s previously defined.\par
-	\end{itemize}
-	$ \sum $  for every A $ \in $  Ac, k $ \in $  N and $ \sigma $  $ \in $  $ \sum $  is:\par
-	for all $\sigma$ , $\sigma$ \textquoteright $\in$  $\sum$ and for every A $\in$ Ac, k $\in$ N assume New (A, $ \sigma $ , $ \sigma $ \textquoteright, t\textquoteright) is a set of all literals such\par
-	that $ \sigma $ \textquoteright $\vDash$  and:\par
-	\begin{itemize}
-		\item f is inertial (f $ \in $  F) and $ \sigma $ (f) $ \neq $  $ \sigma $ \textquoteright(f), or\par
-		
-		\item For some statement (A releases f) $ \in $  D it holds $ \sigma $ 
-	\end{itemize}\par
-	\subsection{Denote:}
-	\begin{enumerate}
-		\item = the action domain obtained from D by removing all constraint statements.\par
-		
-		\item Mod( ) = the set of all models = ($  \Sigma  $ , , ) of in the sense of AR.\par
-		
-		\item Mod$\ast$ ( ) = the set of all model S = ($  \Sigma  $ , 0) $ \in $  Mod( ) such that 0 satisfies all constraint statements in D.
-	\end{enumerate}\par
-	Let S$\ast$  = ($  \Sigma  $ $\ast$ , , k) $ \in $  Mod$\ast$ ( ), Put:\par
-	\begin{itemize}
-		\item $  \Sigma  $  $ \subseteq $  $  \Sigma  $ $\ast$  be the set of states satisfying all constraint statements in D
-	\end{itemize}\par
-	\subsection{QUERIES}
-	\subsubsection{Value Query}
-	necessary $ \alpha $  after (Ac1,k),$ \ldots $ ,(Acn,k) from $\pi$
-	possibly $ \alpha $  after (Ac1,k),$ \ldots $ ,(Acn,k) from $\pi$\\
-	The first statement holds that condition $ \alpha $  occurs ALWAYS after performing certain actions in specific cost expressed in (Acn,k). The second statement implies that $ \alpha $  SOMETIMES holds after performing certain action in specific cost expressed in (Acn,k). When the option from $\pi$ is omitted, these queries refer to the initial state.\par
-	\subsubsection{Executability Query}
-	necessary executable (Ac1,k),$ \ldots $ ,(Acn,k) from $\pi$
-	possibly executable after (Ac1,k),$ \ldots $ ,(Acn,k) from $\pi$\\
-	The first statement holds that actions performed in specific cost specified in (Ac1,c),$ \ldots $ ,(Acn,c) are ALWAYS executable from any state $\pi$, while the second statement implies that actions performed in specific cost specified in (Ac1,k),$ \ldots $ ,(Acn,k) may be executed from any state where $\pi$ is true.\par
-	Similarly, to the value queries the option from $\pi$ is omitted, these queries refer to the initial state\par
+\item 	A state is a mapping $\sigma$ : F $\rightarrow$ {0, 1}. For any f $\in$ F, if $\sigma$(f) = 1, then we say that f holds in $\sigma$ and write $\sigma$   $\vDash$   f. If $\sigma$(f) = 0, then we write $\sigma$   $\vDash$   ¬f and say that f does not hold in $\sigma$. Let $\sigma$ stand for the set of all states.
+\item 	A state is a mapping $\sigma$ : F $\rightarrow$ {0, 1}. For any f $\in$ F, if $\sigma$(f) = 1, then we say that f holds in $\sigma$ and write $\sigma$   $\vDash$   f. If $\sigma$(f) = 0, then we write $\sigma$   $\vDash$   ¬f and say that f does not hold in $\sigma$. Let $\sigma$ stand for the set of all states.
+\item 	A transition function is a mapping $\Upsilon$ : Ac $\times$ $\sigma$ → $\sigma$. For any $\sigma$ $\in$ $\sigma$ and for any A $\in$ Ac, $\Upsilon$(A, $\sigma$) is the state resulting from performing the action A in the state $\sigma$.
+\item 	A transition function is generalized to the mapping $\Upsilon$ $\ast$ : Ac $\ast$  $\times$  $\sigma$ $\rightarrow$ $\sigma$ as follows: 
+$\Upsilon\ast$ ( $\varepsilon$ , $\sigma$) = $\sigma$, $\Upsilon\ast$ ((A1, . . . , An), $\sigma$) = $\Upsilon$(An, $\Upsilon\ast$ (A1, . . . , An-1)).
+\item 	A transition function is generalized to the mapping $\Upsilon\ast$ : Ac $\ast$  $\times$  $\sigma$ $\rightarrow$ $\sigma$ as follows: $\Upsilon\ast$ ( $\varepsilon$ , $\sigma$) = $\sigma$, $\Upsilon\ast$ ((A1, . . . , An), $\sigma$) = $\Upsilon$(An, $\Upsilon\ast$ (A1, . . . , An-1)).
+\item 	Let L be an action language of the class A over the signature Y = (F, Ac). A structure for L is a pair S = ($\Upsilon$, $\sigma$0) where $\Upsilon$ is a transition function and $\sigma$0 $\in$ $\sigma$ is the initial state
+\item 	Let s = ($\Upsilon$, $\sigma$0) be a structure for L. A statement s is true in S, in symbols S   $\vDash$   s, iff if s is of the form f after A1, . . . , An, then $\Upsilon$((A1, . . . , An), $\sigma$0)   $\vDash$   f;
+\item 	Let s = ($\Upsilon$, $\sigma$0) be a structure for L. A statement s is true in S, in symbols S   $\vDash$   s, iff if s is of the form f after A1, . . . , An, then $\Upsilon$((A1, . . . , An), $\sigma$0)   $\vDash$   f; if s is of the form A causes f if g1, . . . , gk, then for every $\sigma$ $\in$ $\sigma$ such that $\sigma$   $\vDash$   gi , i = 1, . . . , k, $\Upsilon$(A, $\sigma$)   $\vDash$   f.
+\end{itemize}
+Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_{c}$). A structure S = ($\Psi$,$\sigma$0,k) is a model of D iff\\
+(M1) for every s $\in$ D, S \textbar= s;\\
+(M2) for every A $\in$ Ac, for every f,g1,...,gn $\in$ F, and for every $\sigma\in\sum$, if one of the following conditions holds:
+\\\indent
+(i) D contains an effect statement\\
+\indent\indent 
+{\bfseries A causes $\overline{f}$ for the cost k if} $\overline{g}$,...,$\overline{gn}$,\\
+\indent where k $\neq$ 0 and $\sigma$\textbar$\neq$  gi for some i = 1,...,n\\
+\indent(ii) D does not contain an effect statement\\
+\indent\indent{\bfseries A causes $\overline{f}$ if} g1,...,gn\\
+\indent then $\sigma$ \textbar= f iff $\Psi$(A,$\sigma$,k) \textbar= f. where k = 0.\\
+
 	\section{Examples}\label{sec:Examples}
 	\subsection{Example 01}\label{example:ex01}
 	\subsubsection{Description}\label{par:p101}
@@ -206,7 +152,7 @@ of objects (in consequence, the state of the world).
 	\end{figure}
 	\subsection{Example 02}\label{example:ex02}
 	\subsubsection{Description}\label{par:p102}
-	John visits a painter to buy a specific painting. The cost of painting is 200$\$$  if its available in the shop. But if painting is not available then John needs to order a new one to be painted that will cost him 100$\$$  extra. At any time only one copy of painting is available and another one to be ordered once sold.
+	John visits a painter to buy a specific painting. The cost of painting is 200\$ if its available in the shop. But if painting is not available then John needs to order a new one to be painted and will buy once its available. At any time only one copy of painting is available and another one to be ordered once sold. 
 	
 	\subsubsection{Representation:}\label{par:p202}
 	\indent 
@@ -214,55 +160,48 @@ of objects (in consequence, the state of the world).
 	Actions: BUY, ORDER.\par
 	BUY costs 200$\$$  \textbf{if} available\par
 	
-	BUY costs 300$\$$  \textbf{after} ORDER\par
+	BUY costs 0$\$$  \textbf{if} ¬available\par
 	
 	
-	MIN COST:0$\$$ \par
+	Order Cost: 0 $\$$
 	
-	MAX COST: 300$\$$ \par
-	
-	
-	Always ORDER $\rightarrow$ available\par
-	
-	Always BUY $\rightarrow$ sold\par
-	
-	initially: ¬available $\vee$  ¬sold\par
+	initially: ¬available $\wedge$  ¬sold\par
 	
 	BUY causes sold if available\par
 	
 	ORDER causes available if ¬available\par
 	
-	¬available after BUY\\
+	BUY causes ¬available\\
 	
 	\subsubsection{Calculation:}\label{par:p302}
 	\indent \par
-	$ \sum $ = $ \{ $ $ \sigma $ 0, $ \sigma $ 1, $ \sigma $ 2, $ \sigma $ 3$ \} $ \par
+	$ \sum $ = $ \{ $ $ \sigma $0, $ \sigma $1, $ \sigma $2, $ \sigma $3$ \} $ \par
 	
-	$ \sigma $ 0 = $ \{ $ ¬available, ¬sold$ \} $ \par
+	$ \sigma $0 = $ \{ $ ¬available, ¬sold$ \} $ \par
 	
-	$ \sigma $ 1 = $ \{ $ ¬available, sold$ \} $ \par
+	$ \sigma $1 = $ \{ $ ¬available, sold$ \} $ \par
 	
-	$ \sigma $ 2 = $ \{ $ available, ¬sold$ \} $ \par
+	$ \sigma $2 = $ \{ $ available, ¬sold$ \} $ \par
 	
-	$ \sigma $ 3 = $ \{ $ available, sold$ \} $ \par
-	\(  \Psi  \)  (BUY, $ \sigma $ 0) = $ \sigma $ 0\par
+	$ \sigma $3 = $ \{ $ available, sold$ \} $ \par
+	\(  \Psi  \)  (BUY, $ \sigma $0) = $ \sigma $0\par
 	
-	\(  \Psi  \)  (ORDER, $ \sigma $ 0) = $ \sigma $ 1\par
+	\(  \Psi  \)  (ORDER, $ \sigma $0) = $ \sigma $1\par
 	
-	\(  \Psi  \)  (BUY, $ \sigma $ 1) = $ \sigma $ 2\par
+	\(  \Psi  \)  (BUY, $ \sigma $1) = $ \sigma $2\par
 	
-	\(  \Psi  \)  (ORDER, $ \sigma $ 1) = $ \sigma $ 1\par
+	\(  \Psi  \)  (ORDER, $ \sigma $1) = $ \sigma $1\par
 	
-	\(  \Psi  \)  (BUY, $ \sigma $ 2) = $ \sigma $ 2\par
+	\(  \Psi  \)  (BUY, $ \sigma $2) = $ \sigma $2\par
 	
-	\(  \Psi  \)  (ORDER, $ \sigma $ 2) = $ \sigma $ 1\par
+	\(  \Psi  \)  (ORDER, $ \sigma $2) = $ \sigma $1\par
 	
-	\(  \Psi  \)  (BUY, $ \sigma $ 3) = $ \sigma $ 2\par
+	\(  \Psi  \)  (BUY, $ \sigma $3) = $ \sigma $2\par
 	
-	\(  \Psi  \)  (ORDER, $ \sigma $ 3) = $ \sigma $ 3\par
+	\(  \Psi  \)  (ORDER, $ \sigma $3) = $ \sigma $3\par
 	\subsubsection{Graph}\label{par:p402}
 	\begin{figure}[H]
-		\includegraphics[width=1\linewidth, height=0.3\textheight]{./media/image1.png}
+		\includegraphics[width=1\linewidth, height=0.3\textheight]{./media/image1.jpeg}
 		\label{Figure:f02}
 		\caption{Example 02}
 	\end{figure}
