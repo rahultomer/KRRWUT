@@ -64,22 +64,21 @@ of objects (in consequence, the state of the world).
 	\section{Syntax}\label{sec:syntax}
 	
 	
-	A system is defined by a set of fluent {\bfseries F}, actions {\bfseries Ac} and Cost {\bfseries k \(\in\) N} and characterized by signature {\bfseries(F, Ac, k)}\\
-	A literal is either a fluent f or its negation $\neg$f.\\
-	A formula is any propositional combination of fluent:
-	
-	$\alpha$ :: $\neg\alpha$ \textbar $\alpha\wedge\beta$ \textbar $\alpha\vee\beta$ \textbar $\alpha\rightarrow\beta$\\
-	Two specific formulas:
-	\begin{enumerate}
-	\item $\top$: truth
-	\item $\bot$: falsity
-	\end{enumerate}
+	\subsection{Signature :}\label{sec:Signature} 
+
+A signature is a pair $\Upsilon$ = (F, Ac, k) where F is a set of fluents; Ac is a set of actions and Cost k.
+
+\subsection{Literal :}\label{sec:Literal} 
+
+A literal is either a fluent f or its negation ¬f.\\
+\textbf{Notation:} for a fluent f $\epsilon$ F, we write $\overline{f}$to denote the literal corresponding to f, i.e., either f or ¬f.
+\subsection{Statements :}\label{sec:Statements} 
 	The system and changes occurring within can be described through a sequence of statements defined in the table:
-	\begin{table}[htbp]
+	\begin{table}[H]
   \centering
     \begin{tabular}{|p{2cm}|p{4cm}|p{9cm}|}
     \hline
-    \multicolumn{1}{|c|}{Statement} & \multicolumn{1}{c|}{Format} & \multicolumn{1}{c|}{Description} \\
+    \multicolumn{1}{|c|}{\textbf{Statement}} & \multicolumn{1}{c|}{\textbf{Format}} & \multicolumn{1}{c|}{\textbf{Description}} \\
     \hline
     Initial Statement & Initially $\alpha$ & \multicolumn{1}{c|}{Initial condition $\alpha$ of the fluent.} \\
     \hline
