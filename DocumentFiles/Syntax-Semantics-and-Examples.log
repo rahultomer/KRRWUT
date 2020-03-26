@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.23)  26 MAR 2020 00:56
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.18)  26 MAR 2020 00:28
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.23)  26 MAR 2020 01:02
 entering extended mode
 **./Syntax-Semantics-and-Examples.tex
 (Syntax-Semantics-and-Examples.tex
@@ -303,21 +299,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--88
 []|\OT1/cmr/m/n/10.95 Value
  []
 
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.91     \textbf{\hline}
-                        
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
 
 Overfull \hbox (104.3913pt too wide) in paragraph at lines 79--93
  [][] 
  []
 
 [3]
-<<<<<<< HEAD
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
 10.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
@@ -337,44 +324,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--134
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 135--142
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 110--121
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 132--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--143
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
-
- []
-
-
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 135--142
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 136--143
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 135--142
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 136--143
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 
  []
 
 <./media/ex01.png, id=29, 693.792pt x 249.93375pt>
 File: ./media/ex01.png Graphic file (type png)
 <use ./media/ex01.png>
-<<<<<<< HEAD
 Package pdftex.def Info: ./media/ex01.png  used on input line 145.
 (pdftex.def)             Requested size: 433.61893pt x 216.81897pt.
 
@@ -384,24 +349,12 @@ Overfull \hbox (73.61893pt too wide) in paragraph at lines 145--147
 
 [5] [6 <./media/ex01.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 170--171
-=======
-Package pdftex.def Info: ./media/ex01.png  used on input line 146.
-(pdftex.def)             Requested size: 433.61893pt x 216.81897pt.
-
-Overfull \hbox (73.61893pt too wide) in paragraph at lines 146--148
- [][] 
- []
-
-[5 <./media/ex01.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 
  []
 
-<./media/image1.jpeg, id=36, 976.64874pt x 524.96124pt>
+<./media/image1.jpeg, id=40, 976.64874pt x 524.96124pt>
 File: ./media/image1.jpeg Graphic file (type jpg)
 <use ./media/image1.jpeg>
-<<<<<<< HEAD
 Package pdftex.def Info: ./media/image1.jpeg  used on input line 200.
 (pdftex.def)             Requested size: 359.99826pt x 216.55719pt.
 
@@ -411,130 +364,70 @@ Underfull \hbox (badness 10000) in paragraph at lines 200--202
 
 [7]
 Underfull \hbox (badness 10000) in paragraph at lines 206--208
-=======
-Package pdftex.def Info: ./media/image1.jpeg  used on input line 201.
-(pdftex.def)             Requested size: 359.99826pt x 216.55719pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--203
-[][]
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 207--209
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 206--208
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 207--209
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 209--220
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 210--221
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 209--220
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 210--221
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 209--220
 
  []
 
 [8 <./media/image1.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 221--244
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 210--221
-
- []
-
-[7 <./media/image1.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 222--245
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 221--244
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 222--245
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 221--244
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 222--245
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 221--244
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 222--245
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 221--244
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 222--245
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 221--244
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 222--245
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 221--244
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 222--245
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 
  []
 
-<./media/figure01.png, id=44, 793.7655pt x 367.97475pt>
+<./media/figure01.png, id=47, 793.7655pt x 367.97475pt>
 File: ./media/figure01.png Graphic file (type png)
 <use ./media/figure01.png>
-<<<<<<< HEAD
 Package pdftex.def Info: ./media/figure01.png  used on input line 246.
-=======
-Package pdftex.def Info: ./media/figure01.png  used on input line 247.
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
 (pdftex.def)             Requested size: 360.00113pt x 162.42033pt.
-[8] [9 <./media/figure01.png (PNG copy)>] (Syntax-Semantics-and-Examples.lof)
+[9] [10 <./media/figure01.png (PNG copy)>] (Syntax-Semantics-and-Examples.lof)
 \tf@lof=\write4
 \openout4 = `Syntax-Semantics-and-Examples.lof'.
 
@@ -543,9 +436,8 @@ Package pdftex.def Info: ./media/figure01.png  used on input line 247.
 \tf@lot=\write5
 \openout5 = `Syntax-Semantics-and-Examples.lot'.
 
- [10] (Syntax-Semantics-and-Examples.aux) ) 
+ [11] (Syntax-Semantics-and-Examples.aux) ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
  3622 strings out of 480934
  51366 string characters out of 2909665
  290202 words of memory out of 3000000
@@ -565,29 +457,9 @@ cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Syntax-Semantics-and-Examples.pdf (12 pages, 511918 bytes).
-=======
- 3624 strings out of 481556
- 49641 string characters out of 2931569
- 287278 words of memory out of 3000000
- 18805 multiletter control sequences out of 15000+200000
- 539146 words of font info for 49 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 31i,11n,32p,466b,372s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\admin\AppData\Local\MiKTe
-X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><E:/miktext/fonts/type1/pu
-blic/amsfonts/cm/cmbx10.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/cmbx12.p
-fb><E:/miktext/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><E:/miktext/fonts/typ
-e1/public/amsfonts/cm/cmex10.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/cmmi8.pfb><E:/miktext/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/c
-mr12.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/miktext/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><E:/miktext/fonts/type1/public/amsfonts/sym
-bols/msam10.pfb>
-Output written on Syntax-Semantics-and-Examples.pdf (11 pages, 512308 bytes).
->>>>>>> 2efc9e2a2d58e4fe42e4fd2f222041875a2ad61c
+Output written on Syntax-Semantics-and-Examples.pdf (12 pages, 512072 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
+ 99 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
