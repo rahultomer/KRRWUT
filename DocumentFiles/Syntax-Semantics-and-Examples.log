@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.23)  26 MAR 2020 01:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.23)  9 APR 2020 20:44
 entering extended mode
 **./Syntax-Semantics-and-Examples.tex
 (Syntax-Semantics-and-Examples.tex
@@ -289,6 +289,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--83
 []|\OT1/cmr/m/n/10.95 Initial
  []
 
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 8
+3.
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
 
 Underfull \hbox (badness 10000) in paragraph at lines 85--85
 []|\OT1/cmr/m/n/10.95 Effect
@@ -305,129 +312,126 @@ Overfull \hbox (104.3913pt too wide) in paragraph at lines 79--93
  []
 
 [3]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-10.
- ("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
-File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--120
+Underfull \hbox (badness 10000) in paragraph at lines 114--125
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 131--134
+Underfull \hbox (badness 10000) in paragraph at lines 136--139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--142
+Underfull \hbox (badness 10000) in paragraph at lines 140--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--142
+Underfull \hbox (badness 10000) in paragraph at lines 140--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--142
+Underfull \hbox (badness 10000) in paragraph at lines 140--147
 
  []
 
-<./media/ex01.png, id=29, 693.792pt x 249.93375pt>
+<./media/ex01.png, id=31, 693.792pt x 249.93375pt>
 File: ./media/ex01.png Graphic file (type png)
 <use ./media/ex01.png>
-Package pdftex.def Info: ./media/ex01.png  used on input line 145.
+Package pdftex.def Info: ./media/ex01.png  used on input line 150.
 (pdftex.def)             Requested size: 433.61893pt x 216.81897pt.
 
-Overfull \hbox (73.61893pt too wide) in paragraph at lines 145--147
+Overfull \hbox (73.61893pt too wide) in paragraph at lines 150--152
  [][] 
  []
 
-[5] [6 <./media/ex01.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+[5 <./media/ex01.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
-<./media/image1.jpeg, id=40, 976.64874pt x 524.96124pt>
+<./media/image1.jpeg, id=37, 976.64874pt x 524.96124pt>
 File: ./media/image1.jpeg Graphic file (type jpg)
 <use ./media/image1.jpeg>
-Package pdftex.def Info: ./media/image1.jpeg  used on input line 200.
+Package pdftex.def Info: ./media/image1.jpeg  used on input line 205.
 (pdftex.def)             Requested size: 359.99826pt x 216.55719pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--202
+Underfull \hbox (badness 10000) in paragraph at lines 205--207
 [][]
  []
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 206--208
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 211--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--208
+Underfull \hbox (badness 10000) in paragraph at lines 211--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--220
+Underfull \hbox (badness 10000) in paragraph at lines 214--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--220
+Underfull \hbox (badness 10000) in paragraph at lines 214--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--220
-
- []
-
-[8 <./media/image1.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 221--244
+Underfull \hbox (badness 10000) in paragraph at lines 214--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--244
+Underfull \hbox (badness 10000) in paragraph at lines 214--226
+
+ []
+
+[7 <./media/image1.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 227--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--244
+Underfull \hbox (badness 10000) in paragraph at lines 227--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--244
+Underfull \hbox (badness 10000) in paragraph at lines 227--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--244
+Underfull \hbox (badness 10000) in paragraph at lines 227--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--244
+Underfull \hbox (badness 10000) in paragraph at lines 227--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--244
+Underfull \hbox (badness 10000) in paragraph at lines 227--250
 
  []
 
-<./media/figure01.png, id=47, 793.7655pt x 367.97475pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--250
+
+ []
+
+<./media/figure01.png, id=45, 793.7655pt x 367.97475pt>
 File: ./media/figure01.png Graphic file (type png)
 <use ./media/figure01.png>
-Package pdftex.def Info: ./media/figure01.png  used on input line 246.
+Package pdftex.def Info: ./media/figure01.png  used on input line 252.
 (pdftex.def)             Requested size: 360.00113pt x 162.42033pt.
-[9] [10 <./media/figure01.png (PNG copy)>] (Syntax-Semantics-and-Examples.lof)
+[8] [9 <./media/figure01.png (PNG copy)>] (Syntax-Semantics-and-Examples.lof)
 \tf@lof=\write4
 \openout4 = `Syntax-Semantics-and-Examples.lof'.
 
@@ -436,15 +440,15 @@ Package pdftex.def Info: ./media/figure01.png  used on input line 246.
 \tf@lot=\write5
 \openout5 = `Syntax-Semantics-and-Examples.lot'.
 
- [11] (Syntax-Semantics-and-Examples.aux) ) 
+ [10] (Syntax-Semantics-and-Examples.aux) ) 
 Here is how much of TeX's memory you used:
  3622 strings out of 480934
  51366 string characters out of 2909665
- 290202 words of memory out of 3000000
+ 290200 words of memory out of 3000000
  19425 multiletter control sequences out of 15000+200000
  539146 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,11n,32p,466b,372s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,12n,32p,552b,372s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Haran's PC\AppData\Local\
 MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/
@@ -456,10 +460,11 @@ cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Syntax-Semantics-and-Examples.pdf (12 pages, 512072 bytes).
+.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Syntax-Semantics-and-Examples.pdf (11 pages, 523109 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
+ 100 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
