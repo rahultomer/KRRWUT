@@ -1,0 +1,21 @@
+diff a/DocumentFiles/Syntax-Semantics-and-Examples.log b/DocumentFiles/Syntax-Semantics-and-Examples.log	(rejected hunks)
+@@ -1,12 +0,15 @@
+-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.23)  9 APR 2020 21:05
++This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.9)  10 APR 2020 00:16
+ entering extended mode
+ **./Syntax-Semantics-and-Examples.tex
+ (Syntax-Semantics-and-Examples.tex
+ LaTeX2e <2020-02-02> patch level 5
+-L3 programming layer <2020-03-06>
+-("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
++L3 programming layer <2020-04-06>
++("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base
++\article.cls"
+ Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+-("C:\Program Files\MiKTeX 2.9\tex/latex/base\size11.clo"
++
++("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base
++\size11.clo"
+ File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+ )
+ \c@part=\count167

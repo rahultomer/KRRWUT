@@ -141,9 +141,9 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_
 	$\sigma_{0}$ = $\lbrace$ fuel, reserve $\rbrace$ \indent $\sigma_{1}$ = $\lbrace$ $\neg$fuel, reserve $\rbrace$\\
 	$\sigma_{2}$ = $\lbrace$ $\neg$fuel, $\neg$reserve $\rbrace$ 
 	\\ \\
-	$\Psi$(Buy,$\sigma_{0}$)=$\sigma_{0}$ \indent $\Psi$(Travel,$\sigma_{0}$)=$\sigma_{1}$\\
-	$\Psi$(Buy,$\sigma_{1}$)=$\sigma_{1}$ \indent $\Psi$(Travel,$\sigma_{1}$)=$\sigma_{2}$\\
-	$\Psi$(Buy,$\sigma_{2}$)=$\sigma_{1}$ \indent $\Psi$(Travel,$\sigma_{2}$)=$\sigma_{2}$\\
+	$\Psi$(Buy,0,$\sigma_{0}$)=$\sigma_{0}$ \indent $\Psi$(Travel,50,$\sigma_{0}$)=$\sigma_{1}$\\
+	$\Psi$(Buy,0,$\sigma_{1}$)=$\sigma_{1}$ \indent $\Psi$(Travel,50,$\sigma_{1}$)=$\sigma_{2}$\\
+	$\Psi$(Buy,100,$\sigma_{2}$)=$\sigma_{1}$ \indent $\Psi$(Travel,0,$\sigma_{2}$)=$\sigma_{2}$\\
 	\subsubsection{Graph}\label{par:p401}
 	\begin{figure}[H]
 		\centering
@@ -184,6 +184,7 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_
 	
 	$ \sigma _{2}$ = $ \{ $ available, ¬sold$ \} $ \par
 	
+<<<<<<< HEAD
 	$ \sigma _{3}$ = $ \{ $ available, sold$ \} $ \par
 	\(  \Psi  \)  (BUY, $ \sigma _{0}$) = $ \sigma _{0}$\par
 	
@@ -200,9 +201,27 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_
 	\(  \Psi  \)  (BUY, $ \sigma _{3}$) = $ \sigma _{2}$\par
 	
 	\(  \Psi  \)  (ORDER, $ \sigma _{3}$) = $ \sigma _{3}$\par
+=======
+	$ \sigma $3 = $ \{ $ available, sold$ \} $ \par
+	\(  \Psi  \)  (BUY,0, $ \sigma $0) = $ \sigma $0\par
+	
+	\(  \Psi  \)  (ORDER,50, $ \sigma $0) = $ \sigma $1\par
+	
+	\(  \Psi  \)  (BUY,200 $ \sigma $1) = $ \sigma $2\par
+	
+	\(  \Psi  \)  (ORDER,0, $ \sigma $1) = $ \sigma $1\par
+	
+	\(  \Psi  \)  (BUY,0, $ \sigma $2) = $ \sigma $2\par
+	
+	\(  \Psi  \)  (ORDER,50, $ \sigma $2) = $ \sigma $1\par
+	
+	\(  \Psi  \)  (BUY,200, $ \sigma $3) = $ \sigma $2\par
+	
+	\(  \Psi  \)  (ORDER,0, $ \sigma $3) = $ \sigma $3\par
+>>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 	\subsubsection{Graph}\label{par:p402}
 	\begin{figure}[H]
-		\includegraphics[width=1\linewidth, height=0.4\textheight]{./media/image1.jpeg}
+		\includegraphics[width=1.2\linewidth, height=0.4\textheight]{./media/example2_graph.png}
 		\label{Figure:f02}
 		\caption{Example 02}
 	\end{figure}
@@ -231,21 +250,21 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_
 	$\sigma_{2}$ = \{$\neg$cooked, $\neg$hungry\}\\
 	$\sigma_{3}$ = \{cooked, $\neg$hungry\}\\
 	\\
-	$\psi$(eat, $\sigma_{0}$) = $\sigma_{0}$\\
-	$\psi$(cook, $\sigma_{0}$) = $\sigma_{1}$\\
-	$\psi$(play, $\sigma_{0}$) = $\sigma_{0}$\\
+	$\psi$(eat,0, $\sigma_{0}$) = $\sigma_{0}$\\
+	$\psi$(cook,15, $\sigma_{0}$) = $\sigma_{1}$\\
+	$\psi$(play,0, $\sigma_{0}$) = $\sigma_{0}$\\
 	\\
-	$\psi$(eat, $\sigma_{1}$) = $\sigma_{2}$\\
-	$\psi$(cook, $\sigma_{1}$) = $\sigma_{1}$\\
-	$\psi$(play, $\sigma_{1}$) = $\sigma_{1}$\\
+	$\psi$(eat,5, $\sigma_{1}$) = $\sigma_{2}$\\
+	$\psi$(cook,0, $\sigma_{1}$) = $\sigma_{1}$\\
+	$\psi$(play,0, $\sigma_{1}$) = $\sigma_{1}$\\
 	\\
-	$\psi$(eat, $\sigma_{2}$) = $\sigma_{2}$\\
-	$\psi$(cook, $\sigma_{2}$) = $\sigma_{3}$\\
-	$\psi$(play, $\sigma_{2}$) = $\sigma_{1}$\\
+	$\psi$(eat,0, $\sigma_{2}$) = $\sigma_{2}$\\
+	$\psi$(cook,15, $\sigma_{2}$) = $\sigma_{3}$\\
+	$\psi$(play,20, $\sigma_{2}$) = $\sigma_{1}$\\
 	\\
-	$\psi$(eat, $\sigma_{3}$) = $\sigma_{2}$\\
-	$\psi$(cook, $\sigma_{3}$) = $\sigma_{3}$\\
-	$\psi$(play, $\sigma_{3}$) = $\sigma_{1}$\\
+	$\psi$(eat,5, $\sigma_{3}$) = $\sigma_{2}$\\
+	$\psi$(cook,0, $\sigma_{3}$) = $\sigma_{3}$\\
+	$\psi$(play,20, $\sigma_{3}$) = $\sigma_{1}$\\
 	\\
 	\subsubsection{Graph}\label{par:p403}
 	\begin{figure}[H]
