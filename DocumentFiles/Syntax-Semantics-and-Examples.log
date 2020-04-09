@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.9)  10 APR 2020 00:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.9)  10 APR 2020 00:57
 entering extended mode
 **./Syntax-Semantics-and-Examples.tex
 (Syntax-Semantics-and-Examples.tex
@@ -11,16 +10,6 @@ Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base
 \size11.clo"
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.18)  9 APR 2020 23:21
-entering extended mode
-**./Syntax-Semantics-and-Examples.tex
-(Syntax-Semantics-and-Examples.tex
-LaTeX2e <2020-02-02> patch level 2
-L3 programming layer <2020-02-14> (E:\miktext\tex/latex/base\article.cls
-Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-(E:\miktext\tex/latex/base\size11.clo
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count167
@@ -34,37 +23,25 @@ File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
-<<<<<<< HEAD
 )
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/floa
 t\float.sty"
-=======
-) (E:\miktext\tex/latex/float\float.sty
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count175
-\float@exts=\toks14
+\float@exts=\toks15
 \float@box=\box45
-\@float@everytoks=\toks15
+\@float@everytoks=\toks16
 \@floatcapt=\box46
 )
-<<<<<<< HEAD
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/grap
 hics\graphicx.sty"
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/grap
 hics\keyval.sty"
-=======
-(E:\miktext\tex/latex/graphics\graphicx.sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(E:\miktext\tex/latex/graphics\keyval.sty
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks16
+\KV@toks@=\toks17
 )
-<<<<<<< HEAD
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/grap
 hics\graphics.sty"
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
@@ -75,47 +52,28 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/grap
 hics-cfg\graphics.cfg"
-=======
-(E:\miktext\tex/latex/graphics\graphics.sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
-
-(E:\miktext\tex/latex/graphics\trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(E:\miktext\tex/latex/graphics-cfg\graphics.cfg
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-<<<<<<< HEAD
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/grap
 hics-def\pdftex.def"
-=======
-(E:\miktext\tex/latex/graphics-def\pdftex.def
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen135
 \Gin@req@width=\dimen136
 )
-<<<<<<< HEAD
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tool
 s\tabularx.sty"
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tool
 s\array.sty"
-=======
-(E:\miktext\tex/latex/tools\tabularx.sty
-Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
- (E:\miktext\tex/latex/tools\array.sty
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \col@sep=\dimen137
 \ar@mcellbox=\box47
 \extrarowheight=\dimen138
-\NC@list=\toks17
+\NC@list=\toks18
 \extratabsurround=\skip49
 \backup@length=\skip50
 \ar@cellbox=\box48
@@ -126,7 +84,6 @@ Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \TX@target=\dimen142
 \TX@delta=\dimen143
 \TX@cols=\count176
-<<<<<<< HEAD
 \TX@ftn=\toks19
 )
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adju
@@ -143,24 +100,10 @@ eyval\xkeyval.tex"
 eyval\xkvutils.tex"
 \XKV@toks=\toks20
 \XKV@tempa@toks=\toks21
-=======
-\TX@ftn=\toks18
-) (E:\miktext\tex/latex/adjustbox\adjustbox.sty
-Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
-
-(E:\miktext\tex/latex/xkeyval\xkeyval.sty
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-(E:\miktext\tex/generic/xkeyval\xkeyval.tex
-(E:\miktext\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks19
-\XKV@tempa@toks=\toks20
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 )
 \XKV@depth=\count177
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-<<<<<<< HEAD
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adju
 stbox\adjcalc.sty"
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
@@ -172,16 +115,6 @@ Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
 
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/coll
 ectbox\collectbox.sty"
-=======
-(E:\miktext\tex/latex/adjustbox\adjcalc.sty
-Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
--ends (calc, etex, pgfmath)
-)
-(E:\miktext\tex/latex/adjustbox\trimclip.sty
-Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
-
-(E:\miktext\tex/latex/collectbox\collectbox.sty
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box49
 )
@@ -191,12 +124,8 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@ury=\dimen147
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
-<<<<<<< HEAD
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adju
 stbox\tc-pdftex.def"
-=======
-(E:\miktext\tex/latex/adjustbox\tc-pdftex.def
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen148
@@ -208,7 +137,6 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@pdepth=\dimen154
 \adjbox@ptotalheight=\dimen155
 
-<<<<<<< HEAD
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ifod
 dpage\ifoddpage.sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
@@ -216,30 +144,18 @@ Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
 )
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/varw
 idth\varwidth.sty"
-=======
-(E:\miktext\tex/latex/ifoddpage\ifoddpage.sty
-Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count178
-)
-(E:\miktext\tex/latex/varwidth\varwidth.sty
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box50
 \sift@deathcycles=\count179
 \@vwid@loff=\dimen156
 \@vwid@roff=\dimen157
 ))
-<<<<<<< HEAD
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsm
 ath\amsmath.sty"
-=======
-(E:\miktext\tex/latex/amsmath\amsmath.sty
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-<<<<<<< HEAD
 
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsm
 ath\amstext.sty"
@@ -247,17 +163,10 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsm
 ath\amsgen.sty"
-=======
-(E:\miktext\tex/latex/amsmath\amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
-
-(E:\miktext\tex/latex/amsmath\amsgen.sty
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks21
+\@emptytoks=\toks22
 \ex@=\dimen158
 ))
-<<<<<<< HEAD
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsm
 ath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
@@ -265,13 +174,6 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 )
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsm
 ath\amsopn.sty"
-=======
-(E:\miktext\tex/latex/amsmath\amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen159
-)
-(E:\miktext\tex/latex/amsmath\amsopn.sty
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count180
@@ -294,37 +196,30 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \dotsspace@=\muskip16
 \c@parentequation=\count187
 \dspbrk@lvl=\count188
-\tag@help=\toks22
+\tag@help=\toks23
 \row@=\count189
 \column@=\count190
 \maxfields@=\count191
-\andhelp@=\toks23
+\andhelp@=\toks24
 \eqnshift@=\dimen161
 \alignsep@=\dimen162
 \tagshift@=\dimen163
 \tagwidth@=\dimen164
 \totwidth@=\dimen165
 \lineht@=\dimen166
-\@envbody=\toks24
+\@envbody=\toks25
 \multlinegap=\skip52
 \multlinetaggap=\skip53
-\mathdisplay@stack=\toks25
+\mathdisplay@stack=\toks26
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
-<<<<<<< HEAD
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsf
 onts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsf
 onts\amsfonts.sty"
-=======
-(E:\miktext\tex/latex/amsfonts\amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(E:\miktext\tex/latex/amsfonts\amsfonts.sty
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -332,19 +227,12 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-<<<<<<< HEAD
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base
 \textcomp.sty"
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/book
 tabs\booktabs.sty"
-=======
-(E:\miktext\tex/latex/base\textcomp.sty
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)
-(E:\miktext\tex/latex/booktabs\booktabs.sty
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen167
 \lightrulewidth=\dimen168
@@ -364,14 +252,9 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count195
 \@thisrulewidth=\dimen179
 )
-<<<<<<< HEAD
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3ba
 ckend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-=======
-(E:\miktext\tex/latex/l3backend\l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 \l__kernel_color_stack_int=\count196
 \l__pdf_internal_box=\box53
 ) (Syntax-Semantics-and-Examples.aux)
@@ -392,32 +275,23 @@ LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 
-<<<<<<< HEAD
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/context/ba
 se/mkii\supp-pdf.mkii"
-=======
-(E:\miktext\tex/context/base/mkii\supp-pdf.mkii
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count197
 \scratchdimen=\dimen180
 \scratchbox=\box54
 \nofMPsegments=\count198
 \nofMParguments=\count199
-\everyMPshowfont=\toks26
+\everyMPshowfont=\toks27
 \MPscratchCnt=\count266
 \MPscratchDim=\dimen181
 \MPnumerator=\count267
 \makeMPintoPDFobject=\count268
-<<<<<<< HEAD
 \everyMPtoPDFconversion=\toks28
 )
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epst
 opdf-pkg\epstopdf-base.sty"
-=======
-\everyMPtoPDFconversion=\toks27
-) (E:\miktext\tex/latex/epstopdf-pkg\epstopdf-base.sty
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
@@ -429,7 +303,6 @@ Package pdftex.def Info: ./media/uni_logo.jpeg  used on input line 19.
 (pdftex.def)             Requested size: 143.99158pt x 135.34877pt.
  [1
 
-<<<<<<< HEAD
 {C:/Users/OM Shanti Koolskull/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
 } <./media/uni_logo.jpeg>]
 (Syntax-Semantics-and-Examples.toc
@@ -437,23 +310,12 @@ LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
 
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsf
 onts\umsa.fd"
-=======
-{C:/Users/admin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./media/uni
-_logo.jpeg>]
-(Syntax-Semantics-and-Examples.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
- (E:\miktext\tex/latex/amsfonts\umsa.fd
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
 
-<<<<<<< HEAD
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsf
 onts\umsb.fd"
-=======
-(E:\miktext\tex/latex/amsfonts\umsb.fd
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write3
@@ -466,13 +328,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--83
 
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 8
 3.
-<<<<<<< HEAD
 
 ("C:\Users\OM Shanti Koolskull\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base
 \omscmr.fd"
-=======
-(E:\miktext\tex/latex/base\omscmr.fd
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
@@ -532,87 +390,89 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
-<./media/example2_graph.png, id=37, 694.39426pt x 249.93375pt>
+[6]
+<./media/example2_graph.png, id=41, 694.39426pt x 249.93375pt>
 File: ./media/example2_graph.png Graphic file (type png)
 <use ./media/example2_graph.png>
-Package pdftex.def Info: ./media/example2_graph.png  used on input line 205.
+Package pdftex.def Info: ./media/example2_graph.png  used on input line 223.
 (pdftex.def)             Requested size: 432.00337pt x 216.56346pt.
 
-Overfull \hbox (72.00337pt too wide) in paragraph at lines 205--207
+Overfull \hbox (72.00337pt too wide) in paragraph at lines 223--225
 [][]
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 211--213
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--231
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--213
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--226
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--226
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--226
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--226
+Underfull \hbox (badness 10000) in paragraph at lines 229--231
 
  []
 
 [7 <./media/example2_graph.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 227--250
+Underfull \hbox (badness 10000) in paragraph at lines 232--244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--250
+Underfull \hbox (badness 10000) in paragraph at lines 232--244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--250
+Underfull \hbox (badness 10000) in paragraph at lines 232--244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--250
+Underfull \hbox (badness 10000) in paragraph at lines 232--244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--250
+Underfull \hbox (badness 10000) in paragraph at lines 245--268
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--250
+Underfull \hbox (badness 10000) in paragraph at lines 245--268
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--250
+Underfull \hbox (badness 10000) in paragraph at lines 245--268
 
  []
 
-<./media/figure01.png, id=46, 793.7655pt x 367.97475pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--268
+
+ []
+
+[8]
+<./media/figure01.png, id=49, 793.7655pt x 367.97475pt>
 File: ./media/figure01.png Graphic file (type png)
 <use ./media/figure01.png>
-Package pdftex.def Info: ./media/figure01.png  used on input line 252.
+Package pdftex.def Info: ./media/figure01.png  used on input line 270.
 (pdftex.def)             Requested size: 360.00113pt x 162.42033pt.
-[8] [9 <./media/figure01.png (PNG copy)>] (Syntax-Semantics-and-Examples.lof)
+ [9 <./media/figure01.png (PNG copy)>] (Syntax-Semantics-and-Examples.lof)
 \tf@lof=\write4
 \openout4 = `Syntax-Semantics-and-Examples.lof'.
 
@@ -623,9 +483,8 @@ Package pdftex.def Info: ./media/figure01.png  used on input line 252.
 
  [10] (Syntax-Semantics-and-Examples.aux) ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
  3622 strings out of 480930
- 54213 string characters out of 2893194
+ 54256 string characters out of 2893194
  290102 words of memory out of 3000000
  19428 multiletter control sequences out of 15000+200000
  539146 words of font info for 49 fonts, out of 3000000 for 9000
@@ -649,27 +508,7 @@ OM Shanti Koolskull/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb><C:/Users/OM Shanti Koolskull/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/OM Shanti Koolskull/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Syntax-Semantics-and-Examples.pdf (11 pages, 524334 bytes).
-=======
- 3628 strings out of 481556
- 49737 string characters out of 2931569
- 287308 words of memory out of 3000000
- 18809 multiletter control sequences out of 15000+200000
- 539146 words of font info for 49 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 31i,12n,32p,552b,372s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\admin\AppData\Local\MiKTe
-X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><E:/miktext/fonts/type1/pu
-blic/amsfonts/cm/cmbx10.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/cmbx12.p
-fb><E:/miktext/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><E:/miktext/fonts/typ
-e1/public/amsfonts/cm/cmex10.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/cmmi8.pfb><E:/miktext/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/c
-mr12.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/miktext/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/
-cmsy8.pfb><E:/miktext/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Syntax-Semantics-and-Examples.pdf (11 pages, 512608 bytes).
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
+Output written on Syntax-Semantics-and-Examples.pdf (11 pages, 513248 bytes).
 PDF statistics:
  101 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

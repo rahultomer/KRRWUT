@@ -153,7 +153,7 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_
 	\end{figure}
 	\subsection{Example 02}\label{example:ex02}
 	\subsubsection{Description}\label{par:p102}
-	John visits a painter to buy a specific painting. The cost of painting is 200\$ if its available in the shop. But if painting is not available then John needs to order a new one to be painted and will buy once its available. At any time only one copy of painting is available and another one to be ordered once sold. 
+	John visits a painter to buy a specific painting. The cost of painting is 200\$ if its available in the shop. But if painting is not available then John needs to order a new one to be painted and will buy once its available.Order costs 50\$ At any time only one copy of painting is available and another one to be ordered once sold. 
 	
 	\subsubsection{Representation:}\label{par:p202}
 	\indent 
@@ -164,8 +164,8 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_
 	BUY costs 0$\$$  \textbf{if} ¬available\par
 	
 	
-	Order Cost: 0 $\$$
-	
+	Order Cost: 50$\$$ \textbf{if} ¬available\par
+	Order Costs 0$\$$ \textbf{if} available\par
 	initially: ¬available $\wedge$  ¬sold\par
 	
 	BUY causes sold if available\par
@@ -183,8 +183,7 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_
 	$ \sigma _{1}$ = $ \{ $ ¬available, sold$ \} $ \par
 	
 	$ \sigma _{2}$ = $ \{ $ available, ¬sold$ \} $ \par
-	
-<<<<<<< HEAD
+
 	$ \sigma _{3}$ = $ \{ $ available, sold$ \} $ \par
 	\(  \Psi  \)  (BUY, $ \sigma _{0}$) = $ \sigma _{0}$\par
 	
@@ -201,7 +200,7 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_
 	\(  \Psi  \)  (BUY, $ \sigma _{3}$) = $ \sigma _{2}$\par
 	
 	\(  \Psi  \)  (ORDER, $ \sigma _{3}$) = $ \sigma _{3}$\par
-=======
+
 	$ \sigma $3 = $ \{ $ available, sold$ \} $ \par
 	\(  \Psi  \)  (BUY,0, $ \sigma $0) = $ \sigma $0\par
 	
@@ -218,7 +217,7 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_
 	\(  \Psi  \)  (BUY,200, $ \sigma $3) = $ \sigma $2\par
 	
 	\(  \Psi  \)  (ORDER,0, $ \sigma $3) = $ \sigma $3\par
->>>>>>> c47c0468620460bdfa6e87d4bb67603b94adf2f2
+
 	\subsubsection{Graph}\label{par:p402}
 	\begin{figure}[H]
 		\includegraphics[width=1.2\linewidth, height=0.4\textheight]{./media/example2_graph.png}
