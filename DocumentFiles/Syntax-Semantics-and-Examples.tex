@@ -98,17 +98,17 @@ A literal is either a fluent f or its negation ¬f.\\
 	\begin{itemize}
 \item 	A state is a function $\sigma$ : F $\rightarrow$ \{0, 1\}. For any f $\in$ F, if $\sigma$(f) = 1, then we say that f holds in $\sigma$ and write $\sigma$   $\vDash$   f. If $\sigma$(f) = 0, then we write $\sigma$   $\vDash$   ¬f and say that f does not hold in $\sigma$. Let $\sigma$ stand for the set of all states.
 
-\item 	A transition function is a mapping $\Upsilon$ : Ac(K) $\times$ $\sigma$ → $\sigma$. For any $\sigma$ $\in$ $\sum$, for any A $\in$ Ac and for any K$_{i}$ in K, $\Upsilon$(A(K$_{i}$) , $\sigma$) is the state resulting from performing the action A in the state $\sigma$.
+\item 	A transition function is a mapping $\Upsilon$ : (Ac,K) $\times$ $\sigma$ → $\sigma$. For any $\sigma$ $\in$ $\sum$, for any A $\in$ Ac and for any K$_{i}$ in K, $\Upsilon$(A,K$_{i}$) , $\sigma$) is the state resulting from performing the action A in the state $\sigma$.
 
-\item  In a transition function $\Upsilon$ : A(K$_{i}$) $\times \sigma \rightarrow \sigma$. For any A$_{i} \in$ Ac there exists a cost value K$_{i} \in$ K  where i = 1 to n respectively. 
+\item  In a transition function $\Upsilon$ : (A,K$_{i}$) $\times \sigma \rightarrow \sigma$. For any A$_{i} \in$ Ac there exists a cost value K$_{i} \in$ K  where i = 1 to n respectively. 
 
-\item 	A transition function is generalized to the mapping $\Upsilon^{\ast}$ : Ac$^{\ast}$  $\times$  $\sigma$ $\rightarrow$ $\sigma$ as follows: 
-$\Upsilon^{\ast}$ ( $\varepsilon$ , $\sigma$) = $\sigma$, $\Upsilon^{\ast}$ ((A1, . . . , An), $\sigma$) = $\Upsilon$(An, $\Upsilon^{\ast}$ (A1, . . . , An-1)).
+\item 	A transition function is generalized to the mapping $\Upsilon^{\ast}$ : (Ac$^{\ast}$,K)  $\times$  $\sigma$ $\rightarrow$ $\sigma$ as follows: 
+$\Upsilon^{\ast}$ ( $\varepsilon$ , $\sigma$) = $\sigma$, $\Upsilon^{\ast}$ (((A1,K$_{1})$, . . . , (An,K$_{n}$)), $\sigma$) = $\Upsilon$((An,K$_{n}$), $\Upsilon^{\ast}$ ((A1,K$_{1}$) . . . , (An-1,K$_{n-1}$))).
 
 
 \item 	Let L be an action language of the class A over the signature $\Upsilon$ = (F, Ac, K). A structure for L is a pair S = ($\Upsilon$, $\sigma_{0}$) where $\Upsilon$ is a transition function and $\sigma_{0}$ $\in$ $\sum$ is the initial state
 
-\item 	Let S = ($\Upsilon$, $\sigma_{0}$) be a structure for L. A statement s$_{\beta}$ is true in S, in symbols S   $\vDash$   s$_{\beta}$, iff s$_{\beta}$ is of the form f after A1, . . . , An, then $\Upsilon$((A1(K$_{1}$), . . . , An(K$_{n}$)), $\sigma_{0}$)   $\vDash$   f; if s$_{\beta}$ is of the form A causes f if g1, . . . , gk and costs K$_{i}$, then for every $\sigma$ $\in$ $\sum$ such that $\sigma$   $\vDash$   gj , j = 1, . . . , k, $\Upsilon$(A(K$_{i}$), $\sigma$)   $\vDash$   f.
+\item 	Let S = ($\Upsilon$, $\sigma_{0}$) be a structure for L. A statement s$_{\beta}$ is true in S, in symbols S   $\vDash$   s$_{\beta}$, iff s$_{\beta}$ is of the form f after A1, . . . , An, then $\Upsilon$(((A1,K$_{1}$), . . . , (An,K$_{n}$)), $\sigma_{0}$)   $\vDash$   f; if s$_{\beta}$ is of the form A causes f if g1, . . . , gk and costs K$_{i}$, then for every $\sigma$ $\in$ $\sum$ such that $\sigma$   $\vDash$   gj , j = 1, . . . , k, $\Upsilon$((A,K$_{i}$), $\sigma$)   $\vDash$   f.
 
 \end{itemize}
 Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_{c}$,K). A structure S = ($\Upsilon$,$\sigma_{0}$ is a model of D iff\\
@@ -121,7 +121,7 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_
 \indent where k $\neq$ 0 and $\sigma$\textbar=  gi for some i = 1,...,n\\
 \indent(ii) D does not contain an effect statement\\
 \indent\indent{\bfseries A causes $\overline{f}$ if} g1,...,gn\\
-\indent then $\sigma$ \textbar$\neq$ gi iff $\Psi$(A(k),$\sigma$) \textbar$\neq$ gi for some i = 1,...,n, where k = 0.\\
+\indent then $\sigma$ \textbar$\neq$ gi iff $\Psi$((A,k),$\sigma$) \textbar$\neq$ gi for some i = 1,...,n, where k = 0.\\
 
 	\section{Examples}\label{sec:Examples}
 	\subsection{Example 01}\label{example:ex01}
@@ -176,30 +176,30 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_
 	
 	\subsubsection{Calculation:}\label{par:p302}
 	\indent \par
-	$ \sum $ = $ \{ $ $ \sigma $0, $ \sigma $1, $ \sigma $2, $ \sigma $3$ \} $ \par
+	$ \sum $ = $ \{ $ $ \sigma _{0}$, $ \sigma _{1}$, $ \sigma _{2}$, $ \sigma _{3}$$ \} $ \par
 	
-	$ \sigma $0 = $ \{ $ ¬available, ¬sold$ \} $ \par
+	$ \sigma _{0}$ = $ \{ $ ¬available, ¬sold$ \} $ \par
 	
-	$ \sigma $1 = $ \{ $ ¬available, sold$ \} $ \par
+	$ \sigma _{1}$ = $ \{ $ ¬available, sold$ \} $ \par
 	
-	$ \sigma $2 = $ \{ $ available, ¬sold$ \} $ \par
+	$ \sigma _{2}$ = $ \{ $ available, ¬sold$ \} $ \par
 	
-	$ \sigma $3 = $ \{ $ available, sold$ \} $ \par
-	\(  \Psi  \)  (BUY, $ \sigma $0) = $ \sigma $0\par
+	$ \sigma _{3}$ = $ \{ $ available, sold$ \} $ \par
+	\(  \Psi  \)  (BUY, $ \sigma _{0}$) = $ \sigma _{0}$\par
 	
-	\(  \Psi  \)  (ORDER, $ \sigma $0) = $ \sigma $1\par
+	\(  \Psi  \)  (ORDER, $ \sigma _{0}$) = $ \sigma _{1}$\par
 	
-	\(  \Psi  \)  (BUY, $ \sigma $1) = $ \sigma $2\par
+	\(  \Psi  \)  (BUY, $ \sigma _{1}$) = $ \sigma _{2}$\par
 	
-	\(  \Psi  \)  (ORDER, $ \sigma $1) = $ \sigma $1\par
+	\(  \Psi  \)  (ORDER, $ \sigma _{1}$) = $ \sigma _{1}$\par
 	
-	\(  \Psi  \)  (BUY, $ \sigma $2) = $ \sigma $2\par
+	\(  \Psi  \)  (BUY, $ \sigma _{2}$) = $ \sigma _{2}$\par
 	
-	\(  \Psi  \)  (ORDER, $ \sigma $2) = $ \sigma $1\par
+	\(  \Psi  \)  (ORDER, $ \sigma _{2}$) = $ \sigma _{1}$\par
 	
-	\(  \Psi  \)  (BUY, $ \sigma $3) = $ \sigma $2\par
+	\(  \Psi  \)  (BUY, $ \sigma _{3}$) = $ \sigma _{2}$\par
 	
-	\(  \Psi  \)  (ORDER, $ \sigma $3) = $ \sigma $3\par
+	\(  \Psi  \)  (ORDER, $ \sigma _{3}$) = $ \sigma _{3}$\par
 	\subsubsection{Graph}\label{par:p402}
 	\begin{figure}[H]
 		\includegraphics[width=1\linewidth, height=0.4\textheight]{./media/image1.jpeg}
