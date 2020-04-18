@@ -66,12 +66,12 @@ of objects (in consequence, the state of the world).
 	
 	\subsection{Signature :}\label{sec:Signature} 
 
-A signature is a pair $\Upsilon$ = (F, Ac, K) where F is a set of fluents; Ac is a set of actions and K is a set of positive integers representing Cost of each action An $\in$ Ac.
+A signature is a triplet $\Upsilon$ = (F, Ac, K) where F is a set of fluents; Ac is a set of actions as follows A1,A2,...,An where Ai $\in$ An and i = 1 to n and K is a set of positive integers representing Cost of each action Ai $\in$ Ac as follows K1,k2,...Kn where Ki $\in$ K and i = 1 to n.
 
 \subsection{Literal :}\label{sec:Literal} 
 
 A literal is either a fluent f or its negation ¬f.\\
-\textbf{Notation:} for a fluent f $\epsilon$ F, we write $\overline{f}$to denote the literal corresponding to f, i.e., either f or ¬f.
+\textbf{Notation:} for a fluent f $\epsilon$ F, we write $\overline{f}$ to denote the literal corresponding to f, i.e., either f or ¬f.
 \subsection{Statements :}\label{sec:Statements} 
 	The system and changes occurring within can be described through a sequence of statements defined in the table:
 	\begin{table}[H]
@@ -80,14 +80,12 @@ A literal is either a fluent f or its negation ¬f.\\
     \hline
     \multicolumn{1}{|c|}{\textbf{Statement}} & \multicolumn{1}{c|}{\textbf{Format}} & \multicolumn{1}{c|}{\textbf{Description}} \\
     \hline
-    Initial Statement & Initially $\alpha$ holds where $\alpha$ is the initial condition with a set of fluent values. & Initial condition $\alpha$ of the fluent set F$_{\alpha}$ where  F$_{\alpha}$ = \{f1,f2,...,fn\} where  fi $\in$ F and i = 1 to n. \\
+    Effect Statement & A causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$ & If the action A is performed in any state satisfying $\overline{g1}$, . . . , $\overline{gk}$, then in
+    the resulting state $\overline{f}$ holds. \\
     \hline
-    Effect Statement & A causes $\alpha$ if g1, . . . , gk & If the action A is performed in any state satisfying g1, . . . , gk, then in
-    the resulting state $\alpha$ holds. \\
+    Value Statement & $\overline{f}$ after A1 ….An where $\overline{f} \in$ F and Ai $\in$ Ac, for i = 1, ... ,n & $\overline{f}$ holds after performing the sequence A1 ….An of actions in the initial state. \\
     \hline
-    Value Statement & $\alpha$ after A1 ….An & The condition $\alpha$ always (must) hold after performing the sequence A1 ….An of actions. \\
-    \hline
-    Cost Statement & A costs C$_{\beta}$, a numerical cost value where C$_{\beta} \in $ K   & If the action A is performed in any satisfying g1, ...,gk then in the resulting state a cost of C$_{\beta}$ is used.C$_{\beta}$ is a numerical value in Cost set K\\
+    Cost Statement & A costs k where k is a positive integer and k $\in$ K   & If the action A is performed in any state satisfying $\overline{g1}$, ...,$\overline{gk}$ , then change in state results in fixed cost k. \\
     \hline
     \end{tabular}
     \caption{Syntax Table}
@@ -96,32 +94,60 @@ A literal is either a fluent f or its negation ¬f.\\
 
 	\section{Semantics}
 	\begin{itemize}
-\item 	A state is a function $\sigma$ : F $\rightarrow$ \{0, 1\}. For any f $\in$ F, if $\sigma$(f) = 1, then we say that f holds in $\sigma$ and write $\sigma$   $\vDash$   f. If $\sigma$(f) = 0, then we write $\sigma$   $\vDash$   ¬f and say that f does not hold in $\sigma$. Let $\sigma$ stand for the set of all states.
+\item 	A state is a mapping $\sigma$ : F $\rightarrow$ \{0, 1\}. For any f $\in$ F, if $\sigma$(f) = 1, then we say that f holds in $\sigma$ and write $\sigma$   $\vDash$   f. If $\sigma$(f) = 0, then we write $\sigma$   $\vDash$   ¬f and say that f does not hold in $\sigma$. Let $\sum$ stand for the set of all states.
 
-\item 	A transition function is a mapping $\Upsilon$ : Ac(K) $\times$ $\sigma$ → $\sigma$. For any $\sigma$ $\in$ $\sum$, for any A $\in$ Ac and for any K$_{i}$ in K, $\Upsilon$(A(K$_{i}$) , $\sigma$) is the state resulting from performing the action A in the state $\sigma$.
+\item 	A state transition function is a mapping $\Psi$ : Ac $\times$ $\sum$ $\rightarrow$ $\sum$. For any $\sigma$ $\in$ $\sum$, for any A $\in$ Ac $\Psi$(A , $\sigma$) is the state resulting from performing the action A in the state $\sigma$. Also $\Psi$(A,$\sigma$) will results in same state if the effect of action is empty.
 
-\item  In a transition function $\Upsilon$ : A(K$_{i}$) $\times \sigma \rightarrow \sigma$. For any A$_{i} \in$ Ac there exists a cost value K$_{i} \in$ K  where i = 1 to n respectively. 
-
-\item 	A transition function is generalized to the mapping $\Upsilon^{\ast}$ : Ac$^{\ast}$  $\times$  $\sigma$ $\rightarrow$ $\sigma$ as follows: 
-$\Upsilon^{\ast}$ ( $\varepsilon$ , $\sigma$) = $\sigma$, $\Upsilon^{\ast}$ ((A1, . . . , An), $\sigma$) = $\Upsilon$(An, $\Upsilon^{\ast}$ (A1, . . . , An-1)).
+\item A cost transition function is a mapping $\Gamma$ : Ac $\times \sum \rightarrow$ K.For any $\sigma\in\sum$ and for any A $\in$ Ac, $\Gamma$(A, $\sigma$) is the fixed cost k where k $\in$ K, resulting from performing the action A in the state $\sigma$. Also $\Gamma$(A,$\sigma$) will results in 0 cost if there is no change in state. 
 
 
-\item 	Let L be an action language of the class A over the signature $\Upsilon$ = (F, Ac, K). A structure for L is a pair S = ($\Upsilon$, $\sigma_{0}$) where $\Upsilon$ is a transition function and $\sigma_{0}$ $\in$ $\sum$ is the initial state
+\item 	A transition function is generalized to the mapping $\Psi^{\ast}$ : Ac$^{\ast}$  $\times$  $\sum$ $\rightarrow$ $\sum$ as follows: 
+\begin{enumerate}
 
-\item 	Let S = ($\Upsilon$, $\sigma_{0}$) be a structure for L. A statement s$_{\beta}$ is true in S, in symbols S   $\vDash$   s$_{\beta}$, iff s$_{\beta}$ is of the form f after A1, . . . , An, then $\Upsilon$((A1(K$_{1}$), . . . , An(K$_{n}$)), $\sigma_{0}$)   $\vDash$   f; if s$_{\beta}$ is of the form A causes f if g1, . . . , gk and costs K$_{i}$, then for every $\sigma$ $\in$ $\sum$ such that $\sigma$   $\vDash$   gj , j = 1, . . . , k, $\Upsilon$(A(K$_{i}$), $\sigma$)   $\vDash$   f.
+\item $\Psi^{\ast}$ ( $\varepsilon$ , $\sigma$) = $\sigma$,
+ 
+\item $\Psi^{\ast}$ ((A1, . . . , An), $\sigma$) = $\Psi$(An, $\Psi^{\ast}$ (A1, . . . , An-1)). 
+
+\end{enumerate}
+ 
+\item A cost transition function is generalized to the mapping $\Gamma^{\ast}$ : Ac$^{\ast}$  $\times$  $\sum$ $\rightarrow$ K as follows: 
+\begin{enumerate}
+
+\item $\Gamma^{\ast}$ ( $\varepsilon$ , $\sigma$) = k,
+ 
+\item $\Gamma^{\ast}$ ((A1, . . . , An), $\sigma$) = $\Gamma$(An, $\Gamma^{\ast}$ (A1, . . . , An-1)). 
+
+\end{enumerate}
+
+\item 	Let L be an action language of the class A over the signature $\Upsilon$ = (F, Ac, K). A structure for L is a triplet S = ($\Psi$, $\sigma_{0}$, $\Gamma$) where $\Psi$ is a transition function, $\Gamma$ is a cost transition function  and $\sigma_{0}$ $\in$ $\sum$ is the initial state
+
+\item 	Let S = ($\Psi$, $\sigma_{0}$, $\Gamma$) be a structure for L. A statement s is true in S, in symbols S   $\vDash$   s, iff 
+\begin{enumerate}
+\item s is of the form $\overline{f}$ after A1, . . . , An, then $\Psi$(A1, . . . , An), $\sigma_{0}$)   $\vDash \overline{f}$;
+
+\item if s is of the form A causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$, then for every $\sigma$ $\in$ $\sum$ such that $\sigma$   $\vDash$   $\overline{gj}$ , j = 1, . . . , k, $\Psi$(A, $\sigma$)   $\vDash$   $\overline{f}$.
+
+\item if s is of the form A costs k, then every $\sigma \in \sum$ such that $\sigma \vDash \overline{gi}$, i = 1,...,k, $\Gamma$(A,$\sigma$) $\vDash$ k.
+\end{enumerate}
+ 
 
 \end{itemize}
-Let D be an action domain in the language L over the signature $\Upsilon$=(F,A$_{c}$,K). A structure S = ($\Upsilon$,$\sigma_{0}$ is a model of D iff\\
-(M1) for every statement s$_{beta}$ $\in$ D, S \textbar= s;\\
-(M2) for every Ai $\in$ Ac there exists K$_{i} \in$ K where i = 1 to n, for every f,g1,...,gn $\in$ F, and for every $\sigma\in\sum$, if one of the following conditions holds:
-\\\indent
-(i) D contains an effect statement\\
-\indent\indent 
-{\bfseries A causes $\overline{f}$ for the cost value k if} $\overline{g1}$,...,$\overline{gn}$,\\
-\indent where k $\neq$ 0 and $\sigma$\textbar=  gi for some i = 1,...,n\\
-\indent(ii) D does not contain an effect statement\\
-\indent\indent{\bfseries A causes $\overline{f}$ if} g1,...,gn\\
-\indent then $\sigma$ \textbar$\neq$ gi iff $\Psi$(A(k),$\sigma$) \textbar$\neq$ gi for some i = 1,...,n, where k = 0.\\
+Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,K). A structure S = ($\Psi$,$\sigma_{0}$, $\Gamma$) is a model of D iff\\
+(M1) for every statement s $\in$ D, S $\vDash$ s;\\
+(M2) for every A $\in$ Ac for every f,g1,...,gn $\in$ F, for every k $\in$ K and for every $\sigma\in\sum$, if one of the following conditions holds:
+\\
+(i) D contains an effect statement and a cost statement as follows:
+\begin{itemize}
+	\item {\bfseries A causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$,$\sigma \nvDash$  $\overline{gi}$ for some i = 1,...,k
+
+	\item {\bfseries A costs k,} and $\sigma \nvDash \overline{gi}$ for some i = 1,...,k.
+\end{itemize}
+(ii) D does not contain an effect statement but contains a 0 cost statement, as follows:
+\begin{itemize}
+\item {\bfseries A causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$ then $\sigma \nvDash$  gi iff $\Psi$(A,$\sigma$) $\vDash$ f.
+
+\item {\bfseries A costs 0}, and $\sigma \vDash$ f iff $\Gamma$(A,$\sigma$) = 0.
+\end{itemize}
 
 	\section{Examples}\label{sec:Examples}
 	\subsection{Example 01}\label{example:ex01}
