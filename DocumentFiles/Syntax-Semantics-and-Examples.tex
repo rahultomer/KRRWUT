@@ -83,9 +83,9 @@ A literal is either a fluent f or its negation ¬f.\\
     Effect Statement & A causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$ & If the action A is performed in any state satisfying $\overline{g1}$, . . . , $\overline{gk}$, then in
     the resulting state $\overline{f}$ holds. \\
     \hline
-    Value Statement & $\overline{f}$ after A1 ….An where $\overline{f} \in$ F and Ai $\in$ Ac, for i = 1, ... ,n & $\overline{f}$ holds after performing the sequence A1 ….An of actions in the initial state. \\
+    Value Statement & $\overline{f}$ after A1 ….An & $\overline{f}$ holds after performing the sequence A1 ….An of actions in the initial state where $\overline{f} \in$ F and Ai $\in$ Ac, for i = 1, ... ,n. \\
     \hline
-    Cost Statement & A costs k where k is a positive integer and k $\in$ K   & If the action A is performed in any state satisfying $\overline{g1}$, ...,$\overline{gk}$ , then change in state results in fixed cost k. \\
+    Cost Statement & A costs k & If the action A is performed in any state satisfying $\overline{g1}$, ...,$\overline{gk}$ , then change in state results in fixed cost k where k is a positive integer and k $\in$ K \\
     \hline
     \end{tabular}
     \caption{Syntax Table}
@@ -159,11 +159,11 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	\\
 	Initially:  fuel $\wedge$ reserve \\
 	travel causes $\neg$fuel if fuel \\
-	travel cost 50 \\
+	travel costs 50 \\
 	travel causes $\neg$reserve if $\neg$fuel $\vee$ reserve\\
-	travel cost 50 \\
+	travel costs 50 \\
 	buy causes fuel $\wedge$ reserve  if $\neg$ fuel $\vee$ $\neg$reserve\\
-	buy cost 100 \\
+	buy costs 100 \\
 	\subsubsection{Calculation}\label{par:p301}\par
 	$\sum$ = $\lbrace$ $\sigma_{0}$,$\sigma_{1}$,$\sigma_{2}$,$\sigma_{3}$ $\rbrace$\\ \\
 	$\sigma_{0}$ = $\lbrace$ fuel, reserve $\rbrace$ \indent $\sigma_{1}$ = $\lbrace$ $\neg$fuel, reserve $\rbrace$\\
@@ -207,7 +207,7 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	buy causes (sold $\land$ ¬available) if available\\
 	buy costs 200$\$$ \\
 	order causes available if ¬available\\
-	order Cost: 50$\$$ \\
+	order costs 50$\$$ \\
 	
 	\subsubsection{Calculation:}\label{par:p302}
 	\indent \\
@@ -254,11 +254,11 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	\\
 	initially $\neg$cooked $\land$ hungry\\
 	cook causes cooked if $\neg$cooked\\
-	cook cost 15\\
+	cook costs 15\\
 	eat causes ($\neg$cooked $\land$ $\neg$hungry) if cooked\\
-	eat cost 5\\
+	eat costs 5\\
 	play causes hungry if $\neg$hungry\\
-	play cost 20\\
+	play costs 20\\
 	\\
 	\subsubsection{Calculation}\label{par:p303}
 	$\sum$ = \{$\sigma_{0}$ ,$\sigma_{1}$, $\sigma_{2}$, $\sigma_{3}$\}\\
