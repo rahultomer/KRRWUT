@@ -66,7 +66,7 @@ of objects (in consequence, the state of the world).
 	
 	\subsection{Signature :}\label{sec:Signature} 
 
-A signature is a triplet $\Upsilon$ = (F, Ac, K) where F is a set of fluents; Ac is a set of actions as follows A1,A2,...,An where Ai $\in$ An and i = 1 to n and K is a set of positive integers representing Cost of each action Ai $\in$ Ac as follows K1,k2,...Kn where Ki $\in$ K and i = 1 to n.
+A signature is a triplet $\Upsilon$ = (F, Ac, K) where F is a set of fluents; Ac is a set of actions as follows A1,A2,...,An where Ai $\in$ Ac and i = 1 to n and K is a set of positive integers representing Cost of each action Ai $\in$ Ac as follows K1,K2,...Kn where Ki $\in$ K and i = 1 to n.
 
 \subsection{Literal :}\label{sec:Literal} 
 
@@ -96,7 +96,7 @@ A literal is either a fluent f or its negation ¬f.\\
 	\begin{itemize}
 \item 	A state is a mapping $\sigma$ : F $\rightarrow$ \{0, 1\}. For any f $\in$ F, if $\sigma$(f) = 1, then we say that f holds in $\sigma$ and write $\sigma$   $\vDash$   f. If $\sigma$(f) = 0, then we write $\sigma$   $\vDash$   ¬f and say that f does not hold in $\sigma$. Let $\sum$ stand for the set of all states.
 
-\item 	A state transition function is a mapping $\Psi$ : Ac $\times$ $\sum$ $\rightarrow$ $\sum$. For any $\sigma$ $\in$ $\sum$, for any A $\in$ Ac $\Psi$(A , $\sigma$) is the state resulting from performing the action A in the state $\sigma$. Also $\Psi$(A,$\sigma$) will results in same state if the effect of action is empty.
+\item 	A state transition function is a mapping $\Psi$ : Ac $\times$ $\sum$ $\rightarrow$ $\sum$. For any $\sigma$ $\in$ $\sum$, for any A $\in$ Ac, $\Psi$(A , $\sigma$) is the state resulting from performing the action A in the state $\sigma$. Also $\Psi$(A,$\sigma$) will results in same state if the effect of action is empty.
 
 \item A cost transition function is a mapping $\Gamma$ : Ac $\times \sum \rightarrow$ K.For any $\sigma\in\sum$ and for any A $\in$ Ac, $\Gamma$(A, $\sigma$) is the fixed cost k where k $\in$ K, resulting from performing the action A in the state $\sigma$. Also $\Gamma$(A,$\sigma$) will results in 0 cost if there is no change in state. 
 
