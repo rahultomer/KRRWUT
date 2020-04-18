@@ -154,22 +154,40 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	\subsubsection{Description}\label{par:p101}
 	Andrew wants to travel by his car to a place.Travelling costs him 50\$ if he uses fuel from the fuel tank of the car.If in case of emergency, Andrew is carrying a bottle of fuel as reserve, which can cost him 50\$ for travelling. buying Fuel costs him 100\$ if both fuel and reserve are empty. and buying causes both his Fuel and Reserve are filled. 
 	\subsubsection{Representation}\label{par:p201}
-	Initially we have:
-	\begin{enumerate}
-		\item Fuel
-		\item Reserve
-	\end{enumerate}
-	Travel causes $\neg$fuel if fuel %$\vee$ reserve\\
-	Travel causes $\neg$reserve if $\neg$fuel $\vee$ reserve\\
-	Buy causes fuel, reserve  if $\neg$ fuel $\vee$ reserve\\
+	Fluents: fuel, reserve\\
+	Actions: buy, travel\\
+	\\
+	Initially:  fuel $\wedge$ reserve \\
+	travel causes $\neg$fuel if fuel \\
+	travel cost 50 \\
+	travel causes $\neg$reserve if $\neg$fuel $\vee$ reserve\\
+	travel cost 50 \\
+	buy causes fuel $\wedge$ reserve  if $\neg$ fuel $\vee$ $\neg$reserve\\
+	buy cost 100 \\
 	\subsubsection{Calculation}\label{par:p301}\par
-	$\sum$ = $\lbrace$ $\sigma_{0}$,$\sigma_{1}$,$\sigma_{2}$ $\rbrace$\\ \\
+	$\sum$ = $\lbrace$ $\sigma_{0}$,$\sigma_{1}$,$\sigma_{2}$,$\sigma_{3}$ $\rbrace$\\ \\
 	$\sigma_{0}$ = $\lbrace$ fuel, reserve $\rbrace$ \indent $\sigma_{1}$ = $\lbrace$ $\neg$fuel, reserve $\rbrace$\\
-	$\sigma_{2}$ = $\lbrace$ $\neg$fuel, $\neg$reserve $\rbrace$ 
-	\\ \\
-	$\Psi$(Buy,$\sigma_{0}$)=$\sigma_{0}$ \indent $\Psi$(Travel,$\sigma_{0}$)=$\sigma_{1}$\\
-	$\Psi$(Buy,$\sigma_{1}$)=$\sigma_{1}$ \indent $\Psi$(Travel,$\sigma_{1}$)=$\sigma_{2}$\\
-	$\Psi$(Buy,$\sigma_{2}$)=$\sigma_{1}$ \indent $\Psi$(Travel,$\sigma_{2}$)=$\sigma_{2}$\\
+	$\sigma_{2}$ = $\lbrace$ $\neg$fuel, $\neg$reserve $\rbrace$ \indent 	$\sigma_{3}$ = $\lbrace$ fuel, $\neg$reserve $\rbrace$
+	\\
+	$\Psi$(buy, $\sigma_{0}$)=$\sigma_{0}$\\ 
+	$\Psi$(travel, $\sigma_{0}$)=$\sigma_{1}$\\
+	\(\Gamma\)(buy, $\sigma_{0}$) = 0\\
+	\(\Gamma\)(travel, $\sigma_{0}$) = 50\\
+	\\
+	$\Psi$(buy, $\sigma_{1}$)=$\sigma_{1}$\\ 
+	$\Psi$(travel, $\sigma_{1}$)=$\sigma_{2}$\\
+	\(\Gamma\)(buy, $\sigma_{1}$) = 0\\
+	\(\Gamma\)(travel, $\sigma_{1}$) = 50\\
+	\\
+	$\Psi$(buy, $\sigma_{2}$)=$\sigma_{0}$\\ 
+	$\Psi$(travel, $\sigma_{2}$)=$\sigma_{2}$\\
+	\(\Gamma\)(buy, $\sigma_{2}$) = 100\\
+	\(\Gamma\)(travel, $\sigma_{2}$) = 0\\
+	\\
+	$\Psi$(buy, $\sigma_{3}$)=$\sigma_{3}$\\ 
+	$\Psi$(travel, $\sigma_{3}$)=$\sigma_{2}$\\
+	\(\Gamma\)(buy, $\sigma_{3}$) = 0\\
+	\(\Gamma\)(travel, $\sigma_{3}$) = 50\\
 	\subsubsection{Graph}\label{par:p401}
 	\begin{figure}[H]
 		\centering
@@ -179,56 +197,49 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	\end{figure}
 	\subsection{Example 02}\label{example:ex02}
 	\subsubsection{Description}\label{par:p102}
-	John visits a painter to buy a specific painting. The cost of painting is 200\$ if its available in the shop. But if painting is not available then John needs to order a new one to be painted and will buy once its available. At any time only one copy of painting is available and another one to be ordered once sold. 
+	John visits a painter to buy a specific painting. The cost of painting is 200\$ if its available in the shop. But if painting is not available then John needs to order a new one to be painted and will buy once its available.Order costs 50\$ At any time only one copy of painting is available and another one to be ordered once sold. 
 	
 	\subsubsection{Representation:}\label{par:p202}
 	\indent 
-	\par Fluents: available, sold.\par
-	Actions: BUY, ORDER.\par
-	BUY costs 200$\$$  \textbf{if} available\par
-	
-	BUY costs 0$\$$  \textbf{if} ¬available\par
-	
-	
-	Order Cost: 0 $\$$
-	
-	initially: ¬available $\wedge$  ¬sold\par
-	
-	BUY causes sold if available\par
-	
-	ORDER causes available if ¬available\par
-	
-	BUY causes ¬available\\
+	Fluents: available, sold.\\
+	Actions: buy, order.\\
+	Initially: ¬available $\wedge$  ¬sold\\
+	buy causes (sold $\land$ ¬available) if available\\
+	buy costs 200$\$$ \\
+	order causes available if ¬available\\
+	order Cost: 50$\$$ \\
 	
 	\subsubsection{Calculation:}\label{par:p302}
-	\indent \par
-	$ \sum $ = $ \{ $ $ \sigma $0, $ \sigma $1, $ \sigma $2, $ \sigma $3$ \} $ \par
-	
-	$ \sigma $0 = $ \{ $ ¬available, ¬sold$ \} $ \par
-	
-	$ \sigma $1 = $ \{ $ ¬available, sold$ \} $ \par
-	
-	$ \sigma $2 = $ \{ $ available, ¬sold$ \} $ \par
-	
-	$ \sigma $3 = $ \{ $ available, sold$ \} $ \par
-	\(  \Psi  \)  (BUY, $ \sigma $0) = $ \sigma $0\par
-	
-	\(  \Psi  \)  (ORDER, $ \sigma $0) = $ \sigma $1\par
-	
-	\(  \Psi  \)  (BUY, $ \sigma $1) = $ \sigma $2\par
-	
-	\(  \Psi  \)  (ORDER, $ \sigma $1) = $ \sigma $1\par
-	
-	\(  \Psi  \)  (BUY, $ \sigma $2) = $ \sigma $2\par
-	
-	\(  \Psi  \)  (ORDER, $ \sigma $2) = $ \sigma $1\par
-	
-	\(  \Psi  \)  (BUY, $ \sigma $3) = $ \sigma $2\par
-	
-	\(  \Psi  \)  (ORDER, $ \sigma $3) = $ \sigma $3\par
+	\indent \\
+	$ \sum $ = $ \{ $ $ \sigma _{0}$, $ \sigma _{1}$, $ \sigma _{2}$, $ \sigma _{3}$$ \} $ \\
+	$ \sigma _{0}$ = $ \{ $ ¬available, ¬sold$ \} $ \\
+	$ \sigma _{1}$ = $ \{ $ available, ¬sold$ \} $ \\
+	$ \sigma _{2}$ = $ \{ $ ¬available, sold$ \} $ \\
+	$ \sigma _{3}$ = $ \{ $ available, sold$ \} $ \\
+	\\
+	\(  \Psi  \)  (buy, $ \sigma $0) = $ \sigma $0\\
+	\(  \Psi  \)  (order, $ \sigma $0) = $ \sigma $1\\
+	\(\Gamma\)(buy, $\sigma_{0}$) = 0\\
+	\(\Gamma\)(order, $\sigma_{0}$) = 50\\
+	\\
+	\(  \Psi  \)  (buy $ \sigma $1) = $ \sigma $2\\
+	\(  \Psi  \)  (order, $ \sigma $1) = $ \sigma $1\\
+	\(\Gamma\)(buy, $\sigma_{1}$) = 200\\
+	\(\Gamma\)(order, $\sigma_{1}$) = 0\\
+	\\
+	\(  \Psi  \)  (buy, $ \sigma $2) = $ \sigma $2\\
+	\(  \Psi  \)  (order, $ \sigma $2) = $ \sigma $1\\
+	\(\Gamma\)(buy, $\sigma_{2}$) = 0\\
+	\(\Gamma\)(order, $\sigma_{2}$) = 50\\
+	\\
+	\(  \Psi  \)  (buy, $ \sigma $3) = $ \sigma $2\\
+	\(  \Psi  \)  (order, $ \sigma $3) = $ \sigma $3\\
+	\(\Gamma\)(buy, $\sigma_{3}$) = 200\\
+	\(\Gamma\)(order, $\sigma_{3}$) = 0\\
+
 	\subsubsection{Graph}\label{par:p402}
 	\begin{figure}[H]
-		\includegraphics[width=1\linewidth, height=0.4\textheight]{./media/image1.jpeg}
+		\includegraphics[width=1.2\linewidth, height=0.4\textheight]{./media/example2_graph.png}
 		\label{Figure:f02}
 		\caption{Example 02}
 	\end{figure}
@@ -241,13 +252,13 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	Actions: cook, eat, play.\\
 	\\
 	\\
-	eat cost 5\\
-	cook cost 15\\
-	play cost 20\\
 	initially $\neg$cooked $\land$ hungry\\
 	cook causes cooked if $\neg$cooked\\
+	cook cost 15\\
 	eat causes ($\neg$cooked $\land$ $\neg$hungry) if cooked\\
+	eat cost 5\\
 	play causes hungry if $\neg$hungry\\
+	play cost 20\\
 	\\
 	\subsubsection{Calculation}\label{par:p303}
 	$\sum$ = \{$\sigma_{0}$ ,$\sigma_{1}$, $\sigma_{2}$, $\sigma_{3}$\}\\
@@ -257,21 +268,33 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	$\sigma_{2}$ = \{$\neg$cooked, $\neg$hungry\}\\
 	$\sigma_{3}$ = \{cooked, $\neg$hungry\}\\
 	\\
-	$\psi$(eat, $\sigma_{0}$) = $\sigma_{0}$\\
-	$\psi$(cook, $\sigma_{0}$) = $\sigma_{1}$\\
-	$\psi$(play, $\sigma_{0}$) = $\sigma_{0}$\\
+	\(  \Psi  \)(eat, $\sigma_{0}$) = $\sigma_{0}$\\
+	\(  \Psi  \)(cook, $\sigma_{0}$) = $\sigma_{1}$\\
+	\(  \Psi  \)(play, $\sigma_{0}$) = $\sigma_{0}$\\
+	\(\Gamma\)(eat, $\sigma_{0}$) = 0\\
+	\(\Gamma\)(cook, $\sigma_{0}$) = 15\\
+	\(\Gamma\)(play, $\sigma_{0}$) = 0\\
 	\\
-	$\psi$(eat, $\sigma_{1}$) = $\sigma_{2}$\\
-	$\psi$(cook, $\sigma_{1}$) = $\sigma_{1}$\\
-	$\psi$(play, $\sigma_{1}$) = $\sigma_{1}$\\
+	\(  \Psi  \)(eat, $\sigma_{1}$) = $\sigma_{2}$\\
+	\(  \Psi  \)(cook, $\sigma_{1}$) = $\sigma_{1}$\\
+	\(  \Psi  \)(play, $\sigma_{1}$) = $\sigma_{1}$\\
+	\(\Gamma\)(eat, $\sigma_{1}$) = 5\\
+	\(\Gamma\)(cook, $\sigma_{1}$) = 0\\
+	\(\Gamma\)(play, $\sigma_{1}$) = 0\\
 	\\
-	$\psi$(eat, $\sigma_{2}$) = $\sigma_{2}$\\
-	$\psi$(cook, $\sigma_{2}$) = $\sigma_{3}$\\
-	$\psi$(play, $\sigma_{2}$) = $\sigma_{1}$\\
+	\(  \Psi  \)(eat, $\sigma_{2}$) = $\sigma_{2}$\\
+	\(  \Psi  \)(cook, $\sigma_{2}$) = $\sigma_{3}$\\
+	\(  \Psi  \)(play, $\sigma_{2}$) = $\sigma_{1}$\\
+	\(\Gamma\)(eat, $\sigma_{2}$) = 0\\
+	\(\Gamma\)(cook, $\sigma_{2}$) = 15\\
+	\(\Gamma\)(play, $\sigma_{2}$) = 20\\
 	\\
-	$\psi$(eat, $\sigma_{3}$) = $\sigma_{2}$\\
-	$\psi$(cook, $\sigma_{3}$) = $\sigma_{3}$\\
-	$\psi$(play, $\sigma_{3}$) = $\sigma_{1}$\\
+	\(  \Psi  \)(eat, $\sigma_{3}$) = $\sigma_{2}$\\
+	\(  \Psi  \)(cook, $\sigma_{3}$) = $\sigma_{3}$\\
+	\(  \Psi  \)(play, $\sigma_{3}$) = $\sigma_{1}$\\
+	\(\Gamma\)(eat, $\sigma_{3}$) = 5\\
+	\(\Gamma\)(cook, $\sigma_{3}$) = 0\\
+	\(\Gamma\)(play, $\sigma_{3}$) = 20\\
 	\\
 	\subsubsection{Graph}\label{par:p403}
 	\begin{figure}[H]
