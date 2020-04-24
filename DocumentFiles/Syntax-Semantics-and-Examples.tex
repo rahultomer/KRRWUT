@@ -120,10 +120,12 @@ A literal is either a fluent f or its negation ¬f.\\
 \end{enumerate}
 
 \item 	Let L be an action language of the class A over the signature $\Upsilon$ = (F, Ac, K). A structure for L is a triplet S = ($\Psi$, $\sigma_{0}$, $\Gamma$) where $\Psi$ is a transition function, $\Gamma$ is a cost transition function  and $\sigma_{0}$ $\in$ $\sum$ is the initial state
+\item 	Let L be an action language of the class A over the signature $\Upsilon$ = (F, Ac, K). A structure for L is a triplet S = ($\Psi$, $\sigma_{0}$, $\Gamma$) where $\Psi$ is a state transition function, $\Gamma$ is a cost transition function  and $\sigma_{0}$ $\in$ $\sum$ is the initial state
 
 \item 	Let S = ($\Psi$, $\sigma_{0}$, $\Gamma$) be a structure for L. A statement s is true in S, in symbols S   $\vDash$   s, iff 
 \begin{enumerate}
 \item s is of the form $\overline{f}$ after A1, . . . , An, then $\Psi$(A1, . . . , An), $\sigma_{0}$)   $\vDash \overline{f}$;
+\item s is of the form $\overline{f}$ after A1, . . . , An, then $\Psi$((A1, . . . , An), $\sigma_{0}$))   $\vDash \overline{f}$;
 
 \item if s is of the form A causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$, then for every $\sigma$ $\in$ $\sum$ such that $\sigma$   $\vDash$   $\overline{gj}$ , j = 1, . . . , k, $\Psi$(A, $\sigma$)   $\vDash$   $\overline{f}$.
 
@@ -210,6 +212,7 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	buy costs 200$\$$ \\
 	order causes available if ¬available\\
 	order Cost: 50$\$$ \\
+	order costs 50$\$$ \\
 	
 	\subsubsection{Calculation:}\label{par:p302}
 	\indent \\
@@ -257,11 +260,14 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	initially $\neg$cooked, hungry\\
 	cook causes cooked if $\neg$cooked\\
 	cook cost 15\\
+	cook costs 15\\
 	eat causes $\neg$cooked if cooked,hungry\\
 	eat causes $\neg$hungry\\
 	eat cost 5\\
+	eat costs 5\\
 	play causes hungry if $\neg$hungry\\
 	play cost 20\\
+	play costs 20\\
 	\\
 	\subsubsection{Calculation}\label{par:p303}
 	$\sum$ = \{$\sigma_{0}$ ,$\sigma_{1}$, $\sigma_{2}$, $\sigma_{3}$\}\\
