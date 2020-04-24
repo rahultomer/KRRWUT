@@ -157,12 +157,13 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	Fluents: fuel, reserve\\
 	Actions: buy, travel\\
 	\\
-	Initially:  fuel $\wedge$ reserve \\
+	Initially:  fuel,reserve \\
 	travel causes $\neg$fuel if fuel \\
 	travel cost 50 \\
-	travel causes $\neg$reserve if $\neg$fuel $\vee$ reserve\\
+	travel causes $\neg$reserve if $\neg$fuel\\
 	travel cost 50 \\
-	buy causes fuel $\wedge$ reserve  if $\neg$ fuel $\vee$ $\neg$reserve\\
+	buy causes fuel if $\neg$ fuel,$\neg$reserve\\
+	buy causes reserve if $\neg$ fuel,$\neg$reserve\\
 	buy cost 100 \\
 	\subsubsection{Calculation}\label{par:p301}\par
 	$\sum$ = $\lbrace$ $\sigma_{0}$,$\sigma_{1}$,$\sigma_{2}$,$\sigma_{3}$ $\rbrace$\\ \\
@@ -203,8 +204,9 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	\indent 
 	Fluents: available, sold.\\
 	Actions: buy, order.\\
-	Initially: ¬available $\wedge$  ¬sold\\
-	buy causes (sold $\land$ ¬available) if available\\
+	Initially: ¬available, ¬sold\\
+	buy causes sold if available\\
+	buy causes ¬available\\
 	buy costs 200$\$$ \\
 	order causes available if ¬available\\
 	order Cost: 50$\$$ \\
@@ -252,10 +254,11 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	Actions: cook, eat, play.\\
 	\\
 	\\
-	initially $\neg$cooked $\land$ hungry\\
+	initially $\neg$cooked, hungry\\
 	cook causes cooked if $\neg$cooked\\
 	cook cost 15\\
-	eat causes ($\neg$cooked $\land$ $\neg$hungry) if cooked\\
+	eat causes $\neg$cooked if cooked,hungry\\
+	eat causes $\neg$hungry\\
 	eat cost 5\\
 	play causes hungry if $\neg$hungry\\
 	play cost 20\\
