@@ -19,5 +19,5 @@
 \contentsline {subsubsection}{\numberline {4.3.1}Description}{8}%
 \contentsline {subsubsection}{\numberline {4.3.2}Representation in language}{9}%
 \contentsline {subsubsection}{\numberline {4.3.3}Calculation}{9}%
-\contentsline {subsubsection}{\numberline {4.3.4}Graph}{10}%
-\contentsline {section}{\numberline {5}Appendix}{11}%
+\contentsline {subsubsection}{\numberline {4.3.4}Graph}{11}%
+\contentsline {section}{\numberline {5}Appendix}{12}%
