@@ -115,7 +115,7 @@ A literal is either a fluent f or its negation ¬f.\\
 
 \item $\Gamma^{\ast}$ ( $\varepsilon$ , $\sigma$) = k,
  
-\item $\Gamma^{\ast}$ ((A1, . . . , An), $\sigma$) = $\Gamma$(An, $\Gamma^{\ast}$ (A1, . . . , An-1)). 
+\item $\Gamma^{\ast}$ ((A1, . . . , An), $\sigma$) = $\Gamma$(An, $\Psi^{\ast}$ (A1, . . . , An-1)). 
 
 \end{enumerate}
 
@@ -140,13 +140,13 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 \begin{itemize}
 	\item {\bfseries A causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$,$\sigma \nvDash$  $\overline{gi}$ for some i = 1,...,k
 
-	\item {\bfseries A costs k,} and $\sigma \nvDash \overline{gi}$ for some i = 1,...,k.
+	\item {\bfseries A costs k,} if $\Psi$(A,$\sigma$) $\nvDash$ $\sigma$.
 \end{itemize}
 (ii) D does not contain an effect statement but contains a 0 cost statement, as follows:
 \begin{itemize}
 \item {\bfseries A causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$ then $\sigma \nvDash$  gi iff $\Psi$(A,$\sigma$) $\vDash$ f.
 
-\item {\bfseries A costs 0}, and $\sigma \vDash$ f iff $\Gamma$(A,$\sigma$) = 0.
+\item {\bfseries A costs 0}, if $\Psi$(A,$\sigma$) $\vDash$ $\sigma$.
 \end{itemize}
 
 	\section{Examples}\label{sec:Examples}
@@ -256,13 +256,10 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	\\
 	initially $\neg$cooked, hungry\\
 	cook causes cooked if $\neg$cooked\\
-	cook cost 15\\
 	cook costs 15\\
-	eat causes $\neg$cooked if cooked,hungry\\
-	eat causes $\neg$hungry\\
+	eat causes $\neg$cooked, $\neg$hungry if cooked\\
 	eat costs 5\\
 	play causes hungry if $\neg$hungry\\
-	play cost 20\\
 	play costs 20\\
 	\\
 	\subsubsection{Calculation}\label{par:p303}
