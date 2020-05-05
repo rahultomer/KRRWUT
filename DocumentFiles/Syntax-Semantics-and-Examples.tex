@@ -80,12 +80,12 @@ A literal is either a fluent f or its negation ¬f.\\
     \hline
     \multicolumn{1}{|c|}{\textbf{Statement}} & \multicolumn{1}{c|}{\textbf{Format}} & \multicolumn{1}{c|}{\textbf{Description}} \\
     \hline
-    Effect Statement & A causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$ & If the action A is performed in any state satisfying $\overline{g1}$, . . . , $\overline{gk}$, then in
+    Effect Statement & Ai causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$ & If the action A is performed in any state satisfying $\overline{g1}$, . . . , $\overline{gk}$, then in
     the resulting state $\overline{f}$ holds. \\
     \hline
     Value Statement & $\overline{f}$ after A1 ….An where $\overline{f} \in$ F and Ai $\in$ Ac, for i = 1, ... ,n & $\overline{f}$ holds after performing the sequence A1 ….An of actions in the initial state. \\
     \hline
-    Cost Statement & A costs k where k is a positive integer and k $\in$ K   & If the action A is performed in any state satisfying $\overline{g1}$, ...,$\overline{gk}$ , then change in state results in fixed cost k. \\
+    Cost Statement & Ai costs ki, ki $\in$ K for i = 1,...,n & If the action A is performed in any state satisfying $\overline{g1}$, ...,$\overline{gk}$ , then change in state results in fixed cost ki. \\
     \hline
     \end{tabular}
     \caption{Syntax Table}
@@ -96,9 +96,9 @@ A literal is either a fluent f or its negation ¬f.\\
 	\begin{itemize}
 \item 	A state is a mapping $\sigma$ : F $\rightarrow$ \{0, 1\}. For any f $\in$ F, if $\sigma$(f) = 1, then we say that f holds in $\sigma$ and write $\sigma$   $\vDash$   f. If $\sigma$(f) = 0, then we write $\sigma$   $\vDash$   ¬f and say that f does not hold in $\sigma$. Let $\sum$ stand for the set of all states.
 
-\item 	A state transition function is a mapping $\Psi$ : Ac $\times$ $\sum$ $\rightarrow$ $\sum$. For any $\sigma$ $\in$ $\sum$, for any A $\in$ Ac, $\Psi$(A , $\sigma$) is the state resulting from performing the action A in the state $\sigma$. Also $\Psi$(A,$\sigma$) will results in same state if the effect of action is empty.
+\item 	A state transition function is a mapping $\Psi$ : Ac $\times$ $\sum$ $\rightarrow$ $\sum$. For any $\sigma$ $\in$ $\sum$, for any action Ai $\in$ Ac where i = 1,...,n, $\Psi$(Ai , $\sigma$) is the state resulting from performing the action A in the state $\sigma$. Also $\Psi$(Ai,$\sigma$) will results in same state if the effect of action is empty.
 
-\item A cost transition function is a mapping $\Gamma$ : Ac $\times \sum \rightarrow$ K.For any $\sigma\in\sum$ and for any A $\in$ Ac, $\Gamma$(A, $\sigma$) is the fixed cost k where k $\in$ K, resulting from performing the action A in the state $\sigma$. Also $\Gamma$(A,$\sigma$) will results in 0 cost if there is no change in state. 
+\item A cost transition function is a mapping $\Gamma$ : Ac $\times \sum \rightarrow$ K.For any $\sigma\in\sum$ and for any action Ai $\in$ Ac where i = 1,...,n, $\Gamma$(Ai, $\sigma$) is the fixed cost ki corresponding to the action Ai, where ki $\in$ K and i=1,...,n, resulting from performing the action Ai in the state $\sigma$. Also $\Gamma$(Ai,$\sigma$) will results in 0 cost if there is no change in state. 
 
 
 \item 	A transition function is generalized to the mapping $\Psi^{\ast}$ : Ac$^{\ast}$  $\times$  $\sum$ $\rightarrow$ $\sum$ as follows: 
@@ -127,26 +127,26 @@ A literal is either a fluent f or its negation ¬f.\\
 
 \item if s is of the form A causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$, then for every $\sigma$ $\in$ $\sum$ such that $\sigma$   $\vDash$   $\overline{gj}$ , j = 1, . . . , k, $\Psi$(A, $\sigma$)   $\vDash$   $\overline{f}$.
 
-\item if s is of the form A costs k, then every $\sigma \in \sum$ such that $\sigma \vDash \overline{gi}$, i = 1,...,k, $\Gamma$(A,$\sigma$) $\vDash$ k.
+\item if s is of the form A1,...,An costs k1,...,kn respectively where ki $\in$ K, Ai $\in$ Ac and i = 1,...n, then every $\sigma \in \sum$ such that $\sigma \vDash \overline{gi}$, i = 1,...,k, $\Gamma$(A,$\sigma$) $\vDash$ k.
 \end{enumerate}
  
 
 \end{itemize}
 Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,K). A structure S = ($\Psi$,$\sigma_{0}$, $\Gamma$) is a model of D iff\\
 (M1) for every statement s $\in$ D, S $\vDash$ s;\\
-(M2) for every A $\in$ Ac for every f,g1,...,gn $\in$ F, for every k $\in$ K and for every $\sigma\in\sum$, if one of the following conditions holds:
+(M2) for every Ai $\in$ Ac for every f,g1,...,gn $\in$ F, for every ki $\in$ K and for every $\sigma\in\sum$, if one of the following conditions holds:
 \\
 (i) D contains an effect statement and a cost statement as follows:
 \begin{itemize}
-	\item {\bfseries A causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$,$\sigma \nvDash$  $\overline{gi}$ for some i = 1,...,k
+	\item {\bfseries Ai causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$,$\sigma \nvDash$  $\overline{gj}$ for some j = 1,...,k
 
-	\item {\bfseries A costs k,} if $\Psi$(A,$\sigma$) $\nvDash$ $\sigma$.
+	\item {\bfseries Ai costs ki,} if $\Psi$(Ai,$\sigma$) $\nvDash$ $\sigma$.
 \end{itemize}
 (ii) D does not contain an effect statement but contains a 0 cost statement, as follows:
 \begin{itemize}
-\item {\bfseries A causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$ then $\sigma \vDash$ f iff $\Psi$(A,$\sigma$) $\vDash$ f.
+\item {\bfseries Ai causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$ then $\sigma \vDash$ f iff $\Psi$(Ai,$\sigma$) $\vDash$ f.
 
-\item {\bfseries A costs 0}, if $\Psi$(A,$\sigma$) $\vDash$ $\sigma$.
+\item {\bfseries Ai costs 0}, if $\Psi$(Ai,$\sigma$) $\vDash$ $\sigma$.
 \end{itemize}
 
 	\section{Examples}\label{sec:Examples}
@@ -154,8 +154,9 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	\subsubsection{Description}\label{par:p101}
 	Andrew wants to travel by his car to a place.Travelling costs him 50\$ if he uses fuel from the fuel tank of the car.If in case of emergency, Andrew is carrying a bottle of fuel as reserve, which can cost him 50\$ for travelling. buying Fuel costs him 100\$ if both fuel and reserve are empty. and buying causes both his Fuel and Reserve are filled. 
 	\subsubsection{Representation}\label{par:p201}
-	Fluents: fuel, reserve\\
-	Actions: buy, travel\\
+	Fluents: F = \{fuel, reserve\}\\
+	Actions: Ac = \{buy, travel\}\\
+	Costs: K = \{100, 50\}\\
 	\\
 	Initially:  fuel,reserve \\
 	travel causes $\neg$fuel if fuel \\
@@ -202,8 +203,9 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	
 	\subsubsection{Representation:}\label{par:p202}
 	\indent 
-	Fluents: available, sold.\\
-	Actions: buy, order.\\
+	Fluents: F = \{available, sold\}\\
+	Actions: Ac = \{buy, order\}\\
+	Costs: K = \{200, 50\}\\
 	Initially: ¬available, ¬sold\\
 	buy causes sold if available\\
 	buy causes ¬available\\
@@ -250,8 +252,9 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	There is a man. He can cook, eat, and play. Cooking makes food cooked. he can eat food if it is cooked. After eating he feels not hungry, and food is not cooked again. He can play. Playing makes him hungry. He just can play if he is not hungry. He just cooks when there is no food is cooked. Initially, he is hungry, and no food is cooked. In terms of energy, eating costs 5, cooking costs 15, playing costs 20.\\
 	\\
 	\subsubsection{Representation in language}\label{par:p203}
-	Fluents: cooked, hungry.\\
-	Actions: cook, eat, play.\\
+	Fluents: F = \{cooked, hungry\}\\
+	Actions: Ac = \{cook, eat, play\}\\
+	Costs: K = \{15, 5, 20\}
 	\\
 	\\
 	initially $\neg$cooked, hungry\\
