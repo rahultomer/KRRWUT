@@ -96,7 +96,7 @@ A literal is either a fluent f or its negation ¬f.\\
 	\begin{itemize}
 \item 	A state is a mapping $\sigma$ : F $\rightarrow$ \{0, 1\}. For any f $\in$ F, if $\sigma$(f) = 1, then we say that f holds in $\sigma$ and write $\sigma$   $\vDash$   f. If $\sigma$(f) = 0, then we write $\sigma$   $\vDash$   ¬f and say that f does not hold in $\sigma$. Let $\sum$ stand for the set of all states.
 
-\item 	A state transition function is a mapping $\Psi$ : Ac $\times$ $\sum$ $\rightarrow$ $\sum$. For any $\sigma$ $\in$ $\sum$, for any action Ai $\in$ Ac where i = 1,...,n, $\Psi$(Ai , $\sigma$) is the state resulting from performing the action A in the state $\sigma$. Also $\Psi$(Ai,$\sigma$) will results in same state if the effect of action is empty.
+\item 	A state transition function is a mapping $\Psi$ : Ac $\times$ $\sum$ $\rightarrow$ $\sum$. For any $\sigma$ $\in$ $\sum$, for any action Ai $\in$ Ac where i = 1,...,n, $\Psi$(Ai , $\sigma$) is the state resulting from performing the action Ai in the state $\sigma$. Also $\Psi$(Ai,$\sigma$) will results in same state if the effect of action is empty.
 
 \item A cost transition function is a mapping $\Gamma$ : Ac $\times \sum \rightarrow$ K.For any $\sigma\in\sum$ and for any action Ai $\in$ Ac where i = 1,...,n, $\Gamma$(Ai, $\sigma$) is the fixed cost ki corresponding to the action Ai, where ki $\in$ K and i=1,...,n, resulting from performing the action Ai in the state $\sigma$. Also $\Gamma$(Ai,$\sigma$) will results in 0 cost if there is no change in state. 
 
@@ -109,15 +109,6 @@ A literal is either a fluent f or its negation ¬f.\\
 \item $\Psi^{\ast}$ ((A1, . . . , An), $\sigma$) = $\Psi$(An, $\Psi^{\ast}$ (A1, . . . , An-1)). 
 
 \end{enumerate}
- 
-\item A cost transition function is generalized to the mapping $\Gamma^{\ast}$ : Ac$^{\ast}$  $\times$  $\sum$ $\rightarrow$ K as follows: 
-\begin{enumerate}
-
-\item $\Gamma^{\ast}$ ( $\varepsilon$ , $\sigma$) = k,
- 
-\item $\Gamma^{\ast}$ ((A1, . . . , An), $\sigma$) = $\Gamma$(An, $\Psi^{\ast}$ (A1, . . . , An-1)). 
-
-\end{enumerate}
 
 \item 	Let L be an action language of the class A over the signature $\Upsilon$ = (F, Ac, K). A structure for L is a triplet S = ($\Psi$, $\sigma_{0}$, $\Gamma$) where $\Psi$ is a state transition function, $\Gamma$ is a cost transition function  and $\sigma_{0}$ $\in$ $\sum$ is the initial state
 
@@ -125,9 +116,9 @@ A literal is either a fluent f or its negation ¬f.\\
 \begin{enumerate}
 \item s is of the form $\overline{f}$ after A1, . . . , An, then $\Psi$((A1, . . . , An), $\sigma_{0}$))   $\vDash \overline{f}$;
 
-\item if s is of the form A causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$, then for every $\sigma$ $\in$ $\sum$ such that $\sigma$   $\vDash$   $\overline{gj}$ , j = 1, . . . , k, $\Psi$(A, $\sigma$)   $\vDash$   $\overline{f}$.
+\item if s is of the form Ai causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$, then for every $\sigma$ $\in$ $\sum$ such that $\sigma$   $\vDash$   $\overline{gj}$ , j = 1, . . . , k, $\Psi$(Ai, $\sigma$)   $\vDash$   $\overline{f}$.
 
-\item if s is of the form A1,...,An costs k1,...,kn respectively where ki $\in$ K, Ai $\in$ Ac and i = 1,...n, then every $\sigma \in \sum$ such that $\sigma \vDash \overline{gi}$, i = 1,...,k, $\Gamma$(A,$\sigma$) $\vDash$ k.
+\item if s is of the form A1,...,An costs k1,...,kn respectively where ki $\in$ K, Ai $\in$ Ac and i = 1,...n, then every $\sigma \in \sum$ such that $\sigma \vDash \overline{gi}$, i = 1,...,k, $\Gamma$(Ai,$\sigma$) $\vDash$ ki.
 \end{enumerate}
  
 
