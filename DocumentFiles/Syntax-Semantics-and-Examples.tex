@@ -85,7 +85,9 @@ A literal is either a fluent f or its negation ¬f.\\
     \hline
     Value Statement & $\overline{f}$ after A1 ….An where $\overline{f} \in$ F and Ai $\in$ Ac, for i = 1, ... ,n & $\overline{f}$ holds after performing the sequence A1 ….An of actions in the initial state. \\
     \hline
-    Cost Statement & Ai costs ki, ki $\in$ K for i = 1,...,n & If the action Ai is performed in any state satisfying $\overline{g1}$, ...,$\overline{gk}$ , then change in state results in fixed cost ki. \\
+    Cost Statement & Ai costs ki (if Ai causes $\overline{f}$ if $\overline{g1}$,....,$\overline{gn}$), ki $\in$ K for i = 1,...,n & If the action Ai is performed in any state satisfying $\overline{g1}$, ...,$\overline{gk}$ , then change in state results in fixed cost ki. \\
+    \hline
+    Abbreviation & initially $\overline{f}$ & in the initial state $\overline{f}$ holds\\
     \hline
     \end{tabular}
     \caption{Syntax Table}
@@ -140,23 +142,40 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 \item {\bfseries Ai costs 0}, if $\Psi$(Ai,$\sigma$) $\vDash$ $\sigma$.
 \end{itemize}
 
+\section{Query}
+State query:\\
+necessary $\sigma$ after A1,...,Ai on $\sum$ \\
+possibly $\sigma$ after A1,....,Ai on $\sum$ \\
+The first statement says that state $\sigma$ always occurs after performing every action in specific state on $\sum$ \\
+The second statement says that state $\sigma$ may occurs after performing every action in specific state on $\sum$ \\
+When the option from $\sum$ is omitted, these queries refer to the initial state \\
+\\
+Cost query: \\
+necessary execution costs ki after A1, ..., Ai on $\sum$ \\
+possibly execution costs 0 after A1, ..., Ai on $\sum$ \\
+The first statement says that corresponding ki cost will always occur after performing every action in a specific state on $\sum$. \\
+The second statement says that 0 cost will always occur after performing every action in a specific state on $\sum$.\\
+When the option from $\sum$ is omitted, these queries refer to the initial state. \\
+
 	\section{Examples}\label{sec:Examples}
 	\subsection{Example 01}\label{example:ex01}
 	\subsubsection{Description}\label{par:p101}
-	Andrew wants to travel by his car to a place.Travelling costs him 50\$ if he uses fuel from the fuel tank of the car.If in case of emergency, Andrew is carrying a bottle of fuel as reserve, which can cost him 50\$ for travelling. buying Fuel costs him 100\$ if both fuel and reserve are empty. and buying causes both his Fuel and Reserve are filled. 
+	Andrew wants to travel by his car to a place. Travelling costs him 50\$ when there is fuel in car tank. Travelling costs him 50\$ when there is fuel in reserve. When there is no fuel in any of it, Andrew can fuy fuel. Fuel costs him 40\$
 	\subsubsection{Representation}\label{par:p201}
 	Fluents: F = \{fuel, reserve\}\\
 	Actions: Ac = \{buy, travel\}\\
 	Costs: K = \{100, 50\}\\
 	\\
-	Initially:  fuel,reserve \\
-	travel causes $\neg$fuel if fuel \\
-	travel costs 50 \\
+	Initially:  fuel \\
+	Initially: reserve \\
+	travel causes $\neg$fuel if fuel, reserve \\
 	travel causes $\neg$reserve if $\neg$fuel, reserve\\
+	travel causes $\neg$fuel if fuel, $\neg$reserve
 	travel costs 50 \\
+	buy causes fuel if $\neg$ fuel,reserve\\
 	buy causes fuel if $\neg$ fuel,$\neg$reserve\\
-	buy causes reserve if $\neg$ fuel,$\neg$reserve\\
-	buy costs 100 \\
+	buy causes reserve if  fuel,$\neg$reserve\\
+	buy costs 40 \\
 	\subsubsection{Calculation}\label{par:p301}\par
 	$\sum$ = $\lbrace$ $\sigma_{0}$,$\sigma_{1}$,$\sigma_{2}$,$\sigma_{3}$ $\rbrace$\\ \\
 	$\sigma_{0}$ = $\lbrace$ fuel, reserve $\rbrace$ \indent $\sigma_{1}$ = $\lbrace$ $\neg$fuel, reserve $\rbrace$\\
@@ -167,19 +186,19 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	\(\Gamma\)(buy, $\sigma_{0}$) = 0\\
 	\(\Gamma\)(travel, $\sigma_{0}$) = 50\\
 	\\
-	$\Psi$(buy, $\sigma_{1}$)=$\sigma_{1}$\\ 
+	$\Psi$(buy, $\sigma_{1}$)=$\sigma_{0}$\\ 
 	$\Psi$(travel, $\sigma_{1}$)=$\sigma_{2}$\\
-	\(\Gamma\)(buy, $\sigma_{1}$) = 0\\
+	\(\Gamma\)(buy, $\sigma_{1}$) = 40\\
 	\(\Gamma\)(travel, $\sigma_{1}$) = 50\\
 	\\
-	$\Psi$(buy, $\sigma_{2}$)=$\sigma_{0}$\\ 
+	$\Psi$(buy, $\sigma_{2}$)=$\sigma_{3}$\\ 
 	$\Psi$(travel, $\sigma_{2}$)=$\sigma_{2}$\\
-	\(\Gamma\)(buy, $\sigma_{2}$) = 100\\
+	\(\Gamma\)(buy, $\sigma_{2}$) = 40\\
 	\(\Gamma\)(travel, $\sigma_{2}$) = 0\\
 	\\
-	$\Psi$(buy, $\sigma_{3}$)=$\sigma_{3}$\\ 
+	$\Psi$(buy, $\sigma_{3}$)=$\sigma_{0}$\\ 
 	$\Psi$(travel, $\sigma_{3}$)=$\sigma_{2}$\\
-	\(\Gamma\)(buy, $\sigma_{3}$) = 0\\
+	\(\Gamma\)(buy, $\sigma_{3}$) = 40\\
 	\(\Gamma\)(travel, $\sigma_{3}$) = 50\\
 	\subsubsection{Graph}\label{par:p401}
 	\begin{figure}[H]
@@ -188,6 +207,16 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 		\label{Figure:f01}
 		\caption{Example 01}
 	\end{figure}
+	\subsubsection{Queries}
+	possibly $\sigma_{0}$ after buy on $\sigma_{0}$\\
+	necessary $\sigma_{0}$ after buy on $\sigma_{1}$\\
+	possibly $\sigma_{2}$ after travel on $\sigma_{2}$\\
+	necessary $\sigma_{1}$ after travel on $\sigma_{0}$\\
+	\\
+	possibly execution costs 0 after buy on $\sigma_{0}$\\
+	necessary execution costs 40 after buy on $\sigma_{2}$\\
+	possibly execution costs 0 after travel on $\sigma_{2}$\\
+	necessary execution costs 50 after travel on $\sigma_{0}$\\
 	\subsection{Example 02}\label{example:ex02}
 	\subsubsection{Description}\label{par:p102}
 	John visits a painter to buy a specific painting. The cost of painting is 200\$ if its available in the shop. But if painting is not available then John needs to order a new one to be painted and will buy once its available.Order costs 50\$ At any time only one copy of painting is available and another one to be ordered once sold. 
@@ -197,10 +226,11 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	Fluents: F = \{available, sold\}\\
 	Actions: Ac = \{buy, order\}\\
 	Costs: K = \{200, 50\}\\
-	Initially: ¬available, ¬sold\\
+	Initially: ¬available\\
+	Initially: ¬sold\\
 	buy causes sold if available\\
 	buy causes ¬available\\
-	buy costs 200$\$$ \\
+	buy costs 200\$
 	order causes available if ¬available\\
 	order costs 50$\$$ \\
 	
@@ -238,6 +268,16 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 		\label{Figure:f02}
 		\caption{Example 02}
 	\end{figure}
+	\subsubsection{Queries}
+	possibly $\sigma_{0}$ after buy on $\sigma_{0}$\\
+	necessary $\sigma_{2}$ after buy on $\sigma_{1}$\\
+	possibly $\sigma_{1}$ after order on $\sigma_{1}$\\
+	necessary $\sigma_{1}$ after order on $\sigma_{0}$\\
+	\\
+	possibly execution costs 0 after buy on $\sigma_{0}$\\
+	necessary execution costs 200 after buy on $\sigma_{1}$\\
+	possibly execution costs 0 after order on $\sigma_{1}$\\
+	necessary execution costs 50 after order on $\sigma_{0}$\\
 	\subsection{Example 03}
 	\subsubsection{Description}\label{par:p103}
 	There is a man. He can cook, eat, and play. Cooking makes food cooked. he can eat food if it is cooked. After eating he feels not hungry, and food is not cooked again. He can play. Playing makes him hungry. He just can play if he is not hungry. He just cooks when there is no food is cooked. Initially, he is hungry, and no food is cooked. In terms of energy, eating costs 5, cooking costs 15, playing costs 20.\\
@@ -248,10 +288,12 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 	Costs: K = \{15, 5, 20\}
 	\\
 	\\
-	initially $\neg$cooked, hungry\\
+	initially $\neg$cooked\\
+	initially hungry\\
 	cook causes cooked if $\neg$cooked\\
 	cook costs 15\\
-	eat causes $\neg$cooked, $\neg$hungry if cooked\\
+	eat causes $\neg$cooked if cooked\\
+	eat causes $\neg$hungry if cooked\\
 	eat costs 5\\
 	play causes hungry if $\neg$hungry\\
 	play costs 20\\
@@ -298,6 +340,16 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 		\caption{Example 03}
 		\label{Figure:f03}
 	\end{figure}
+	\subsubsection{Queries}
+	possibly $\sigma_{0}$ after eat on $\sigma_{0}$\\
+	necessary $\sigma_{1}$ after cook on $\sigma_{0}$\\
+	possibly $\sigma_{0}$ after play on $\sigma_{0}$\\
+	necessary $\sigma_{3}$ after eat on $\sigma_{1}$\\
+	\\
+	possibly execution costs 0 after eat on $\sigma_{0}$\\
+	necessary execution costs 15 after cook on $\sigma_{0}$\\
+	possibly execution costs 20 after play on $\sigma_{2}$\\
+	necessary execution costs 5 after eat on $\sigma_{1}$\\
 	\newpage
 	\section{Appendix}	
 	\begin{appendix}
