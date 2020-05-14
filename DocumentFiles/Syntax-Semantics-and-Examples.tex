@@ -80,14 +80,14 @@ A literal is either a fluent f or its negation ¬f.\\
     \hline
     \multicolumn{1}{|c|}{\textbf{Statement}} & \multicolumn{1}{c|}{\textbf{Format}} & \multicolumn{1}{c|}{\textbf{Description}} \\
     \hline
+    Value Statement & $\overline{f}$ after A1 ….An where $\overline{f} \in$ F and Ai $\in$ Ac, for i = 1, ... ,n & $\overline{f}$ holds after performing the sequence A1 ….An of actions in the initial state. \\
+    \hline
+    Abbreviation & initially $\overline{f}$ & in the initial state $\overline{f}$ holds\\
+    \hline
     Effect Statement & Ai causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$ & If the action Ai is performed in any state satisfying $\overline{g1}$, . . . , $\overline{gk}$, then in
     the resulting state $\overline{f}$ holds. \\
     \hline
-    Value Statement & $\overline{f}$ after A1 ….An where $\overline{f} \in$ F and Ai $\in$ Ac, for i = 1, ... ,n & $\overline{f}$ holds after performing the sequence A1 ….An of actions in the initial state. \\
-    \hline
     Cost Statement & Ai costs ki (if Ai causes $\overline{f}$ if $\overline{g1}$,....,$\overline{gn}$), ki $\in$ K for i = 1,...,n & If the action Ai is performed in any state satisfying $\overline{g1}$, ...,$\overline{gk}$ , then change in state results in fixed cost ki. \\
-    \hline
-    Abbreviation & initially $\overline{f}$ & in the initial state $\overline{f}$ holds\\
     \hline
     \end{tabular}
     \caption{Syntax Table}
@@ -139,24 +139,27 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 \begin{itemize}
 \item {\bfseries Ai causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$ then $\sigma \vDash$ f iff $\Psi$(Ai,$\sigma$) $\vDash$ f.
 
-\item {\bfseries Ai costs 0}, if $\Psi$(Ai,$\sigma$) $\vDash$ $\sigma$.
+\item if $\Psi$(Ai,$\sigma$) = $\sigma$ then $\Gamma$(Ai,$\sigma$) = 0.
 \end{itemize}
 
 \section{Query}
-State query:\\
+\begin{itemize}
+\item{State query:\\
 necessary $\sigma$ after A1,...,Ai on $\sum$ \\
 possibly $\sigma$ after A1,....,Ai on $\sum$ \\
+\\
 The first statement says that state $\sigma$ always occurs after performing every action in specific state on $\sum$ \\
 The second statement says that state $\sigma$ may occurs after performing every action in specific state on $\sum$ \\
-When the option from $\sum$ is omitted, these queries refer to the initial state \\
+When the option from $\sum$ is omitted, these queries refer to the initial state \\}
 \\
-Cost query: \\
+\item{Cost query: \\
 necessary execution costs ki after A1, ..., Ai on $\sum$ \\
 possibly execution costs 0 after A1, ..., Ai on $\sum$ \\
+\\
 The first statement says that corresponding ki cost will always occur after performing every action in a specific state on $\sum$. \\
-The second statement says that 0 cost will always occur after performing every action in a specific state on $\sum$.\\
-When the option from $\sum$ is omitted, these queries refer to the initial state. \\
-
+The second statement says that 0 cost may occur after performing every action in a specific state on $\sum$.\\
+When the option from $\sum$ is omitted, these queries refer to the initial state. \\}
+\end{itemize}
 	\section{Examples}\label{sec:Examples}
 	\subsection{Example 01}\label{example:ex01}
 	\subsubsection{Description}\label{par:p101}
@@ -164,18 +167,18 @@ When the option from $\sum$ is omitted, these queries refer to the initial state
 	\subsubsection{Representation}\label{par:p201}
 	Fluents: F = \{fuel, reserve\}\\
 	Actions: Ac = \{buy, travel\}\\
-	Costs: K = \{100, 50\}\\
+	Costs: K = \{40, 50\}\\
 	\\
-	Initially:  fuel \\
-	Initially: reserve \\
-	travel causes $\neg$fuel if fuel, reserve \\
-	travel causes $\neg$reserve if $\neg$fuel, reserve\\
+	Initially:  fuel; \\
+	Initially: reserve; \\
+	travel causes $\neg$fuel if fuel, reserve; \\
+	travel causes $\neg$reserve if $\neg$fuel, reserve;\\
 	travel causes $\neg$fuel if fuel, $\neg$reserve
-	travel costs 50 \\
-	buy causes fuel if $\neg$ fuel,reserve\\
-	buy causes fuel if $\neg$ fuel,$\neg$reserve\\
-	buy causes reserve if  fuel,$\neg$reserve\\
-	buy costs 40 \\
+	travel costs 50; \\
+	buy causes fuel if $\neg$ fuel,reserve;\\
+	buy causes fuel if $\neg$ fuel,$\neg$reserve;\\
+	buy causes reserve if  fuel,$\neg$reserve;\\
+	buy costs 40; \\
 	\subsubsection{Calculation}\label{par:p301}\par
 	$\sum$ = $\lbrace$ $\sigma_{0}$,$\sigma_{1}$,$\sigma_{2}$,$\sigma_{3}$ $\rbrace$\\ \\
 	$\sigma_{0}$ = $\lbrace$ fuel, reserve $\rbrace$ \indent $\sigma_{1}$ = $\lbrace$ $\neg$fuel, reserve $\rbrace$\\
@@ -226,13 +229,13 @@ When the option from $\sum$ is omitted, these queries refer to the initial state
 	Fluents: F = \{available, sold\}\\
 	Actions: Ac = \{buy, order\}\\
 	Costs: K = \{200, 50\}\\
-	Initially: ¬available\\
-	Initially: ¬sold\\
-	buy causes sold if available\\
-	buy causes ¬available\\
-	buy costs 200\$
-	order causes available if ¬available\\
-	order costs 50$\$$ \\
+	Initially: ¬available;\\
+	Initially: ¬sold;\\
+	buy causes sold if available;\\
+	buy causes ¬available;\\
+	buy costs 200\$;\\
+	order causes available if ¬availabl;\\
+	order costs 50\$; \\
 	
 	\subsubsection{Calculation:}\label{par:p302}
 	\indent \\
@@ -288,15 +291,15 @@ When the option from $\sum$ is omitted, these queries refer to the initial state
 	Costs: K = \{15, 5, 20\}
 	\\
 	\\
-	initially $\neg$cooked\\
-	initially hungry\\
-	cook causes cooked if $\neg$cooked\\
-	cook costs 15\\
-	eat causes $\neg$cooked if cooked\\
-	eat causes $\neg$hungry if cooked\\
-	eat costs 5\\
-	play causes hungry if $\neg$hungry\\
-	play costs 20\\
+	initially $\neg$cooked;\\
+	initially hungry;\\
+	cook causes cooked if $\neg$cooked;\\
+	cook costs 15;\\
+	eat causes $\neg$cooked if cooked;\\
+	eat causes $\neg$hungry if cooked;\\
+	eat costs 5;\\
+	play causes hungry if $\neg$hungry;\\
+	play costs 20;\\
 	\\
 	\subsubsection{Calculation}\label{par:p303}
 	$\sum$ = \{$\sigma_{0}$ ,$\sigma_{1}$, $\sigma_{2}$, $\sigma_{3}$\}\\
