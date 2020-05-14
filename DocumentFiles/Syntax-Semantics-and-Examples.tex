@@ -143,22 +143,26 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 \end{itemize}
 
 \section{Query}
+\subsection{Syntax}
 \begin{itemize}
-\item{State query:\\
-necessary $\sigma$ after A1,...,Ai on $\sum$ \\
-possibly $\sigma$ after A1,....,Ai on $\sum$ \\
+\item{Query set Q1:\\
+necessary $\sigma$ after A1,...,Ai on $\sigma_{0}$ \\
+possibly $\sigma$ after A1,....,Ai on $\sigma_{0}$ \\
 \\
-The first statement says that state $\sigma$ always occurs after performing every action in specific state on $\sum$ \\
-The second statement says that state $\sigma$ may occurs after performing every action in specific state on $\sum$ \\
-When the option from $\sum$ is omitted, these queries refer to the initial state \\}
+The first statement says that state $\sigma$ will always occurs after executing the program on initial state. \\
+The second statement says that state $\sigma$ may occurs after executing the program on initial state. \\}
 \\
-\item{Cost query: \\
-necessary execution costs ki after A1, ..., Ai on $\sum$ \\
-possibly execution costs 0 after A1, ..., Ai on $\sum$ \\
+\item{Query set Q2: \\
+necessary cost C for A1,....,Ai\\
+sufficient cost C for A1,....,Ai\\
 \\
-The first statement says that corresponding ki cost will always occur after performing every action in a specific state on $\sum$. \\
-The second statement says that 0 cost may occur after performing every action in a specific state on $\sum$.\\
-When the option from $\sum$ is omitted, these queries refer to the initial state. \\}
+The first statement says that cost C is necessary to execute the program\\
+The second statement says that cost C is sufficient to execute the program\\}
+\end{itemize}
+\subsection{Semantics}
+\begin{itemize}
+	\item{The query set Q1 is defined as Q1 = ($\sigma$,P,$\sigma_{0}$) where $\sigma_{0}$ is the initial state, $\sigma$ is the resulting state from the execution of program P and P is a sequence defined as P = (A1,...,An), n $\geq$ 0 of actions and $\sigma$, $\sigma_{0}$ $\in$ $\sum$ }
+	\item{The Query set Q2 is defined as Q2=(C,P) where C is the cost to execute the program P and P is a sequence defined as P=(A1,....,An), n $\geq$ 0 of actions}
 \end{itemize}
 	\section{Examples}\label{sec:Examples}
 	\subsection{Example 01}\label{example:ex01}
@@ -211,15 +215,13 @@ When the option from $\sum$ is omitted, these queries refer to the initial state
 		\caption{Example 01}
 	\end{figure}
 	\subsubsection{Queries}
-	possibly $\sigma_{0}$ after buy on $\sigma_{0}$\\
-	necessary $\sigma_{0}$ after buy on $\sigma_{1}$\\
-	possibly $\sigma_{2}$ after travel on $\sigma_{2}$\\
-	necessary $\sigma_{1}$ after travel on $\sigma_{0}$\\
+	necessary $\sigma_{3}$ for travel, travel, buy on $\sigma_{0}$\\
+	possibly $\sigma_{1}$ for buy, buy, travel on $\sigma_{0}$\\
+	necessary $\sigma_{2}$ for travel, travel, buy, travel on $\sigma_{0}$\\
 	\\
-	possibly execution costs 0 after buy on $\sigma_{0}$\\
-	necessary execution costs 40 after buy on $\sigma_{2}$\\
-	possibly execution costs 0 after travel on $\sigma_{2}$\\
-	necessary execution costs 50 after travel on $\sigma_{0}$\\
+	necessary cost 140 for travel, travel, buy\\
+	sufficient cost 100 for buy, travel, buy\\
+	necessary cost 190 for travel, travel, buy, travel\\
 	\subsection{Example 02}\label{example:ex02}
 	\subsubsection{Description}\label{par:p102}
 	John visits a painter to buy a specific painting. The cost of painting is 200\$ if its available in the shop. But if painting is not available then John needs to order a new one to be painted and will buy once its available.Order costs 50\$ At any time only one copy of painting is available and another one to be ordered once sold. 
@@ -272,15 +274,13 @@ When the option from $\sum$ is omitted, these queries refer to the initial state
 		\caption{Example 02}
 	\end{figure}
 	\subsubsection{Queries}
-	possibly $\sigma_{0}$ after buy on $\sigma_{0}$\\
-	necessary $\sigma_{2}$ after buy on $\sigma_{1}$\\
-	possibly $\sigma_{1}$ after order on $\sigma_{1}$\\
-	necessary $\sigma_{1}$ after order on $\sigma_{0}$\\
+	necessary $\sigma_{1}$ for order, buy, order on $\sigma_{0}$\\
+	possibly $\sigma_{1}$ for buy, buy, order on $\sigma_{0}$\\
+	necessary $\sigma_{2}$ for order, buy on $\sigma_{0}$\\
 	\\
-	possibly execution costs 0 after buy on $\sigma_{0}$\\
-	necessary execution costs 200 after buy on $\sigma_{1}$\\
-	possibly execution costs 0 after order on $\sigma_{1}$\\
-	necessary execution costs 50 after order on $\sigma_{0}$\\
+	necessary cost 300 for order, buy, order\\
+	sufficient cost 60 for buy, buy, order\\
+	necessary cost 250 for order, buy\\
 	\subsection{Example 03}
 	\subsubsection{Description}\label{par:p103}
 	There is a man. He can cook, eat, and play. Cooking makes food cooked. he can eat food if it is cooked. After eating he feels not hungry, and food is not cooked again. He can play. Playing makes him hungry. He just can play if he is not hungry. He just cooks when there is no food is cooked. Initially, he is hungry, and no food is cooked. In terms of energy, eating costs 5, cooking costs 15, playing costs 20.\\
@@ -344,15 +344,13 @@ When the option from $\sum$ is omitted, these queries refer to the initial state
 		\label{Figure:f03}
 	\end{figure}
 	\subsubsection{Queries}
-	possibly $\sigma_{0}$ after eat on $\sigma_{0}$\\
-	necessary $\sigma_{1}$ after cook on $\sigma_{0}$\\
-	possibly $\sigma_{0}$ after play on $\sigma_{0}$\\
-	necessary $\sigma_{3}$ after eat on $\sigma_{1}$\\
+	necessary $\sigma_{2}$ for cook, eat, cook on $\sigma_{0}$\\
+	possibly $\sigma_{3}$ for play, cook, play, eat on $\sigma_{0}$\\
+	necessary $\sigma_{1}$ for cook, eat, play, cook on $\sigma_{0}$\\
 	\\
-	possibly execution costs 0 after eat on $\sigma_{0}$\\
-	necessary execution costs 15 after cook on $\sigma_{0}$\\
-	possibly execution costs 20 after play on $\sigma_{2}$\\
-	necessary execution costs 5 after eat on $\sigma_{1}$\\
+	necessary cost 35 for cook, eat, cook\\
+	sufficient cost 25 for play, cook, play, eat\\
+	necessary cost 55 for cook, eat, play, cook\\
 	\newpage
 	\section{Appendix}	
 	\begin{appendix}
