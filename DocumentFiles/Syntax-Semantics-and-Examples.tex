@@ -113,8 +113,8 @@ A literal is either a fluent f or its negation ¬f.\\
 
 \item A program cost transition function is generalized to the mapping $\Gamma^{\ast}$:A$^{\ast}$ $\rightarrow$k as follow:
 \begin{enumerate}
-\item $\Gamma^{\ast}$($\epsilon$) = 0(empty program)
-\item $\Gamma^{\ast}$((A1,...,Ai)) = $\Gamma^{\ast}$((A1,...,Ai-1)) + $\Gamma$(Ai,$\Psi$(A1,...,Ai),$\sigma_{0}$)(non-empty program)
+\item $\Gamma^{\ast}$($\epsilon$) = 0 (empty program)
+\item $\Gamma^{\ast}$((A1,...,Ai)) = $\Gamma^{\ast}$((A1,...,Ai-1)) + $\Gamma$(Ai,$\Psi$(A1,...,Ai),$\sigma_{0}$) (non-empty program)
 \end{enumerate}
 
 \item 	Let L be an action language of the class A over the signature $\Upsilon$ = (F, Ac, K). A structure for L is a triplet S = ($\Psi$, $\sigma_{0}$, $\Gamma$) where $\Psi$ is a state transition function, $\Gamma$ is a program cost transition function  and $\sigma_{0}$ $\in$ $\sum$ is the initial state
@@ -138,13 +138,13 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 \begin{itemize}
 	\item {\bfseries Ai causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$,$\sigma \nvDash$  $\overline{gj}$ for some j = 1,...,k
 
-	\item A costs k if $\Psi$(A, $\sigma$) $\nvDash$ $\sigma$
+	\item $\Gamma$(A) = k iff $\Psi$(A, $\sigma$) $\nvDash$ $\sigma$
 \end{itemize}
 (ii) D does not contain an effect statement but contains a 0 cost statement, as follows:
 \begin{itemize}
 \item {\bfseries Ai causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$ then $\sigma \vDash$ f iff $\Psi$(Ai,$\sigma$) $\vDash$ f.
 
-\item $\Gamma$(A)=0 if $\Psi$(A, $\sigma$) $\vDash$ $\sigma$.
+\item $\Gamma$(A)=0 iff $\Psi$(A, $\sigma$) $\vDash$ $\sigma$.
 \end{itemize}
 
 \section{Query}
@@ -158,9 +158,9 @@ where $\overline{f}$ is the given condition and A is the sequence of actions per
 }
 \item{Query 2: Q2 is a query determined from model S of the action domain D to check whether a given cost k is sufficient to execute a program or not.
 \begin{center}
-	k sufficient for A
+	C sufficient for A
 \end{center}
-where A is the sequence of actions performed and k is the sum of cost of respective actions.\\
+where A is the sequence of actions performed, and C is the cost which needs to be checked.
 }
 
 \begin{table}[H]
@@ -171,7 +171,7 @@ where A is the sequence of actions performed and k is the sum of cost of respect
 		\hline
 		Q1 & $\overline{f}$ holds after A & whether $\overline{f}$ holds after A where A is the sequence of actions performed\\
 		\hline
-		Q2 & k sufficient for A & Whether k is sufficient to execute the program A, where A is a sequence of actions (A1,...,Ai) and k is sum of costs, k = K1 + K2 + ... + Ki respectively\\
+		Q2 & C sufficient for A & Whether C is sufficient to execute the program A, where A is a sequence of actions (A1,...,Ai)\\
 		\hline
 	\end{tabular}
 	\caption{Syntax Table}
@@ -181,7 +181,7 @@ where A is the sequence of actions performed and k is the sum of cost of respect
 \subsection{Semantics}
 \begin{itemize}
 	\item{Query 1 is defined as Q1: (A,$\overline{f}$) $\rightarrow$ True/False, where A is the sequence of actions performed and $\overline{f}$} is the condition to check. If the given condition holds after performing A, then the result of Q1 is True. If the given condition does not hold after performing A, the result of Q1 is False.
-	\item{Query 2 is defined as Q2: (A,k) $\rightarrow$ True/False, where A is the sequence of actions performed and k is the sum of cost of respective actions. For every model S of the action domain D and for the mapping $\Gamma^{\ast}$ defined above, iff $\Gamma^{\ast}$((A1,...,An)) $\ge$ k, then result of Q2 is True, else is False}
+	\item{Query 2 is defined as Q2: (A,C) $\rightarrow$ True/False, where A is the sequence of actions performed and C is the cost to be checked. For every model S of the action domain D and for the mapping $\Gamma^{\ast}$ defined above, iff $\Gamma^{\ast}$((A1,...,An)) $\leq$ C, then result of Q2 is True, else is False}
 \end{itemize}
 	\section{Examples}\label{sec:Examples}
 	\subsection{Example 01}\label{example:ex01}
