@@ -87,7 +87,7 @@ A literal is either a fluent f or its negation ¬f.\\
     Effect Statement & Ai causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$ & If the action Ai is performed in any state satisfying $\overline{g1}$, . . . , $\overline{gk}$, then in
     the resulting state $\overline{f}$ holds. \\
     \hline
-    Cost Statement & Ai costs ki (if Ai causes $\overline{f}$ if $\overline{g1}$,....,$\overline{gn}$), ki $\in$ K for i = 1,...,n & If the action Ai is performed in any state satisfying $\overline{g1}$, ...,$\overline{gk}$ , then change in state results in fixed cost ki. \\
+    Cost Statement & A costs k & The action A, if performed with a non-empty effect, costs k \\
     \hline
     \end{tabular}
     \caption{Syntax Table}
@@ -100,8 +100,7 @@ A literal is either a fluent f or its negation ¬f.\\
 
 \item 	A state transition function is a mapping $\Psi$ : Ac $\times$ $\sum$ $\rightarrow$ $\sum$. For any $\sigma$ $\in$ $\sum$, for any action Ai $\in$ Ac where i = 1,...,n, $\Psi$(Ai , $\sigma$) is the state resulting from performing the action Ai in the state $\sigma$. Also $\Psi$(Ai,$\sigma$) will results in same state if the effect of action is empty.
 
-\item A cost transition function is a mapping $\Gamma$ : Ac $\times \sum \rightarrow$ K.For any $\sigma\in\sum$ and for any action Ai $\in$ Ac where i = 1,...,n, $\Gamma$(Ai, $\sigma$) is the fixed cost ki corresponding to the action Ai, where ki $\in$ K and i=1,...,n, resulting from performing the action Ai in the state $\sigma$. Also $\Gamma$(Ai,$\sigma$) will results in 0 cost if there is no change in state. 
-
+\item A program cost transition function is a mapping $\Gamma$ : A $\rightarrow$ k, where A is the sequence of actions A1, A2, ..., Ai performed on a state and k is the sum of corresponding costs of action and is defined as k = k1 + k2 + ... + ki. For any action having an empty effect, the cost is 0.
 
 \item 	A transition function is generalized to the mapping $\Psi^{\ast}$ : Ac$^{\ast}$  $\times$  $\sum$ $\rightarrow$ $\sum$ as follows: 
 \begin{enumerate}
@@ -112,7 +111,13 @@ A literal is either a fluent f or its negation ¬f.\\
 
 \end{enumerate}
 
-\item 	Let L be an action language of the class A over the signature $\Upsilon$ = (F, Ac, K). A structure for L is a triplet S = ($\Psi$, $\sigma_{0}$, $\Gamma$) where $\Psi$ is a state transition function, $\Gamma$ is a cost transition function  and $\sigma_{0}$ $\in$ $\sum$ is the initial state
+\item A program cost transition function is generalized to the mapping $\Gamma^{\ast}$:A$^{\ast}$ $\rightarrow$k as follow:
+\begin{enumerate}
+\item $\Gamma^{\ast}$($\epsilon$) = 0(empty program)
+\item $\Gamma^{\ast}$((A1,...,Ai)) = $\Gamma^{\ast}$((A1,...,Ai-1)) + $\Gamma$(Ai,$\Psi$(A1,...,Ai),$\sigma_{0}$)(non-empty program)
+\end{enumerate}
+
+\item 	Let L be an action language of the class A over the signature $\Upsilon$ = (F, Ac, K). A structure for L is a triplet S = ($\Psi$, $\sigma_{0}$, $\Gamma$) where $\Psi$ is a state transition function, $\Gamma$ is a program cost transition function  and $\sigma_{0}$ $\in$ $\sum$ is the initial state
 
 \item 	Let S = ($\Psi$, $\sigma_{0}$, $\Gamma$) be a structure for L. A statement s is true in S, in symbols S   $\vDash$   s, iff 
 \begin{enumerate}
@@ -120,7 +125,7 @@ A literal is either a fluent f or its negation ¬f.\\
 
 \item if s is of the form Ai causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$, then for every $\sigma$ $\in$ $\sum$ such that $\sigma$   $\vDash$   $\overline{gj}$ , j = 1, . . . , k, $\Psi$(Ai, $\sigma$)   $\vDash$   $\overline{f}$.
 
-\item if s is of the form A1,...,An costs k1,...,kn respectively where ki $\in$ K, Ai $\in$ Ac and i = 1,...n, then every $\sigma \in \sum$ such that $\sigma \vDash \overline{gi}$, i = 1,...,k, $\Gamma$(Ai,$\sigma$) $\vDash$ ki.
+\item if s is of the form: A costs k where A is a sequence of actions (A1,...,Ai) and k is sum of cost, k = K1 + K2 + ... + Ki respectively. $\Gamma$(A) = k
 \end{enumerate}
  
 
@@ -133,36 +138,50 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 \begin{itemize}
 	\item {\bfseries Ai causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$,$\sigma \nvDash$  $\overline{gj}$ for some j = 1,...,k
 
-	\item if $\Psi$(Ai,$\sigma$) $\nvDash$ $\sigma$ then $\Gamma$(Ai,$\sigma$) = ki.
+	\item A costs k if $\Psi$(A, $\sigma$) $\nvDash$ $\sigma$
 \end{itemize}
 (ii) D does not contain an effect statement but contains a 0 cost statement, as follows:
 \begin{itemize}
 \item {\bfseries Ai causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$ then $\sigma \vDash$ f iff $\Psi$(Ai,$\sigma$) $\vDash$ f.
 
-\item if $\Psi$(Ai,$\sigma$) = $\sigma$ then $\Gamma$(Ai,$\sigma$) = 0.
+\item $\Gamma$(A)=0 if $\Psi$(A, $\sigma$) $\vDash$ $\sigma$.
 \end{itemize}
 
 \section{Query}
 \subsection{Syntax}
 \begin{itemize}
-\item{Query set Q1:\\
-necessary $\sigma$ after A1,...,Ai on $\sigma_{0}$ \\
-possibly $\sigma$ after A1,....,Ai on $\sigma_{0}$ \\
-\\
-The first statement says that state $\sigma$ will always occurs after executing the program on initial state. \\
-The second statement says that state $\sigma$ may occurs after executing the program on initial state. \\}
-\\
-\item{Query set Q2: \\
-necessary cost C for A1,....,Ai\\
-sufficient cost C for A1,....,Ai\\
-\\
-The first statement says that cost C is necessary to execute the program\\
-The second statement says that cost C is sufficient to execute the program\\}
+\item{Query 1: Q1 is a query defined to detemine whether a given condition holds after executing a program or not:
+\begin{center}
+	$\overline{f}$ holds after A
+\end{center}
+where $\overline{f}$ is the given condition and A is the sequence of actions performed.
+}
+\item{Query 2: Q2 is a query determined from model S of the action domain D to check whether a given cost k is sufficient to execute a program or not.
+\begin{center}
+	k sufficient for A
+\end{center}
+where A is the sequence of actions performed and k is the sum of cost of respective actions.\\
+}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{2cm}|p{4cm}|p{7cm}|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{Query}} & \multicolumn{1}{c|}{\textbf{Format}} & \multicolumn{1}{c|}{\textbf{Description}} \\
+		\hline
+		Q1 & $\overline{f}$ holds after A & whether $\overline{f}$ holds after A where A is the sequence of actions performed\\
+		\hline
+		Q2 & k sufficient for A & Whether k is sufficient to execute the program A, where A is a sequence of actions (A1,...,Ai) and k is sum of costs, k = K1 + K2 + ... + Ki respectively\\
+		\hline
+	\end{tabular}
+	\caption{Syntax Table}
+	\label{tab:table01}
+\end{table}
 \end{itemize}
 \subsection{Semantics}
 \begin{itemize}
-	\item{The query set Q1 is defined as Q1 = ($\sigma$,P,$\sigma_{0}$) where $\sigma_{0}$ is the initial state, $\sigma$ is the resulting state from the execution of program P and P is a sequence defined as P = (A1,...,An), n $\geq$ 0 of Ac and $\sigma$, $\sigma_{0}$ $\in$ $\sum$ }
-	\item{The Query set Q2 is defined as Q2=(C,P) where C is the cost to execute the program P and P is a sequence defined as P=(A1,....,An), n $\geq$ 0 of Ac}
+	\item{Query 1 is defined as Q1: (A,$\overline{f}$) $\rightarrow$ True/False, where A is the sequence of actions performed and $\overline{f}$} is the condition to check. If the given condition holds after performing A, then the result of Q1 is True. If the given condition does not hold after performing A, the result of Q1 is False.
+	\item{Query 2 is defined as Q2: (A,k) $\rightarrow$ True/False, where A is the sequence of actions performed and k is the sum of cost of respective actions. For every model S of the action domain D and for the mapping $\Gamma^{\ast}$ defined above, iff $\Gamma^{\ast}$((A1,...,An)) $\ge$ k, then result of Q2 is True, else is False}
 \end{itemize}
 	\section{Examples}\label{sec:Examples}
 	\subsection{Example 01}\label{example:ex01}
@@ -174,7 +193,7 @@ The second statement says that cost C is sufficient to execute the program\\}
 	Costs: K = \{40, 50\}\\
 	\\
 	Initially:  fuel; \\
-	Initially: reserve; \\
+	Initially: $\neg$reserve; \\
 	travel causes $\neg$fuel if fuel, reserve; \\
 	travel causes $\neg$reserve if $\neg$fuel, reserve;\\
 	travel causes $\neg$fuel if fuel, $\neg$reserve\\
@@ -185,27 +204,28 @@ The second statement says that cost C is sufficient to execute the program\\}
 	buy costs 40; \\
 	\subsubsection{Calculation}\label{par:p301}\par
 	$\sum$ = $\lbrace$ $\sigma_{0}$,$\sigma_{1}$,$\sigma_{2}$,$\sigma_{3}$ $\rbrace$\\ \\
-	$\sigma_{0}$ = $\lbrace$ fuel, reserve $\rbrace$ \indent $\sigma_{1}$ = $\lbrace$ $\neg$fuel, reserve $\rbrace$\\
-	$\sigma_{2}$ = $\lbrace$ $\neg$fuel, $\neg$reserve $\rbrace$ \indent 	$\sigma_{3}$ = $\lbrace$ fuel, $\neg$reserve $\rbrace$
+	$\sigma_{0}$ = $\lbrace$ fuel, $\neg$reserve $\rbrace$ \indent $\sigma_{1}$ = $\lbrace$ $\neg$fuel, $\neg$reserve $\rbrace$\\
+	$\sigma_{2}$ = $\lbrace$ $\neg$fuel, reserve $\rbrace$ \indent 	
+	$\sigma_{3}$ = $\lbrace$ fuel,reserve $\rbrace$
 	\\
-	$\Psi$(buy, $\sigma_{0}$)=$\sigma_{0}$\\ 
+	$\Psi$(buy, $\sigma_{0}$)=$\sigma_{3}$\\ 
 	$\Psi$(travel, $\sigma_{0}$)=$\sigma_{1}$\\
-	\(\Gamma\)(buy, $\sigma_{0}$) = 0\\
+	\(\Gamma\)(buy, $\sigma_{0}$) = 40\\
 	\(\Gamma\)(travel, $\sigma_{0}$) = 50\\
 	\\
 	$\Psi$(buy, $\sigma_{1}$)=$\sigma_{0}$\\ 
-	$\Psi$(travel, $\sigma_{1}$)=$\sigma_{2}$\\
+	$\Psi$(travel, $\sigma_{1}$)=$\sigma_{1}$\\
 	\(\Gamma\)(buy, $\sigma_{1}$) = 40\\
-	\(\Gamma\)(travel, $\sigma_{1}$) = 50\\
+	\(\Gamma\)(travel, $\sigma_{1}$) = 0\\
 	\\
 	$\Psi$(buy, $\sigma_{2}$)=$\sigma_{3}$\\ 
-	$\Psi$(travel, $\sigma_{2}$)=$\sigma_{2}$\\
+	$\Psi$(travel, $\sigma_{2}$)=$\sigma_{1}$\\
 	\(\Gamma\)(buy, $\sigma_{2}$) = 40\\
-	\(\Gamma\)(travel, $\sigma_{2}$) = 0\\
+	\(\Gamma\)(travel, $\sigma_{2}$) = 50\\
 	\\
-	$\Psi$(buy, $\sigma_{3}$)=$\sigma_{0}$\\ 
+	$\Psi$(buy, $\sigma_{3}$)=$\sigma_{3}$\\ 
 	$\Psi$(travel, $\sigma_{3}$)=$\sigma_{2}$\\
-	\(\Gamma\)(buy, $\sigma_{3}$) = 40\\
+	\(\Gamma\)(buy, $\sigma_{3}$) = 0\\
 	\(\Gamma\)(travel, $\sigma_{3}$) = 50\\
 	\subsubsection{Graph}\label{par:p401}
 	\begin{figure}[H]
@@ -215,13 +235,11 @@ The second statement says that cost C is sufficient to execute the program\\}
 		\caption{Example 01}
 	\end{figure}
 	\subsubsection{Queries}
-	necessary $\sigma_{3}$ for travel, travel, buy on $\sigma_{0}$\\
-	possibly $\sigma_{1}$ for buy, buy, travel on $\sigma_{0}$\\
-	necessary $\sigma_{2}$ for travel, travel, buy, travel on $\sigma_{0}$\\
+	$\sigma_{1}$ holds after (travel, travel, buy, travel): True\\
+	$\sigma_{2}$ holds after (buy, travel, buy): False\\
 	\\
-	necessary cost 140 for travel, travel, buy\\
-	sufficient cost 100 for buy, travel, buy\\
-	necessary cost 190 for travel, travel, buy, travel\\
+	150 sufficient for (travel, travel, buy, travel): True\\
+	90 sufficient for (buy, travel, buy): False\\
 	\subsection{Example 02}\label{example:ex02}
 	\subsubsection{Description}\label{par:p102}
 	John visits a painter to buy a specific painting. The cost of painting is 200\$ if its available in the shop. But if painting is not available then John needs to order a new one to be painted and will buy once its available.Order costs 50\$ At any time only one copy of painting is available and another one to be ordered once sold. 
@@ -274,13 +292,11 @@ The second statement says that cost C is sufficient to execute the program\\}
 		\caption{Example 02}
 	\end{figure}
 	\subsubsection{Queries}
-	necessary $\sigma_{1}$ for order, buy, order on $\sigma_{0}$\\
-	possibly $\sigma_{1}$ for buy, buy, order on $\sigma_{0}$\\
-	necessary $\sigma_{2}$ for order, buy on $\sigma_{0}$\\
+	$\sigma_{1}$ holds after (buy, order, buy, order): True\\
+	$\sigma_{3}$ holds after (buy, order, buy): False\\
 	\\
-	necessary cost 300 for order, buy, order\\
-	sufficient cost 60 for buy, buy, order\\
-	necessary cost 250 for order, buy\\
+	275 sufficient for (buy, order, order, buy): True\\
+	190 sufficient for (order, buy, buy, order): False\\
 	\subsection{Example 03}
 	\subsubsection{Description}\label{par:p103}
 	There is a man. He can cook, eat, and play. Cooking makes food cooked. he can eat food if it is cooked. After eating he feels not hungry, and food is not cooked again. He can play. Playing makes him hungry. He just can play if he is not hungry. He just cooks when there is no food is cooked. Initially, he is hungry, and no food is cooked. In terms of energy, eating costs 5, cooking costs 15, playing costs 20.\\
@@ -344,13 +360,11 @@ The second statement says that cost C is sufficient to execute the program\\}
 		\label{Figure:f03}
 	\end{figure}
 	\subsubsection{Queries}
-	necessary $\sigma_{2}$ for cook, eat, cook on $\sigma_{0}$\\
-	possibly $\sigma_{3}$ for play, cook, play, eat on $\sigma_{0}$\\
-	necessary $\sigma_{1}$ for cook, eat, play, cook on $\sigma_{0}$\\
+	$\sigma_{1}$ holds after (play, play, eat, cook): True\\
+	$\sigma_{0}$ holds after (cook, eat play, cook): False\\
 	\\
-	necessary cost 35 for cook, eat, cook\\
-	sufficient cost 25 for play, cook, play, eat\\
-	necessary cost 55 for cook, eat, play, cook\\
+	40 sufficient for (play, cook, eat, cook): True\\
+	20 sufficient for (cook, eat, cook, play): False\\
 	\newpage
 	\section{Appendix}	
 	\begin{appendix}
