@@ -84,7 +84,7 @@ A literal is either a fluent f or its negation ¬f.\\
     \hline
     Abbreviation & initially $\overline{f}$ & in the initial state $\overline{f}$ holds\\
     \hline
-    Effect Statement & Ai causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$ & If the action Ai is performed in any state satisfying $\overline{g1}$, . . . , $\overline{gk}$, then in
+    Effect Statement & A causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$ & If the action A is performed in any state satisfying $\overline{g1}$, . . . , $\overline{gk}$, then in
     the resulting state $\overline{f}$ holds. \\
     \hline
     Cost Statement & A costs k & The action A, if performed with a non-empty effect, costs k \\
@@ -98,11 +98,11 @@ A literal is either a fluent f or its negation ¬f.\\
 	\begin{itemize}
 \item 	A state is a mapping $\sigma$ : F $\rightarrow$ \{0, 1\}. For any f $\in$ F, if $\sigma$(f) = 1, then we say that f holds in $\sigma$ and write $\sigma$   $\vDash$   f. If $\sigma$(f) = 0, then we write $\sigma$   $\vDash$   ¬f and say that f does not hold in $\sigma$. Let $\sum$ stand for the set of all states.
 
-\item 	A state transition function is a mapping $\Psi$ : Ac $\times$ $\sum$ $\rightarrow$ $\sum$. For any $\sigma$ $\in$ $\sum$, for any action Ai $\in$ Ac where i = 1,...,n, $\Psi$(Ai , $\sigma$) is the state resulting from performing the action Ai in the state $\sigma$. Also $\Psi$(Ai,$\sigma$) will results in same state if the effect of action is empty.
+\item 	A state transition function is a mapping $\Psi$ : Ac $\times$ $\sum$ $\rightarrow$ $\sum$. For any $\sigma$ $\in$ $\sum$, for any action A $\in$ Ac, $\Psi$(A , $\sigma$) is the state resulting from performing the action A in the state $\sigma$. Also $\Psi$(A,$\sigma$) will results in same state if the effect of action is empty.
 
-\item A program cost transition function is a mapping $\Gamma$ : A $\rightarrow$ k, where A is the sequence of actions A1, A2, ..., Ai performed on a state and k is the sum of corresponding costs of action and is defined as k = k1 + k2 + ... + ki. For any action having an empty effect, the cost is 0.
+\item A cost transition function is a mapping $\Gamma$ : A $\rightarrow$ k, where A is the action performed with a non-empty effect and k is the cost of the action. For any action having an empty effect, the cost is 0.
 
-\item 	A transition function is generalized to the mapping $\Psi^{\ast}$ : Ac$^{\ast}$  $\times$  $\sum$ $\rightarrow$ $\sum$ as follows: 
+\item 	A state transition function is generalized to the mapping $\Psi^{\ast}$ : Ac$^{\ast}$  $\times$  $\sum$ $\rightarrow$ $\sum$ as follows: 
 \begin{enumerate}
 
 \item $\Psi^{\ast}$ ( $\varepsilon$ , $\sigma$) = $\sigma$,
@@ -117,32 +117,32 @@ A literal is either a fluent f or its negation ¬f.\\
 \item $\Gamma^{\ast}$((A1,...,Ai)) = $\Gamma^{\ast}$((A1,...,Ai-1)) + $\Gamma$(Ai,$\Psi$(A1,...,Ai),$\sigma_{0}$) (non-empty program)
 \end{enumerate}
 
-\item 	Let L be an action language of the class A over the signature $\Upsilon$ = (F, Ac, K). A structure for L is a triplet S = ($\Psi$, $\sigma_{0}$, $\Gamma$) where $\Psi$ is a state transition function, $\Gamma$ is a program cost transition function  and $\sigma_{0}$ $\in$ $\sum$ is the initial state
+\item 	Let L be an action language of the class A over the signature $\Upsilon$ = (F, Ac, K). A structure for L is a triplet S = ($\Psi$, $\sigma_{0}$, $\Gamma$) where $\Psi$ is a state transition function, $\Gamma$ is a  cost transition function  and $\sigma_{0}$ $\in$ $\sum$ is the initial state
 
 \item 	Let S = ($\Psi$, $\sigma_{0}$, $\Gamma$) be a structure for L. A statement s is true in S, in symbols S   $\vDash$   s, iff 
 \begin{enumerate}
 \item s is of the form $\overline{f}$ after A1, . . . , An, then $\Psi$((A1, . . . , An), $\sigma_{0}$))   $\vDash \overline{f}$;
 
-\item if s is of the form Ai causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$, then for every $\sigma$ $\in$ $\sum$ such that $\sigma$   $\vDash$   $\overline{gj}$ , j = 1, . . . , k, $\Psi$(Ai, $\sigma$)   $\vDash$   $\overline{f}$.
+\item if s is of the form A causes $\overline{f}$ if $\overline{g1}$, . . . , $\overline{gk}$, then for every $\sigma$ $\in$ $\sum$ such that $\sigma$  $\vDash$  $\overline{gi}$ , i = 1, . . . , k, $\Psi$(A, $\sigma$)   $\vDash$   $\overline{f}$.
 
-\item if s is of the form: A costs k where A is a sequence of actions (A1,...,Ai) and k is sum of cost, k = K1 + K2 + ... + Ki respectively. $\Gamma$(A) = k
+\item if s is of the form: A costs k where A is the action, if performed with a non empty effect, the cost is k, $\Gamma$(A) = k
 \end{enumerate}
  
 
 \end{itemize}
 Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,K). A structure S = ($\Psi$,$\sigma_{0}$, $\Gamma$) is a model of D iff\\
 (M1) for every statement s $\in$ D, S $\vDash$ s;\\
-(M2) for every Ai $\in$ Ac for every f,g1,...,gn $\in$ F, for every ki $\in$ K and for every $\sigma\in\sum$, if one of the following conditions holds:
+(M2) for every A $\in$ Ac for every f,g1,...,gn $\in$ F, for every k $\in$ K and for every $\sigma\in\sum$, if one of the following conditions holds:
 \\
 (i) D contains an effect statement and a cost statement as follows:
 \begin{itemize}
-	\item {\bfseries Ai causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$,$\sigma \nvDash$  $\overline{gj}$ for some j = 1,...,k
+	\item {\bfseries A causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$, and $\sigma \nvDash$  $\overline{gj}$ for some j = 1,...,k
 
 	\item $\Gamma$(A) = k iff $\Psi$(A, $\sigma$) $\nvDash$ $\sigma$
 \end{itemize}
 (ii) D does not contain an effect statement but contains a 0 cost statement, as follows:
 \begin{itemize}
-\item {\bfseries Ai causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$ then $\sigma \vDash$ f iff $\Psi$(Ai,$\sigma$) $\vDash$ f.
+\item {\bfseries A causes $\overline{f}$ if} $\overline{g1}$,...,$\overline{gk}$ then $\sigma \vDash$ f iff $\Psi$(A,$\sigma$) $\vDash$ f.
 
 \item $\Gamma$(A)=0 iff $\Psi$(A, $\sigma$) $\vDash$ $\sigma$.
 \end{itemize}
@@ -152,15 +152,15 @@ Let D be an action domain in the language L over the signature $\Upsilon$=(F,Ac,
 \begin{itemize}
 \item{Query 1: Q1 is a query defined to detemine whether a given condition holds after executing a program or not:
 \begin{center}
-	$\overline{f}$ holds after A
+	$\overline{f}$ holds after P
 \end{center}
-where $\overline{f}$ is the given condition and A is the sequence of actions performed.
+where $\overline{f}$ is the given condition and program is the sequence P=(A1, A2,..., An), n $\geq$ 0, of actions.
 }
-\item{Query 2: Q2 is a query determined from model S of the action domain D to check whether a given cost k is sufficient to execute a program or not.
+\item{Query 2: Q2 is a query determined from model S of the action domain D to check whether a given cost C is sufficient to execute a program or not.
 \begin{center}
-	C sufficient for A
+	C sufficient for P
 \end{center}
-where A is the sequence of actions performed, and C is the cost which needs to be checked.
+where C is the cost which needs to be checked and program is the sequence P=(A1, A2,..., An), n $\geq$ 0, of actions
 }
 
 \begin{table}[H]
@@ -169,9 +169,9 @@ where A is the sequence of actions performed, and C is the cost which needs to b
 		\hline
 		\multicolumn{1}{|c|}{\textbf{Query}} & \multicolumn{1}{c|}{\textbf{Format}} & \multicolumn{1}{c|}{\textbf{Description}} \\
 		\hline
-		Q1 & $\overline{f}$ holds after A & whether $\overline{f}$ holds after A where A is the sequence of actions performed\\
+		Q1 & $\overline{f}$ holds after A & whether $\overline{f}$ holds after executing the program P where P=(A1, A2,..., An), n $\geq$ 0, is a sequence of actions.\\
 		\hline
-		Q2 & C sufficient for A & Whether C is sufficient to execute the program A, where A is a sequence of actions (A1,...,Ai)\\
+		Q2 & C sufficient for P & Cost C is sufficient to execute the program P=(A1,..., An), n $\geq$ 0, is a sequence of actions\\
 		\hline
 	\end{tabular}
 	\caption{Syntax Table}
@@ -180,8 +180,12 @@ where A is the sequence of actions performed, and C is the cost which needs to b
 \end{itemize}
 \subsection{Semantics}
 \begin{itemize}
-	\item{Query 1 is defined as Q1: (A,$\overline{f}$) $\rightarrow$ True/False, where A is the sequence of actions performed and $\overline{f}$} is the condition to check. If the given condition holds after performing A, then the result of Q1 is True. If the given condition does not hold after performing A, the result of Q1 is False.
-	\item{Query 2 is defined as Q2: (A,C) $\rightarrow$ True/False, where A is the sequence of actions performed and C is the cost to be checked. For every model S of the action domain D and for the mapping $\Gamma^{\ast}$ defined above, iff $\Gamma^{\ast}$((A1,...,An)) $\leq$ C, then result of Q2 is True, else is False}
+	\item{Query 1 is defined as Q1: (P,$\overline{f}$) $\rightarrow$ True/False, where P is the program P=(A1, A2, ..., An), n $\geq$ 0, of actions and $\overline{f}$} is the condition to check. 
+	\subitem {Q1 $\rightarrow$ True, iff $\Psi^{\ast}$((A1,..., An), $\sigma$) $\vDash$ $\sigma$}
+	\subitem {Q1 $\rightarrow$ False, iff $\Psi^{\ast}$((A1,..., An), $\sigma$) $\nvDash$ $\sigma$}
+	\item{Query 2 is defined as Q2: (P,C) $\rightarrow$ True/False, where P is the program P=(A1, A2,..., An), n $\geq$ 0, of actions and C is the cost to be checked. For every model S of the action domain D and for the mapping $\Gamma^{\ast}$ defined above:}
+	\subitem {Q2 $\rightarrow$ True, iff $\Gamma^{\ast}$((A1,..., An)) $\leq$ C}
+	\subitem {Q2 $\rightarrow$ False, iff $\Gamma^{\ast}$((A1,..., An)) $\ge$ C}
 \end{itemize}
 	\section{Examples}\label{sec:Examples}
 	\subsection{Example 01}\label{example:ex01}
