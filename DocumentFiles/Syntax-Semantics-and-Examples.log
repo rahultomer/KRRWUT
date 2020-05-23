@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.18)  23 MAY 2020 14:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.18)  23 MAY 2020 14:48
 entering extended mode
 **./Syntax-Semantics-and-Examples.tex
 (Syntax-Semantics-and-Examples.tex
@@ -360,7 +360,7 @@ Overfull \hbox (73.61644pt too wide) in paragraph at lines 237--239
  [][] 
  []
 
-
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 242--247
 
  []
@@ -370,12 +370,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 242--247
 
  []
 
-[7 <./media/ex01.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 252--263
 
  []
 
-
+[8 <./media/ex01.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 265--291
 
  []
@@ -400,8 +400,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 265--291
 
  []
 
-[8]
-<./media/example2_graph.png, id=47, 693.792pt x 249.93375pt>
+[9]
+<./media/example2_graph.png, id=50, 693.792pt x 249.93375pt>
 File: ./media/example2_graph.png Graphic file (type png)
 <use ./media/example2_graph.png>
 Package pdftex.def Info: ./media/example2_graph.png  used on input line 294.
@@ -411,7 +411,7 @@ Overfull \hbox (71.9992pt too wide) in paragraph at lines 294--296
 [][]
  []
 
-[9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 299--304
 
  []
@@ -487,7 +487,7 @@ File: ./media/figure01.png Graphic file (type png)
 <use ./media/figure01.png>
 Package pdftex.def Info: ./media/figure01.png  used on input line 362.
 (pdftex.def)             Requested size: 360.00113pt x 162.42033pt.
-
+ [12]
 Underfull \hbox (badness 10000) in paragraph at lines 367--372
 
  []
@@ -497,7 +497,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 367--372
 
  []
 
-[12 <./media/figure01.png>] [13] (Syntax-Semantics-and-Examples.lof)
+[13 <./media/figure01.png>] (Syntax-Semantics-and-Examples.lof)
 \tf@lof=\write4
 \openout4 = `Syntax-Semantics-and-Examples.lof'.
 
@@ -529,7 +529,7 @@ ktext/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/miktext/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/m
 iktext/fonts/type1/public/amsfonts/symbols/msam10.pfb><E:/miktext/fonts/type1/p
 ublic/amsfonts/symbols/msbm10.pfb>
-Output written on Syntax-Semantics-and-Examples.pdf (15 pages, 490687 bytes).
+Output written on Syntax-Semantics-and-Examples.pdf (15 pages, 490841 bytes).
 PDF statistics:
  114 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
