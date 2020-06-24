@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.18)  23 MAY 2020 14:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.18)  24 JUN 2020 11:20
 entering extended mode
 **./Syntax-Semantics-and-Examples.tex
 (Syntax-Semantics-and-Examples.tex
@@ -283,18 +283,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout3 = `Syntax-Semantics-and-Examples.toc'.
 
  [1] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 83--83
-[]|\OT1/cmr/m/n/10.95 Value
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+[]|\OT1/cmr/m/n/10.95 Abbreviation of
  []
 
 
-Overfull \hbox (5.78336pt too wide) in paragraph at lines 85--85
-[]|\OT1/cmr/m/n/10.95 Abbreviation| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
-[]|\OT1/cmr/m/n/10.95 Effect
+Underfull \hbox (badness 3492) in paragraph at lines 85--85
+\OT1/cmr/m/n/10.95 Value State-ment
  []
 
 
@@ -324,32 +319,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--209
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--234
-
- []
-
 [6]
+Underfull \hbox (badness 10000) in paragraph at lines 210--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--234
+
+ []
+
 <./media/ex01.png, id=38, 509.5035pt x 242.1045pt>
 File: ./media/ex01.png Graphic file (type png)
 <use ./media/ex01.png>
@@ -529,7 +523,7 @@ ktext/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/miktext/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb><E:/miktext/fonts/type1/public/amsfonts/cm/cmsy8.pfb><E:/m
 iktext/fonts/type1/public/amsfonts/symbols/msam10.pfb><E:/miktext/fonts/type1/p
 ublic/amsfonts/symbols/msbm10.pfb>
-Output written on Syntax-Semantics-and-Examples.pdf (15 pages, 490841 bytes).
+Output written on Syntax-Semantics-and-Examples.pdf (15 pages, 491189 bytes).
 PDF statistics:
  114 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
