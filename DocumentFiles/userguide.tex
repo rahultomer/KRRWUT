@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage{amsmath,amssymb,trimclip,adjustbox}
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\newcommand{\Csh}{C\includegraphics{hash-symbol}}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\Large{Warsaw University of Technology's}\\
+			\Large{Faculty of Mathematics and Information Science}\\
+			[0.3in]
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.4\linewidth, height=0.25\textheight]{./media/uni_logo.jpeg}
+				\label{Figure:f04}
+			\end{figure}
+			\Large{\bfseries Knowledge Representation and Reasoning}\\
+			[0.3in]
+			\Large{\bfseries Project number 2:}\\
+			\Large{\bfseries Deterministic Action With Cost}\\
+			\Large{\bfseries Supervisor: Dr Anna Radzikowska}\\
+			[0.3in]
+			\Large{\bfseries User Guide}\\
+			[0.3in]
+			\textsc{\Large{Created By}\\
+				Rishabh Jain,
+				Rahul Tomer,
+				Kuldeep Shankar,\\ 
+				Alaa Abboushi,
+				Haran Dev Murugan,\\
+				Bui Tuan Anh.\\}
+		\end{center}	
+	\end{titlepage}
+	\tableofcontents
+	\newpage
+	\section{Introduction}\label{sec:intro}
+	A dynamic system is designed for deterministic actions with cost. This document will help a user to understand the design and functionality of the system.
+Following work flow is performed based on our Example 1 (Travel -Fuel – Reserve) from our drafted functional document. As system is dynamic hence other examples can be verified exactly same way as shown below.
+Numerical Indices shown in images have been explained respectively followed by image.
+
+System has been designed in C\# language.
+	\section{Home Screen}\label{sec:homescreen}
+	\bfseries{Legend:}
+\begin{enumerate}
+	\item Status \\ Displays the status of the project (If the fluents are submitted, if the actions are 	added, If the states are added etc.)\\
+ 	\item Scenario Build \\  This button is a drop-down menu button used for adding fluents and actions needed 	for scenario building. (Refer the Next image)\\
+	\item Show Transitions\\ This Button opens the show states form that lets us Set the initial state and then shows the generated states and transitions of the system\\
+	\item Queries\\ This Button opens the queries form window that lets us check a query against the 	scenario that we have built.
+	\item	Clear Data\\ This Button clears all the data inputted by the user and reset the system.
+\end{enumerate}
+
+
+
+		 
+\end{document}
